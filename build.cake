@@ -84,32 +84,29 @@ Task("UpdateCustomer")
 
 #region Canister
 Task("GetCanisters")
-.Does(()=> {
-    System.Threading.Tasks.Task.Run(async ()=> {
-        var canisters = await "http://localhost:6040/smartdose/Canisters/".GetJsonAsync<List<Model.Canister>>();
-        Information($"Canisters={canisters.Count}");
-        Information(canisters.Dump());
+    .Does(()=> {
+        System.Threading.Tasks.Task.Run(async ()=> {
+            var canisters = await "http://localhost:6040/smartdose/Canisters/".GetJsonAsync<List<Model.Canister>>();
+            Information($"Canisters={canisters.Count}");
+            Information(canisters.Dump());
     }).Wait();
 });
 
 Task("CreateCanisters")
-.Does(()=> {
-    System.Threading.Tasks.Task.Run(async ()=> {
-        var canister = new Model.Canister
-        {
-            CanisterId= "Canister4711",
-            Rfid = 1.ToRfId(),
-            Largecanister = false,
-            RotorId= 1.ToRotorId(),
-        };
-        var response = await "http://localhost:6040/SmartDose/Canisters".AllowHttpStatus("400-500").PostJsonAsync(canister);
-        if (response.StatusCode == System.Net.HttpStatusCode.OK)
-            Information($"Canister created {canister.CanisterId}");
-        else
-            Error($"Canister created StatusCode={(int)response.StatusCode}={response.StatusCode}");
-        
-        var canisters = await "http://localhost:6040/smartdose/Canisters/".GetJsonAsync<List<Model.Canister>>();
-        Information($"Canisters={canisters.Count}");
+    .Does(()=> {
+        System.Threading.Tasks.Task.Run(async ()=> {
+            var canister = new Model.Canister
+            {
+                CanisterId= "Canister4711",
+                Rfid = 1.ToRfId(),
+                Largecanister = false,
+                RotorId= 1.ToRotorId(),
+            };
+            var response = await "http://localhost:6040/SmartDose/Canisters".AllowHttpStatus("400-500").PostJsonAsync(canister);
+             ResponseMessage(response.StatusCode, $"Canister created {canister.CanisterId}")
+            
+            var canisters = await "http://localhost:6040/smartdose/Canisters/".GetJsonAsync<List<Model.Canister>>();
+            Information($"Canisters={canisters.Count}");
     }).Wait();
 })
 .OnError(exception =>
@@ -171,12 +168,11 @@ async Task CreateExternalOrder(string jsonFilename)
 }
 #endregion
 
-
-#region Ticket
+#region Tickets
 Task("Ticket-Sw-11427-Works")
     .Does(()=> {
         System.Threading.Tasks.Task.Run(async ()=> {
-        await CreateExternalOrder("./Tickets/SW-11427/20180724-ROWATest49-JSON-working.json").ConfigureAwait(false);
+            await CreateExternalOrder("./Tickets/SW-11427/20180724-ROWATest49-JSON-working.json").ConfigureAwait(false);
     }).Wait();
 });
 #endregion
@@ -185,8 +181,8 @@ Task("Ticket-Sw-11427-Works")
 #region Cake defaults
 var target = Argument("target", "Default");
 Task("Default")
-.Does(() => {
-   Information("Hello Cake!");
+    .Does(() => {
+    Information("Hello Cake!");
 });
 
 RunTarget(target);
