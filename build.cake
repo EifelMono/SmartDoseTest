@@ -14,6 +14,16 @@ using SmartDose.RestCore.Models;
 using Model = SmartDose.RestCore.Models.V1;
 #endregion
 
+#region Helper
+void ResponseMessage(System.Net.HttpStatusCode statusCode, string messsage= "")
+{
+    if (statusCode == System.Net.HttpStatusCode.OK)
+        Information($"{messsage}");
+    else
+        Error($"{messsage} StatusCode={(int)statusCode}={statusCode}");
+
+}
+#endregion
 
 #region Customers
 Task("GetCustomers")
@@ -22,6 +32,18 @@ Task("GetCustomers")
         var customers = await "http://localhost:6040/smartdose/Customers/".GetJsonAsync<List<Model.Customer>>();
         Information($"Customers={customers.Count}");
         Information(customers.Dump());
+    }).Wait();
+});
+
+Task("DeleteAllCustomers")
+.Does(()=> {
+    System.Threading.Tasks.Task.Run(async ()=> {
+        var customers = await "http://localhost:6040/smartdose/Customers/".GetJsonAsync<List<Model.Customer>>();
+        foreach(var customer in customers)
+        {
+            var response = await $"http://localhost:6040/smartdose/Customers/{customer.CustomerId}".DeleteAsync();
+            ResponseMessage(response.StatusCode, "Customer delete");
+        }
     }).Wait();
 });
 
@@ -35,10 +57,7 @@ Task("CreateCustomer")
             Description= "Hallo",
         };
         var response = await "http://localhost:6040/SmartDose/Customers".PostJsonAsync(customer);
-        if (response.StatusCode == System.Net.HttpStatusCode.OK)
-            Information($"Customer created {customer.CustomerId}");
-        else
-            Error(response);
+        ResponseMessage(response.StatusCode, $"Customer create {customer.Name}");
         
         var customers = await "http://localhost:6040/smartdose/Customers/".GetJsonAsync<List<Model.Customer>>();
         Information($"Customers={customers.Count}");
@@ -46,26 +65,22 @@ Task("CreateCustomer")
 });
 
 Task("UpdateCustomer")
-.Does(()=> {
-    System.Threading.Tasks.Task.Run(async ()=> {
-        var customer = new Model.Customer
-        {
-            CustomerId = "4711",
-            Name = "Name4711-"+ DateTime.Now.ToString(),
-            Description= "Hallo",
-        };
-        var response = await $"http://localhost:6040/SmartDose/Customers/{customer.CustomerId}".PutJsonAsync(customer);
-        if (response.StatusCode == System.Net.HttpStatusCode.OK)
-            Information($"Customer created {customer.CustomerId}");
-        else
-            Error(response);
-        
-        var customers = await "http://localhost:6040/smartdose/Customers/".GetJsonAsync<List<Model.Customer>>();
-        Information($"Customers={customers.Count}");
-    }).Wait();
-});
+    .Does(()=> {
+        System.Threading.Tasks.Task.Run(async ()=> {
+            var customer = new Model.Customer
+            {
+                CustomerId = "4711",
+                Name = "Name4711-"+ DateTime.Now.ToString(),
+                Description= "Hallo",
+            };
+            var response = await $"http://localhost:6040/SmartDose/Customers/{customer.CustomerId}".PutJsonAsync(customer);
+            ResponseMessage(response.StatusCode, $"Customer update {customer.Name}");
+            
+            var customers = await "http://localhost:6040/smartdose/Customers/".GetJsonAsync<List<Model.Customer>>();
+            Information($"Customers={customers.Count}");
+        }).Wait();
+    });
 #endregion
-
 
 #region Canister
 Task("GetCanisters")
@@ -91,7 +106,7 @@ Task("CreateCanisters")
         if (response.StatusCode == System.Net.HttpStatusCode.OK)
             Information($"Canister created {canister.CanisterId}");
         else
-            Error($"StatusCode={(int)response.StatusCode}={response.StatusCode}");
+            Error($"Canister created StatusCode={(int)response.StatusCode}={response.StatusCode}");
         
         var canisters = await "http://localhost:6040/smartdose/Canisters/".GetJsonAsync<List<Model.Canister>>();
         Information($"Canisters={canisters.Count}");
@@ -102,6 +117,70 @@ Task("CreateCanisters")
     Error($"Creating Canister {exception}");
 });
 #endregion
+
+#region Ticket Helper
+
+async Task CreateMedicine(Model.Medicine medicine)
+{
+    Information($"Create Medicine {medicine.Name}");
+    try {
+        var response = await "http://localhost:6040/SmartDose/Medicines".AllowHttpStatus("400-500").PostJsonAsync(medicine).ConfigureAwait(false);
+        ResponseMessage(response.StatusCode, "Medicine create");
+    }
+    catch(Exception ex)
+    {
+        Error(ex.ToString());
+    }
+}
+
+async Task CreateMedicineFromExternalOrder(Model.ExternalOrder externalOrder)
+{
+    foreach(var orderDetail in externalOrder.OrderDetails)
+        foreach(var intakeDetail in orderDetail.IntakeDetails)
+            foreach(var medicationDetail in intakeDetail.MedicationDetails)
+                await CreateMedicine(new Model.Medicine{
+                                Active = true,
+                                Comment = "Comment " + Guid.NewGuid().ToString(),
+                                Description = "Med Desc " + Guid.NewGuid().ToString(),
+                                Identifier = medicationDetail.MedicineId,
+                                Name = medicationDetail.PrescribedMedicine,
+                                Pictures = new List<Model.MedicinePicture>(),
+                                PouchMode = Model.PouchMode.MultiDose,
+                                PrintDetails = new List<Model.PrintDetail>(),
+                                SpecialHandling = new Model.SpecialHandling
+                                {
+                                    MaxAmountPerPouch = 4,
+                                    Narcotic = true,
+                                    NeedsCooling = false,
+                                    RobotHandling = false,
+                                    SeperatePouch = false,
+                                    Splitable = true
+                                },
+                                SynonymIds = new List<Model.Synonym>(),
+                                TrayFillOnly = false,
+                }).ConfigureAwait(false);
+}
+
+async Task CreateExternalOrder(string jsonFilename)
+{
+    var externalOrder= jsonFilename.FromJsonFile<Model.ExternalOrder>();
+    Information("Order {externalOrder.ExternalId}");
+    await CreateMedicineFromExternalOrder(externalOrder).ConfigureAwait(false);
+    var response = await "http://localhost:6040/SmartDose/Orders".AllowHttpStatus("400-500").PostJsonAsync(externalOrder);
+    ResponseMessage(response.StatusCode, $"Order create {externalOrder.ExternalId}");
+}
+#endregion
+
+
+#region Ticket
+Task("Ticket-Sw-11427-Works")
+    .Does(()=> {
+        System.Threading.Tasks.Task.Run(async ()=> {
+        await CreateExternalOrder("./Tickets/SW-11427/20180724-ROWATest49-JSON-working.json").ConfigureAwait(false);
+    }).Wait();
+});
+#endregion
+
 
 #region Cake defaults
 var target = Argument("target", "Default");

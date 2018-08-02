@@ -4,7 +4,7 @@ using System.Collections.Generic;
 namespace SmartDose.RestCore.Models.V1
 {
     [Serializable]
-    internal class Medicine
+    public class Medicine
     {
         /// <summary>
         ///     Initializes a new instance of the <see cref="Medicine" /> class.

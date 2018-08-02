@@ -1,0 +1,90 @@
+{
+    "ExternalId": "20180724-TEST52",
+    "Timestamp": "2018-07-24T10:47:00",
+    "Customer": {
+        "CustomerId": "11111 - TEST52",
+        "Name": "Customer Customer - TEST52 - Long 1234567890 1234567890"
+    },
+    "OrderDetails": [
+        {
+            "Pharmacy": {
+                "CustomerId": "11112 - TEST52",
+                "Name": "Customer Apotheke - TEST52 - Long 1234567890 1234567890"
+            },
+            "Patient": {
+                "ExternalPatientNumber": "081513 - TEST52",
+                "DateOfBirth": "1900-02-03T00:00:00",
+                "ContactPerson": {
+                    "Name": "Domi Tester - TEST52 - Long 1234567890 1234567890"
+                },
+                "ContactAddress": {
+                    "Addressline1": "Apotheke Nameline1 - TEST52 - Long 1234567890 1234567890",
+                    "City":  "Apotheke Nameline2 - TEST52",
+                    "Country": "de-DE - TEST52",
+                    "Postalcode": "0815-0850-20180724",
+                    "State": "01"
+                },
+                "RoomNumber": "PatRoom - TEST52 - Long 1234567890 1234567890",
+                "BedNumber": "PatBed - TEST52 - Long 1234567890 1234567890",
+                "WardName": "PadWard - TEST52 - Long 1234567890 1234567890"
+            },
+            "DestinationFacility": {
+                "CustomerId": "11123 - TEST52 - Long 1234567890 1234567890",
+                "Name": "DestinationName - TEST52 - Long 1234567890 1234567890",
+				"DepartmentCode": "10100 - TEST52 - Long 1234567890 1234567890",
+				"DepartmentName": "DepartmentName - TEST52 - Long 1234567890 1234567890",
+					"ContactAddress": {
+						"NameLine1": "DestinationFacility NameLine1 - TEST52 - Long 1234567890 1234567890",
+						"Addressline1": "DestinationFacility AdressLine1 - TEST52 - Long 1234567890 1234567890",
+						"Postalcode": "DestinationFacility PostalCode - TEST52 - Long 1234567890 1234567890",
+						"City": "DestinationFacility City - TEST52 - Long 1234567890 1234567890",
+						"Country": "DestinationFacility Country - TEST52 - Long 1234567890 1234567890"
+					},
+			},
+            "ExternalDetailPrintInfo1": "A 25.07.2018 - TEST52 - Long 1234567890 1234567890",
+            "ExternalDetailPrintInfo2": "B 25.07.2018 - TEST52 - Long 1234567890 1234567890",
+            "IntakeDetails": [
+                {
+                    "IntakeDateTime": "2018-07-25T08:00:00",
+                    "MedicationDetails": [
+                        {
+                            "MedicineId": 2010503001105,
+                            "Count": 1,
+                            "PrescribedMedicine": "Paracetamol 500 mg Actavis - TEST52 - Long 1234567890 1234567890",
+                            "IntakeAdvice": "Tabl  oblong  weiss1  ø1 - TEST52 - Long 1234567890 1234567890",
+                            "PhysicianComment": "1.0",
+                            "Physician": "Physician - TEST52 - Long 1234567890 1234567890"
+                        }
+						,
+                        {
+                            "MedicineId": 2011457001104,
+                            "Count": 1,
+                            "PrescribedMedicine": "Keppra 250 mg - TEST52 - Long 1234567890 1234567890",
+                            "IntakeAdvice": "Tabl  oval  blau3  ucb 250  ø1 - TEST52 - Long 1234567890 1234567890",
+                            "PhysicianComment": "1.0",
+                            "Physician": "Physician - TEST52 - Long 1234567890 1234567890"
+                        }
+						,
+                        {
+                            "MedicineId": 2012689001108,
+                            "Count": 1,
+                            "PrescribedMedicine": "Sequase 25 mg - TEST52 - Long 1234567890 1234567890",
+                            "IntakeAdvice": "Tabl  rund  rot6  SEROQUEL 25 - TEST52 - Long 1234567890 1234567890",
+                            "PhysicianComment": "1.0",
+                            "Physician": "Physician - TEST52 - Long 1234567890 1234567890"
+                        }
+						,
+                        {
+                            "MedicineId": 2011210001105,
+                            "Count": 1,
+                            "PrescribedMedicine": "Oedemex 40 mg - TEST52 - Long 1234567890 1234567890",
+                            "IntakeAdvice": "Tabl  rund  weiss1  ø1 - TEST52 - Long 1234567890 1234567890",
+                            "PhysicianComment": "1.0",
+                            "Physician": "Physician - TEST52 - Long 1234567890 1234567890"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

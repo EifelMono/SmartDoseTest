@@ -1,6 +1,6 @@
 ﻿namespace SmartDose.RestCore.Models.V1
 {
-    internal class Manufacturer
+    public class Manufacturer
     {
         /// <summary>
         ///     Visible identifier for the manufacturer
