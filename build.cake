@@ -172,18 +172,18 @@ async Task CreateExternalOrder(string jsonFilename)
 
 #region Tickets 
 
-#region Ticket 11427
-Task("Ticket-Sw-11427-Working")
+#region Ticket 1804
+Task("Ticket-Sw-1804-Working")
     .Does(()=> {
         System.Threading.Tasks.Task.Run(async ()=> {
-            await CreateExternalOrder("./Tickets/SW-11427/20180724-ROWATest49-JSON-working.json").ConfigureAwait(false);
+            await CreateExternalOrder("./Tickets/SW-1804/20180724-ROWATest49-JSON-working.json").ConfigureAwait(false);
     }).Wait();
 });
 
-Task("Ticket-Sw-11427-LongText-not-Working")
+Task("Ticket-Sw-1804-LongText-not-Working")
     .Does(()=> {
         System.Threading.Tasks.Task.Run(async ()=> {
-            await CreateExternalOrder("./Tickets/SW-11427/20180724-ROWATest51-JSON-Longtext-not_working.json").ConfigureAwait(false);
+            await CreateExternalOrder("./Tickets/SW-1804/20180724-ROWATest51-JSON-Longtext-not_working.json").ConfigureAwait(false);
     }).Wait();
 });
 #endregion
