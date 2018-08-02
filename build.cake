@@ -1,5 +1,5 @@
 #region Setup
-#addin nuget:?package=Flurl&version=2.8.0
+#addin nuget:?package=Flurl&version=2.7.1
 #addin nuget:?package=Flurl.Http&version=2.3.2
 #addin nuget:?package=Newtonsoft.Json&version=11.0.2
 #addin nuget:?package=Cake.Incubator&version=2.0.2
@@ -9,7 +9,7 @@ using Flurl;
 using Flurl.Http;
 using Cake.Incubator;
 
-#r ".\SmartDose.RestCore\bin\Debug\net45\SmartDose.RestCore.dll"
+#r ".\SmartDose.RestCore\bin\Debug\netstandard2.0\SmartDose.RestCore.dll"
 using SmartDose.RestCore.Helpers;
 using SmartDose.RestCore.Models;
 using Model = SmartDose.RestCore.Models.V1;
@@ -17,6 +17,7 @@ using Model = SmartDose.RestCore.Models.V1;
 
 #region Helper
 string SmartDoseServer="http://localhost:6040/smartdose/";
+
 void ResponseMessage(System.Net.HttpStatusCode statusCode, string messsage= "")
 {
     if (statusCode == System.Net.HttpStatusCode.OK)
@@ -40,42 +41,42 @@ Task("GetCustomers")
 });
 
 Task("DeleteAllCustomers")
-.Does(()=> {
-    System.Threading.Tasks.Task.Run(async ()=> {
-        var customers = await SmartDoseServer
-                                .AppendPathSegment("Customers")
-                                .GetJsonAsync<List<Model.Customer>>();
-        foreach(var customer in customers)
-        {
-            var response = await SmartDoseServer
+    .Does(()=> {
+        System.Threading.Tasks.Task.Run(async ()=> {
+            var customers = await SmartDoseServer
                                     .AppendPathSegment("Customers")
-                                    .AppendPathSegment(customer.CustomerId)
-                                    .DeleteAsync();
-            ResponseMessage(response.StatusCode, "Customer delete");
-        }
-    }).Wait();
-});
+                                    .GetJsonAsync<List<Model.Customer>>();
+            foreach(var customer in customers)
+            {
+                var response = await SmartDoseServer
+                                        .AppendPathSegment("Customers")
+                                        .AppendPathSegment(customer.CustomerId)
+                                        .DeleteAsync();
+                ResponseMessage(response.StatusCode, "Customer delete");
+            }
+        }).Wait();
+    });
 
 Task("CreateCustomer")
-.Does(()=> {
-    System.Threading.Tasks.Task.Run(async ()=> {
-        var customer = new Model.Customer
-        {
-            CustomerId = "4711",
-            Name = "Name4711",
-            Description= "Hallo",
-        };
-        var response = await SmartDoseServer
-                                .AppendPathSegment("Customers")
-                                .PostJsonAsync(customer);
-        ResponseMessage(response.StatusCode, $"Customer create {customer.Name}");
-        
-        var customers = await SmartDoseServer
-                                .AppendPathSegment("Customers")
-                                .GetJsonAsync<List<Model.Customer>>();
-        Information($"Customers={customers.Count}");
-    }).Wait();
-});
+    .Does(()=> {
+        System.Threading.Tasks.Task.Run(async ()=> {
+            var customer = new Model.Customer
+            {
+                CustomerId = "4711",
+                Name = "Name4711",
+                Description= "Hallo",
+            };
+            var response = await SmartDoseServer
+                                    .AppendPathSegment("Customers")
+                                    .PostJsonAsync(customer);
+            ResponseMessage(response.StatusCode, $"Customer create {customer.Name}");
+            
+            var customers = await SmartDoseServer
+                                    .AppendPathSegment("Customers")
+                                    .GetJsonAsync<List<Model.Customer>>();
+            Information($"Customers={customers.Count}");
+        }).Wait();
+    });
 
 Task("UpdateCustomer")
     .Does(()=> {
@@ -219,12 +220,13 @@ Task("Ticket-Sw-1804-LongText-not-Working")
 
 #endregion
 
-
 #region Cake defaults
 var target = Argument("target", "Default");
 Task("Default")
     .Does(() => {
-    Information("Hello Cake!");
+        Information("Build dependence project for this cake!");
+        NuGetRestore("./SmartDose.RestCore/SmartDose.RestCore.csproj");
+        DotNetCoreBuild("./SmartDose.RestCore/SmartDose.RestCore.csproj");
 });
 
 RunTarget(target);
