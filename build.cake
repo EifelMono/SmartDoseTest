@@ -5,6 +5,7 @@
 #addin nuget:?package=Cake.Incubator&version=2.0.2
 
 using Newtonsoft.Json;
+using Flurl;
 using Flurl.Http;
 using Cake.Incubator;
 
@@ -15,6 +16,7 @@ using Model = SmartDose.RestCore.Models.V1;
 #endregion
 
 #region Helper
+string SmartDoseServer="http://localhost:6040/smartdose/";
 void ResponseMessage(System.Net.HttpStatusCode statusCode, string messsage= "")
 {
     if (statusCode == System.Net.HttpStatusCode.OK)
@@ -29,7 +31,7 @@ void ResponseMessage(System.Net.HttpStatusCode statusCode, string messsage= "")
 Task("GetCustomers")
 .Does(()=> {
     System.Threading.Tasks.Task.Run(async ()=> {
-        var customers = await "http://localhost:6040/smartdose/Customers/".GetJsonAsync<List<Model.Customer>>();
+        var customers = await SmartDoseServer.AppendPathSegment("Customers").GetJsonAsync<List<Model.Customer>>();
         Information($"Customers={customers.Count}");
         Information(customers.Dump());
     }).Wait();
@@ -103,7 +105,7 @@ Task("CreateCanisters")
                 RotorId= 1.ToRotorId(),
             };
             var response = await "http://localhost:6040/SmartDose/Canisters".AllowHttpStatus("400-500").PostJsonAsync(canister);
-             ResponseMessage(response.StatusCode, $"Canister created {canister.CanisterId}")
+             ResponseMessage(response.StatusCode, $"Canister created {canister.CanisterId}");
             
             var canisters = await "http://localhost:6040/smartdose/Canisters/".GetJsonAsync<List<Model.Canister>>();
             Information($"Canisters={canisters.Count}");
@@ -161,20 +163,31 @@ async Task CreateMedicineFromExternalOrder(Model.ExternalOrder externalOrder)
 async Task CreateExternalOrder(string jsonFilename)
 {
     var externalOrder= jsonFilename.FromJsonFile<Model.ExternalOrder>();
-    Information("Order {externalOrder.ExternalId}");
+    Information($"Order {externalOrder.ExternalId}");
     await CreateMedicineFromExternalOrder(externalOrder).ConfigureAwait(false);
     var response = await "http://localhost:6040/SmartDose/Orders".AllowHttpStatus("400-500").PostJsonAsync(externalOrder);
     ResponseMessage(response.StatusCode, $"Order create {externalOrder.ExternalId}");
 }
 #endregion
 
-#region Tickets
-Task("Ticket-Sw-11427-Works")
+#region Tickets 
+
+#region Ticket 11427
+Task("Ticket-Sw-11427-Working")
     .Does(()=> {
         System.Threading.Tasks.Task.Run(async ()=> {
             await CreateExternalOrder("./Tickets/SW-11427/20180724-ROWATest49-JSON-working.json").ConfigureAwait(false);
     }).Wait();
 });
+
+Task("Ticket-Sw-11427-LongText-not-Working")
+    .Does(()=> {
+        System.Threading.Tasks.Task.Run(async ()=> {
+            await CreateExternalOrder("./Tickets/SW-11427/20180724-ROWATest51-JSON-Longtext-not_working.json").ConfigureAwait(false);
+    }).Wait();
+});
+#endregion
+
 #endregion
 
 
