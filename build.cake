@@ -31,7 +31,9 @@ void ResponseMessage(System.Net.HttpStatusCode statusCode, string messsage= "")
 Task("GetCustomers")
 .Does(()=> {
     System.Threading.Tasks.Task.Run(async ()=> {
-        var customers = await SmartDoseServer.AppendPathSegment("Customers").GetJsonAsync<List<Model.Customer>>();
+        var customers = await SmartDoseServer
+                                .AppendPathSegment("Customers")
+                                .GetJsonAsync<List<Model.Customer>>();
         Information($"Customers={customers.Count}");
         Information(customers.Dump());
     }).Wait();
@@ -40,10 +42,15 @@ Task("GetCustomers")
 Task("DeleteAllCustomers")
 .Does(()=> {
     System.Threading.Tasks.Task.Run(async ()=> {
-        var customers = await "http://localhost:6040/smartdose/Customers/".GetJsonAsync<List<Model.Customer>>();
+        var customers = await SmartDoseServer
+                                .AppendPathSegment("Customers")
+                                .GetJsonAsync<List<Model.Customer>>();
         foreach(var customer in customers)
         {
-            var response = await $"http://localhost:6040/smartdose/Customers/{customer.CustomerId}".DeleteAsync();
+            var response = await SmartDoseServer
+                                    .AppendPathSegment("Customers")
+                                    .AppendPathSegment(customer.CustomerId)
+                                    .DeleteAsync();
             ResponseMessage(response.StatusCode, "Customer delete");
         }
     }).Wait();
@@ -58,10 +65,14 @@ Task("CreateCustomer")
             Name = "Name4711",
             Description= "Hallo",
         };
-        var response = await "http://localhost:6040/SmartDose/Customers".PostJsonAsync(customer);
+        var response = await SmartDoseServer
+                                .AppendPathSegment("Customers")
+                                .PostJsonAsync(customer);
         ResponseMessage(response.StatusCode, $"Customer create {customer.Name}");
         
-        var customers = await "http://localhost:6040/smartdose/Customers/".GetJsonAsync<List<Model.Customer>>();
+        var customers = await SmartDoseServer
+                                .AppendPathSegment("Customers")
+                                .GetJsonAsync<List<Model.Customer>>();
         Information($"Customers={customers.Count}");
     }).Wait();
 });
@@ -75,10 +86,15 @@ Task("UpdateCustomer")
                 Name = "Name4711-"+ DateTime.Now.ToString(),
                 Description= "Hallo",
             };
-            var response = await $"http://localhost:6040/SmartDose/Customers/{customer.CustomerId}".PutJsonAsync(customer);
+            var response = await SmartDoseServer
+                                    .AppendPathSegment("Customers")
+                                    .AppendPathSegment(customer.CustomerId)
+                                    .PutJsonAsync(customer);
             ResponseMessage(response.StatusCode, $"Customer update {customer.Name}");
             
-            var customers = await "http://localhost:6040/smartdose/Customers/".GetJsonAsync<List<Model.Customer>>();
+            var customers = await SmartDoseServer
+                                    .AppendPathSegment("Customers")
+                                    .GetJsonAsync<List<Model.Customer>>();
             Information($"Customers={customers.Count}");
         }).Wait();
     });
@@ -88,7 +104,9 @@ Task("UpdateCustomer")
 Task("GetCanisters")
     .Does(()=> {
         System.Threading.Tasks.Task.Run(async ()=> {
-            var canisters = await "http://localhost:6040/smartdose/Canisters/".GetJsonAsync<List<Model.Canister>>();
+            var canisters = await SmartDoseServer
+                                    .AppendPathSegment("Canisters")
+                                    .GetJsonAsync<List<Model.Canister>>();
             Information($"Canisters={canisters.Count}");
             Information(canisters.Dump());
     }).Wait();
@@ -104,10 +122,15 @@ Task("CreateCanisters")
                 Largecanister = false,
                 RotorId= 1.ToRotorId(),
             };
-            var response = await "http://localhost:6040/SmartDose/Canisters".AllowHttpStatus("400-500").PostJsonAsync(canister);
+            var response = await SmartDoseServer
+                                    .AppendPathSegment("Canisters")
+                                    .AllowHttpStatus("400-500")
+                                    .PostJsonAsync(canister);
              ResponseMessage(response.StatusCode, $"Canister created {canister.CanisterId}");
             
-            var canisters = await "http://localhost:6040/smartdose/Canisters/".GetJsonAsync<List<Model.Canister>>();
+            var canisters = await SmartDoseServer
+                                    .AppendPathSegment("Canisters")
+                                    .GetJsonAsync<List<Model.Canister>>();
             Information($"Canisters={canisters.Count}");
     }).Wait();
 })
@@ -123,7 +146,10 @@ async Task CreateMedicine(Model.Medicine medicine)
 {
     Information($"Create Medicine {medicine.Name}");
     try {
-        var response = await "http://localhost:6040/SmartDose/Medicines".AllowHttpStatus("400-500").PostJsonAsync(medicine).ConfigureAwait(false);
+        var response = await SmartDoseServer
+                                .AppendPathSegment("Medicines")
+                                .AllowHttpStatus("400-500")
+                                .PostJsonAsync(medicine).ConfigureAwait(false);
         ResponseMessage(response.StatusCode, "Medicine create");
     }
     catch(Exception ex)
@@ -165,7 +191,10 @@ async Task CreateExternalOrder(string jsonFilename)
     var externalOrder= jsonFilename.FromJsonFile<Model.ExternalOrder>();
     Information($"Order {externalOrder.ExternalId}");
     await CreateMedicineFromExternalOrder(externalOrder).ConfigureAwait(false);
-    var response = await "http://localhost:6040/SmartDose/Orders".AllowHttpStatus("400-500").PostJsonAsync(externalOrder);
+    var response = await SmartDoseServer
+                                .AppendPathSegment("Orders")
+                                .AllowHttpStatus("400-500")
+                                .PostJsonAsync(externalOrder);
     ResponseMessage(response.StatusCode, $"Order create {externalOrder.ExternalId}");
 }
 #endregion
