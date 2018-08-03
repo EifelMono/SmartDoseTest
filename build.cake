@@ -18,7 +18,6 @@ using Model = SmartDose.RestCore.Models.V1;
 #region Helper
 var SmartDoseServer ="http://localhost:6040/smartdose/";
                         // .AllowHttpStatus("400-500");
-var SmartDoseServerWithHttpStatus = SmartDoseServer.AllowHttpStatus("400-500");
 
 void ResponseMessage(System.Net.HttpStatusCode statusCode, string messsage= "")
 {
@@ -68,8 +67,9 @@ Task("CreateCustomer")
                     Name = "Name4711",
                     Description= "Hallo",
                 };
-                var response = await SmartDoseServerWithHttpStatus
+                var response = await SmartDoseServer
                                         .AppendPathSegment("Customers")
+                                        .AllowHttpStatus("400-500")
                                         .PostJsonAsync(customer);
                 ResponseMessage(response.StatusCode, $"Customer create {customer.Name}");
                 
@@ -129,8 +129,9 @@ Task("CreateCanisters")
                 Largecanister = false,
                 RotorId= 1.ToRotorId(),
             };
-            var response = await SmartDoseServerWithHttpStatus
+            var response = await SmartDoseServer
                                     .AppendPathSegment("Canisters")
+                                    .AllowHttpStatus("400-500")
                                     .PostJsonAsync(canister);
              ResponseMessage(response.StatusCode, $"Canister created {canister.CanisterId}");
             
@@ -147,6 +148,31 @@ Task("CreateCanisters")
 #endregion
 
 #region Medicine
+
+Model.Medicine TestMedicine(string id, string name= null)
+{
+    return new Model.Medicine{
+                Active = true,
+                Comment = $"Comment {id}",
+                Description = $"Med Desc {id}",
+                Identifier = id,
+                Name = name ?? $"Medicine {id}",
+                Pictures = new List<Model.MedicinePicture>(),
+                PouchMode = Model.PouchMode.MultiDose,
+                PrintDetails = new List<Model.PrintDetail>(),
+                SpecialHandling = new Model.SpecialHandling
+                {
+                    MaxAmountPerPouch = 4,
+                    Narcotic = true,
+                    NeedsCooling = false,
+                    RobotHandling = false,
+                    SeperatePouch = false,
+                    Splitable = true
+                },
+                SynonymIds = new List<Model.Synonym>(),
+                TrayFillOnly = false,
+    };
+}
 Task("GetMedicines")
     .Does(()=> {
         System.Threading.Tasks.Task.Run(async ()=> {
@@ -177,63 +203,67 @@ Task("DeleteAllMedicines")
 Task("CreateMedicine")
     .Does(()=> {
         System.Threading.Tasks.Task.Run(async ()=> {
-            var medicine= new Model.Medicine{
-                                Active = true,
-                                Comment = "Comment " + Guid.NewGuid().ToString(),
-                                Description = "Med Desc " + Guid.NewGuid().ToString(),
-                                Identifier = "3",
-                                Name = "Medicine 3",
-                                Pictures = new List<Model.MedicinePicture>(),
-                                PouchMode = Model.PouchMode.MultiDose,
-                                PrintDetails = new List<Model.PrintDetail>(),
-                                SpecialHandling = new Model.SpecialHandling
-                                {
-                                    MaxAmountPerPouch = 4,
-                                    Narcotic = true,
-                                    NeedsCooling = false,
-                                    RobotHandling = false,
-                                    SeperatePouch = false,
-                                    Splitable = true
-                                },
-                                SynonymIds = new List<Model.Synonym>(),
-                                TrayFillOnly = false,
-                };
-                var response = await SmartDoseServerWithHttpStatus
-                                        .AppendPathSegment("Medicines")
-                                        .PostJsonAsync(medicine);
-                ResponseMessage(response.StatusCode, $"Medicine create {medicine.Name}");
-            
-                var medicines = await SmartDoseServer
-                                        .AppendPathSegment("Medicines")
-                                        .GetJsonAsync<List<Model.Customer>>();
-                Information($"Customers={medicines.Count}");
+            var medicine= TestMedicine("1");
+            var response = await SmartDoseServer
+                                    .AppendPathSegment("Medicines")
+                                    .AllowHttpStatus("400-500")
+                                    .PostJsonAsync(medicine);
+            ResponseMessage(response.StatusCode, $"Medicine create {medicine.Name}");
+
+            var medicines = await SmartDoseServer
+                                    .AppendPathSegment("Medicines")
+                                    .GetJsonAsync<List<Model.Customer>>();
+            Information($"Medicines={medicines.Count}");
         }).Wait();
     });
 
-/*
-Task("UpdateCustomer")
+Task("UpdateMedicine")
     .Does(()=> {
         System.Threading.Tasks.Task.Run(async ()=> {
-            var customer = new Model.Customer
-            {
-                CustomerId = "4711",
-                Name = "Name4711-"+ DateTime.Now.ToString(),
-                Description= "Hallo",
-            };
+            var medicine= TestMedicine("1", DateTime.Now.ToString());
             var response = await SmartDoseServer
-                                    .AppendPathSegments("Customers", customer.CustomerId)
-                                    .PutJsonAsync(customer);
-            ResponseMessage(response.StatusCode, $"Customer update {customer.Name}");
+                                    .AppendPathSegments("Medicines", medicine.Identifier)
+                                    .PutJsonAsync(medicine);
+            ResponseMessage(response.StatusCode, $"Medicine update {medicine.Name}");
             
-            var customers = await SmartDoseServer
-                                    .AppendPathSegment("Customers")
-                                    .GetJsonAsync<List<Model.Customer>>();
-            Information($"Customers={customers.Count}");
+            var medicines = await SmartDoseServer
+                                    .AppendPathSegment("Medicines")
+                                    .GetJsonAsync<List<Model.Medicine>>();
+            Information($"Medicines={medicines.Count}");
         }).Wait();
     });
-*/ 
 #endregion
 
+#region ExternalOrder
+/* 
+Task("GetOrders")
+    .Does(()=> {
+        System.Threading.Tasks.Task.Run(async ()=> {
+            var orders = await SmartDoseServer
+                                .AppendPathSegment("Orders")
+                                .GetJsonAsync<List<Model.OrderDetail>>();
+            Information($"Orders={orders.Count}");
+            Information(orders.Dump());
+        }).Wait();
+    });
+
+Task("DeleteAllOrders")
+    .Does(()=> {
+        System.Threading.Tasks.Task.Run(async ()=> {
+            var orders = await SmartDoseServer
+                                    .AppendPathSegment("Orders")
+                                    .GetJsonAsync<List<Model.OrderDetail>>();
+            foreach(var order in orders)
+            {
+                var response = await SmartDoseServer
+                                        .AppendPathSegments("Orders", order.Identifier)
+                                        .DeleteAsync();
+                ResponseMessage(response.StatusCode, "Orders delete");
+            }
+        }).Wait();
+    });
+*/
+#endregion
 
 #region Ticket Helper
 
@@ -241,8 +271,9 @@ async Task CreateMedicine(Model.Medicine medicine)
 {
     Information($"Create Medicine {medicine.Name}");
     try {
-        var response = await SmartDoseServerWithHttpStatus
+        var response = await SmartDoseServer
                                 .AppendPathSegment("Medicines")
+                                .AllowHttpStatus("400-500")
                                 .PostJsonAsync(medicine).ConfigureAwait(false);
         ResponseMessage(response.StatusCode, "Medicine create");
     }
@@ -285,8 +316,9 @@ async Task CreateExternalOrder(string jsonFilename)
     var externalOrder= jsonFilename.FromJsonFile<Model.ExternalOrder>();
     Information($"Order {externalOrder.ExternalId}");
     await CreateMedicineFromExternalOrder(externalOrder).ConfigureAwait(false);
-    var response = await SmartDoseServerWithHttpStatus
+    var response = await SmartDoseServer
                                 .AppendPathSegment("Orders")
+                                .AllowHttpStatus("400-500")
                                 .PostJsonAsync(externalOrder);
     ResponseMessage(response.StatusCode, $"Order create {externalOrder.ExternalId}");
 }
@@ -297,10 +329,21 @@ async Task CreateExternalOrder(string jsonFilename)
 #region Ticket 1804
 
 Task("Ticket-Sw-1804-Test")
-    .Does(()=> {
-        System.Threading.Tasks.Task.Run(async ()=> {
-            await CreateExternalOrder("./Tickets/SW-1804/Test.json").ConfigureAwait(false);
-    }).Wait();
+    .Does(async ()=> {
+        //System.Threading.Tasks.Task.Run(async ()=> {
+            for (int i=100;i<105; i++)
+            {
+                Information($"Medicine {i}");
+                var medicine= TestMedicine(i.ToString());
+                var response = await SmartDoseServer
+                                        .AppendPathSegment("Medicines")
+                                        .AllowHttpStatus("400-500")
+                                        .PostJsonAsync(medicine);
+                ResponseMessage(response.StatusCode, $"Medicine create {medicine.Name}");
+                // await System.Threading.Tasks.Task.Delay(TimeSpan.FromSeconds(1)).ConfigureAwait(false);
+            }
+            // await CreateExternalOrder("./Tickets/SW-1804/Test.json").ConfigureAwait(false);
+    //}).Wait();
 });
 Task("Ticket-Sw-1804-Working")
     .Does(()=> {
