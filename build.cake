@@ -21,6 +21,8 @@ var SmartDoseUrl= "http://localhost:6040/SmartDose";
 var CustomersUrl= "http://localhost:6040/SmartDose/Customers";
 var CanistersUrl= "http://localhost:6040/SmartDose/Canisters";
 
+var MedicinesUrl= "http://localhost:6040/SmartDose/Medicines";
+
 
 void StatusMessage(System.Net.HttpStatusCode statusCode, string message= "")
 {
@@ -35,15 +37,11 @@ void StatusMessage(System.Net.HttpStatusCode statusCode, string message= "")
 }
 
 void StatusMessage(EmcFlurHttpResponse response, string message= "")
-{
-    StatusMessage(response.StatusCode, message);
-}
+    => StatusMessage(response.StatusCode, message);
 
 #endregion
 
 #region Customers
-
-
 Task("GetCustomers")
     .Does(async ()=> {
             if (await CustomersUrl.EmcGetJsonAsync<List<Models.Customer>>() is var customers && customers.IsHttpStatusCodeOK())
@@ -94,7 +92,8 @@ Task("DeleteCustomers")
 });
 
 #endregion
-#region Canister
+
+#region Canisters
 
 Task("GetCanisters")
     .Does(async ()=> {
@@ -126,90 +125,38 @@ Task("DeleteCanisters")
 
 #endregion
 
+#region Medicines
 
-#region Medicine
-/* 
-Model.Medicine TestMedicine(string id, string name= null)
-{
-    return new Model.Medicine{
-                Active = true,
-                Comment = $"Comment {id}",
-                Description = $"Med Desc {id}",
-                MedicineId = id,
-                Name = name ?? $"Medicine {id}",
-                Pictures = new List<Model.MedicinePicture>(),
-                PouchMode = Model.PouchMode.MultiDose,
-                PrintDetails = new List<Model.PrintDetail>(),
-                SpecialHandling = new Model.SpecialHandling
-                {
-                    MaxAmountPerPouch = 4,
-                    Narcotic = true,
-                    NeedsCooling = false,
-                    RobotHandling = false,
-                    SeperatePouch = false,
-                    Splitable = true
-                },
-                SynonymIds = new List<Model.Synonym>(),
-                TrayFillOnly = false,
-    };
-}
 Task("GetMedicines")
-    .Does(()=> {
-        System.Threading.Tasks.Task.Run(async ()=> {
-            var medicines = await SmartDoseServer
-                                .AppendPathSegment("Medicines")
-                                .GetJsonAsync<List<Model.Medicine>>();
-            Information($"Medicines={medicines.Count}");
-            Information(medicines.Dump());
-        }).Wait();
-    });
-Task("DeleteAllMedicines")
-    .Does(()=> {
-        System.Threading.Tasks.Task.Run(async ()=> {
-            var medicines = await SmartDoseServer
-                                    .AppendPathSegment("Medicines")
-                                    .GetJsonAsync<List<Model.Medicine>>();
-            foreach(var medicine in medicines)
+    .Does(async ()=> {
+            if (await MedicinesUrl.EmcGetJsonAsync<List<Models.Medicine>>() is var medicines && medicines.IsHttpStatusCodeOK())
             {
-                var response = await SmartDoseServer
-                                        .AppendPathSegments("Medicines", medicine.MedicineId)
-                                        .DeleteAsync();
-                ResponseMessage(response.StatusCode, "Medicines delete");
+                Information($"Medicines={medicines.Self.Count}");
+                Information(medicines.Self.Dump());
             }
-        }).Wait();
-    });
-Task("CreateMedicine")
-    .Does(()=> {
-        System.Threading.Tasks.Task.Run(async ()=> {
-            var medicine= TestMedicine("1");
-            var response = await SmartDoseServer
-                                    .AppendPathSegment("Medicines")
-                                    .AllowHttpStatus("400-500")
-                                    .PostJsonAsync(medicine);
-            ResponseMessage(response.StatusCode, $"Medicine create {medicine.Name}");
-            var medicines = await SmartDoseServer
-                                    .AppendPathSegment("Medicines")
-                                    .GetJsonAsync<List<Model.Customer>>();
-            Information($"Medicines={medicines.Count}");
-        }).Wait();
-    });
-Task("UpdateMedicine")
-    .Does(()=> {
-        System.Threading.Tasks.Task.Run(async ()=> {
-            var medicine= TestMedicine("1", DateTime.Now.ToString());
-            var response = await SmartDoseServer
-                                    .AppendPathSegments("Medicines", medicine.MedicineId)
-                                    .PutJsonAsync(medicine);
-            ResponseMessage(response.StatusCode, $"Medicine update {medicine.Name}");
-            
-            var medicines = await SmartDoseServer
-                                    .AppendPathSegment("Medicines")
-                                    .GetJsonAsync<List<Model.Medicine>>();
-            Information($"Medicines={medicines.Count}");
-        }).Wait();
-    });
-*/
+            StatusMessage(medicines.StatusCode, "GetMedicines");
+});
+
+Task("CreateMedicines")
+    .Does(async ()=> {
+        for(int i=1;i<= 10; i++)
+        StatusMessage(await MedicinesUrl.EmcPostJsonAsync(Defaults.Medicine(i.ToString())), $"Create Medicine {i}");
+});
+
+
+Task("DeleteMedicines")
+    .Does(async ()=> {
+            if (await MedicinesUrl.EmcGetJsonAsync<List<Models.Medicine>>() is var medicines && medicines.IsHttpStatusCodeOK())
+            {
+                Information($"Medicines={medicines.Self.Count}");
+                foreach(var medicine in medicines.Self)
+                    StatusMessage(await MedicinesUrl.AppendPathSegment(medicine.MedicineId).EmcDeleteAsync(), $"Delete medicines id={medicine.MedicineId}");
+            }
+            StatusMessage(medicines.StatusCode, "DeleteMedicines");
+});
 #endregion
+
+
 #region ExternalOrder
 /* 
 Task("GetOrders")
@@ -332,9 +279,9 @@ Task("Ticket-Sw-1804-LongText-not-Working")
 */
 #endregion
 #endregion
+
 #region Cake defaults
 var target = Argument("target", "Default");
-
 
 Task("Default")
     .Does(() => {

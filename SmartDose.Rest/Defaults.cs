@@ -39,5 +39,29 @@ namespace SmartDose.Rest
               Largecanister = false,
               RotorId = id.ToRotorId(),
           };
+
+        public static Models.Medicine Medicine(string id, string name = null)
+            => new Models.Medicine
+            {
+                Active = true,
+                Comment = $"Comment {id}",
+                Description = $"Med Desc {id}",
+                MedicineId = id,
+                Name = name ?? $"Medicine {id}",
+                Pictures = new List<Models.MedicinePicture>(),
+                PouchMode = Models.PouchMode.MultiDose,
+                PrintDetails = new List<Models.PrintDetail>(),
+                SpecialHandling = new Models.SpecialHandling
+                {
+                    MaxAmountPerPouch = 4,
+                    Narcotic = true,
+                    NeedsCooling = false,
+                    RobotHandling = false,
+                    SeperatePouch = false,
+                    Splitable = true
+                },
+                SynonymIds = new List<Models.Synonym>(),
+                TrayFillOnly = false,
+            };
     }
 }
