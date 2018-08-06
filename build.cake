@@ -23,6 +23,8 @@ var CanistersUrl= "http://localhost:6040/SmartDose/Canisters";
 
 var MedicinesUrl= "http://localhost:6040/SmartDose/Medicines";
 
+var OrdersUrl= "http://localhost:6040/SmartDose/Orders";
+
 
 void StatusMessage(System.Net.HttpStatusCode statusCode, string message= "")
 {
@@ -158,17 +160,19 @@ Task("DeleteMedicines")
 
 
 #region ExternalOrder
-/* 
+
+
 Task("GetOrders")
-    .Does(()=> {
-        System.Threading.Tasks.Task.Run(async ()=> {
-            var orders = await SmartDoseServer
-                                .AppendPathSegment("Orders")
-                                .GetJsonAsync<List<Model.OrderDetail>>();
-            Information($"Orders={orders.Count}");
-            Information(orders.Dump());
-        }).Wait();
-    });
+    .Does(async ()=> {
+            if (await OrdersUrl.EmcGetJsonAsync<List<Models.OrderDetail>>() is var orders && orders.IsHttpStatusCodeOK())
+            {
+                Information($"Orders={orders.Self.Count}");
+                Information(orders.Self.Dump());
+            }
+            StatusMessage(orders.StatusCode, "GetOrders");
+});
+
+/* 
 Task("DeleteAllOrders")
     .Does(()=> {
         System.Threading.Tasks.Task.Run(async ()=> {
@@ -187,83 +191,35 @@ Task("DeleteAllOrders")
 */
 #endregion
 #region Ticket Helper
-/* 
-async Task CreateMedicine(Model.Medicine medicine)
+async Task CreateMedicineAsync(Models.Medicine medicine)
 {
-    Information($"Create Medicine {medicine.Name}");
-    try {
-        var response = await SmartDoseServer
-                                .AppendPathSegment("Medicines")
-                                .AllowHttpStatus("400-500")
-                                .PostJsonAsync(medicine).ConfigureAwait(false);
-        ResponseMessage(response.StatusCode, "Medicine create");
-    }
-    catch(Exception ex)
-    {
-        Error(ex.ToString());
-    }
+    StatusMessage(await MedicinesUrl.EmcPostJsonAsync(medicine).ConfigureAwait(false), $"Create Medicine {medicine.Name}");
 }
-async Task CreateMedicineFromExternalOrder(Model.ExternalOrder externalOrder)
+async Task CreateMedicineFromExternalOrderAsync(Models.ExternalOrder externalOrder)
 {
     foreach(var orderDetail in externalOrder.OrderDetails)
         foreach(var intakeDetail in orderDetail.IntakeDetails)
             foreach(var medicationDetail in intakeDetail.MedicationDetails)
-                await CreateMedicine(new Model.Medicine{
-                                Active = true,
-                                Comment = "Comment " + Guid.NewGuid().ToString(),
-                                Description = "Med Desc " + Guid.NewGuid().ToString(),
-                                MedicineId = medicationDetail.MedicineId,
-                                Name = medicationDetail.PrescribedMedicine,
-                                Pictures = new List<Model.MedicinePicture>(),
-                                PouchMode = Model.PouchMode.MultiDose,
-                                PrintDetails = new List<Model.PrintDetail>(),
-                                SpecialHandling = new Model.SpecialHandling
-                                {
-                                    MaxAmountPerPouch = 4,
-                                    Narcotic = true,
-                                    NeedsCooling = false,
-                                    RobotHandling = false,
-                                    SeperatePouch = false,
-                                    Splitable = true
-                                },
-                                SynonymIds = new List<Model.Synonym>(),
-                                TrayFillOnly = false,
-                }).ConfigureAwait(false);
+                await CreateMedicineAsync(Defaults.Medicine(medicationDetail.MedicineId, medicationDetail.PrescribedMedicine)).ConfigureAwait(false);
 }
-async Task CreateExternalOrder(string jsonFilename)
+async Task CreateExternalOrderAsync(string jsonFilename)
 {
-    var externalOrder= jsonFilename.FromJsonFile<Model.ExternalOrder>();
+    var externalOrder= jsonFilename.FileReadJson<Models.ExternalOrder>();
     Information($"Order {externalOrder.ExternalId}");
-    await CreateMedicineFromExternalOrder(externalOrder).ConfigureAwait(false);
-    var response = await SmartDoseServer
-                                .AppendPathSegment("Orders")
-                                .AllowHttpStatus("400-500")
-                                .PostJsonAsync(externalOrder);
-    ResponseMessage(response.StatusCode, $"Order create {externalOrder.ExternalId}");
+    await CreateMedicineFromExternalOrderAsync(externalOrder).ConfigureAwait(false);
+    StatusMessage(await OrdersUrl.EmcPostJsonAsync(externalOrder).ConfigureAwait(false), $"Create External order");
 }
-*/
+
+
 #endregion
 #region Tickets 
 #region Ticket 1804
 
-/* 
 Task("Ticket-Sw-1804-Test")
     .Does(async ()=> {
-        //System.Threading.Tasks.Task.Run(async ()=> {
-            for (int i=100;i<105; i++)
-            {
-                Information($"Medicine {i}");
-                var medicine= TestMedicine(i.ToString());
-                var response = await SmartDoseServer
-                                        .AppendPathSegment("Medicines")
-                                        .AllowHttpStatus("400-500")
-                                        .PostJsonAsync(medicine);
-                ResponseMessage(response.StatusCode, $"Medicine create {medicine.Name}");
-                // await System.Threading.Tasks.Task.Delay(TimeSpan.FromSeconds(1)).ConfigureAwait(false);
-            }
-            // await CreateExternalOrder("./Tickets/SW-1804/Test.json").ConfigureAwait(false);
-    //}).Wait();
-});
+        await CreateExternalOrderAsync("./Tickets/SW-1804/Test.json");
+    });
+/* 
 Task("Ticket-Sw-1804-Working")
     .Does(()=> {
         System.Threading.Tasks.Task.Run(async ()=> {
