@@ -158,7 +158,6 @@ Task("DeleteMedicines")
 });
 #endregion
 
-
 #region ExternalOrder
 
 
@@ -190,10 +189,16 @@ Task("DeleteAllOrders")
     });
 */
 #endregion
+
 #region Ticket Helper
 async Task CreateMedicineAsync(Models.Medicine medicine)
 {
     StatusMessage(await MedicinesUrl.EmcPostJsonAsync(medicine).ConfigureAwait(false), $"Create Medicine {medicine.Name}");
+}
+
+async Task CreateCanisterAsync(Models.Canister canister)
+{
+    StatusMessage(await CanistersUrl.EmcPostJsonAsync(canister).ConfigureAwait(false), $"Create Canister {canister.CanisterId}");
 }
 async Task CreateMedicineFromExternalOrderAsync(Models.ExternalOrder externalOrder)
 {
@@ -202,6 +207,16 @@ async Task CreateMedicineFromExternalOrderAsync(Models.ExternalOrder externalOrd
             foreach(var medicationDetail in intakeDetail.MedicationDetails)
                 await CreateMedicineAsync(Defaults.Medicine(medicationDetail.MedicineId, medicationDetail.PrescribedMedicine)).ConfigureAwait(false);
 }
+/* 
+async Task CreateCanisterFromExternalOrderAsync(Models.ExternalOrder externalOrder)
+{
+    foreach(var orderDetail in externalOrder.OrderDetails)
+        foreach(var intakeDetail in orderDetail.IntakeDetails)
+            foreach(var medicationDetail in intakeDetail.MedicationDetails)
+                await CreateCansiterAsync(Defaults.Canister(medicationDetail.MedicineId, medicationDetail.PrescribedMedicine)).ConfigureAwait(false);
+}
+*/
+
 async Task CreateExternalOrderAsync(string jsonFilename)
 {
     var externalOrder= jsonFilename.FileReadJson<Models.ExternalOrder>();
@@ -219,20 +234,17 @@ Task("Ticket-Sw-1804-Test")
     .Does(async ()=> {
         await CreateExternalOrderAsync("./Tickets/SW-1804/Test.json");
     });
-/* 
+    
 Task("Ticket-Sw-1804-Working")
-    .Does(()=> {
-        System.Threading.Tasks.Task.Run(async ()=> {
-            await CreateExternalOrder("./Tickets/SW-1804/20180724-ROWATest49-JSON-working.json").ConfigureAwait(false);
-    }).Wait();
-});
+    .Does(async ()=> {
+        await CreateExternalOrderAsync("./Tickets/SW-1804/20180724-ROWATest49-JSON-working.json");
+    });
+
 Task("Ticket-Sw-1804-LongText-not-Working")
-    .Does(()=> {
-        System.Threading.Tasks.Task.Run(async ()=> {
-            await CreateExternalOrder("./Tickets/SW-1804/20180724-ROWATest51-JSON-Longtext-not_working.json").ConfigureAwait(false);
-    }).Wait();
-});
-*/
+    .Does(async ()=> {
+        await CreateExternalOrderAsync("./Tickets/SW-1804/20180724-ROWATest51-JSON-Longtext-not_working.json");
+    });
+
 #endregion
 #endregion
 
