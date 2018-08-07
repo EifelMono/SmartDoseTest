@@ -1,0 +1,90 @@
+{
+    "ExternalId": "20180724-TEST54",
+    "Timestamp": "2018-07-24T10:47:00",
+    "Customer": {
+        "CustomerId": "11111 - TEST54",
+        "Name": "Customer Customer - TEST54"
+    },
+    "OrderDetails": [
+        {
+            "Pharmacy": {
+                "CustomerId": "11112 - TEST54",
+                "Name": "Customer Apotheke - TEST54"
+            },
+            "Patient": {
+                "ExternalPatientNumber": "081513 - TEST54",
+                "DateOfBirth": "1900-02-03T00:00:00",
+                "ContactPerson": {
+                    "Name": "ÀÂÆÈÉÊËÎÏÔŒÙÛÜŸÇ"
+                },
+                "ContactAddress": {
+                    "Addressline1": "àâæèéêëîïôœùûüÿç",
+                    "City":  "¡¢£¤¥¦§¨©ª«¬®¯°±²³´µ¶·¸¹º»¼½¾",
+                    "Country": "de-DE - TEST54",
+                    "Postalcode": "0815-0850-20180724",
+                    "State": "01"
+                },
+                "RoomNumber": "PatRoom - TEST54",
+                "BedNumber": "ìíîïðñòóôõö÷øùúûüýþÿ",
+                "WardName": "PadWard - TEST54"
+            },
+            "DestinationFacility": {
+                "CustomerId": "11123 - TEST54",
+                "Name": "ÀÁÂÃÄÅÆÇÈÉÊËÌÍÎÏÐÑÒÓÔÕÖ",
+				"DepartmentCode": "10100 - TEST54",
+				"DepartmentName": "×ØÙÚÛÜÝÞßàáâãäåæçèéêë",
+					"ContactAddress": {
+						"NameLine1": "DestinationFacility NameLine1 - TEST54",
+						"Addressline1": "DestinationFacility AdressLine1 - TEST54",
+						"Postalcode": "DestinationFacility PostalCode - TEST54",
+						"City": "DestinationFacility City - TEST54",
+						"Country": "DestinationFacility Country - TEST54"
+			 }
+			},
+            "ExternalDetailPrintInfo1": "A 25.07.2018 - TEST54",
+            "ExternalDetailPrintInfo2": "B 25.07.2018 - TEST54",
+            "IntakeDetails": [
+                {
+                    "IntakeDateTime": "2018-07-25T08:00:00",
+                    "MedicationDetails": [
+                        {
+                            "MedicineId": 2010503001105,
+                            "Count": 1,
+                            "PrescribedMedicine": "ĀāĂăĄąĆćĈĉĊċČčĎďĐđĒēĔĕĖėĘęĚěĜĝĞğĠġĢ",
+                            "IntakeAdvice": "ģĤĥĦħĨĩĪīĬĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁł",
+                            "PhysicianComment": "1.0",
+                            "Physician": "Physician - TEST54"
+                        }
+						,
+                        {
+                            "MedicineId": 2011457001104,
+                            "Count": 1,
+                            "PrescribedMedicine": "ŅņŇňŉŊŋŌōŎŏŐőŒœŔŕŖŗŘřŚśŜŝŞ",
+                            "IntakeAdvice": "şŠšŢţŤťŦŧŨũŪūŬŭŮůŰűŲųŴŵŶŷŸŹźŻżŽžſ",
+                            "PhysicianComment": "1.0",
+                            "Physician": "Physician - TEST54"
+                        }
+						,
+                        {
+                            "MedicineId": 2012689001108,
+                            "Count": 1,
+                            "PrescribedMedicine": "ƀƁƂƃƄƅƆƇƈƉƊƋƌƍƎƏƐƑƒƓƔƕƖƗƘƙƚƛ",
+                            "IntakeAdvice": "ƜƝƞƟƠơƢƣƤƥƦƧƨƩƪƫƬƭƮƯưƱƲƳƴƵƶƷƸƹƺƻƼƽƾƿ",
+                            "PhysicianComment": "1.0",
+                            "Physician": "Physician - TEST54"
+                        }
+						,
+                        {
+                            "MedicineId": 2011210001105,
+                            "Count": 1,
+                            "PrescribedMedicine": "ǀǁǂǃǄǅǆǇǈǉǊǋǌǍǎǏǐǑǒǓǔǕǖǗǘǙǚǛǜǝǞǟǠǡ",
+                            "IntakeAdvice": "ǣǤǥǦǧǨǩǪǫǬǭǮǯǰǱǲǳǴǵǶǷǸǹǺǻǼǽǾǿ",
+                            "PhysicianComment": "1.0",
+                            "Physician": "Physician - TEST54"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

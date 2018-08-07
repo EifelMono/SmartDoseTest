@@ -246,6 +246,15 @@ Task("Ticket-Sw-1804-LongText-not-Working")
     });
 
 #endregion
+
+#region Ticket 1805
+
+Task("Ticket-Sw-1804")
+    .Does(async ()=> {
+        await CreateExternalOrderAsync("./Tickets/SW-1805/20180726_132546-JSON-TEST54-Bug-Medifilm-IntakeAdvice-Unicode.json");
+    });
+
+#endregion
 #endregion
 
 #region Cake defaults
