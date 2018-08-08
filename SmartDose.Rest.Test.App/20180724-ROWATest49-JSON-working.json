@@ -1,0 +1,86 @@
+{
+  "ExternalId": "20180724-TEST49",
+  "Timestamp": "2018-07-24T20:47:00",
+  "Customer": {
+    "CustomerId": "11111 - TEST49",
+    "Name": "Customer Customer - TEST49"
+  },
+  "OrderDetails": [
+    {
+      "Pharmacy": {
+        "CustomerId": "11112 - TEST49",
+        "Name": "Customer Apotheke - TEST49"
+      },
+      "Patient": {
+        "ExternalPatientNumber": "081513 - TEST49",
+        "DateOfBirth": "1900-02-03T00:00:00",
+        "ContactPerson": {
+          "Name": "Domi Tester - TEST49"
+        },
+        "ContactAddress": {
+          "City": "Apotheke Nameline2 - TEST49",
+          "Country": "de-DE - TEST49",
+          "Postalcode": "0815-0850-20180724",
+          "State": "01"
+        },
+        "RoomNumber": "PatRoom - TEST49",
+        "BedNumber": "PatBed - TEST49",
+        "WardName": "PadWard - TEST49"
+      },
+      "DestinationFacility": {
+        "CustomerId": "11123 - TEST49",
+        "Name": "DestinationName - TEST49",
+        "DepartmentCode": "10100 - TEST49",
+        "DepartmentName": "DepartmentName - TEST49",
+        "ContactAddress": {
+          "NameLine1": "DestinationFacility NameLine1 - TEST49",
+          "Addressline1": "DestinationFacility AdressLine1 - TEST49",
+          "Postalcode": "DestinationFacility PostalCode - TEST49",
+          "City": "DestinationFacility City - TEST49",
+          "Country": "DestinationFacility Country - TEST49"
+        },
+      },
+      "ExternalDetailPrintInfo1": "A 25.07.2018 - TEST49",
+      "ExternalDetailPrintInfo2": "B 25.07.2018 - TEST49",
+      "IntakeDetails": [
+        {
+          "IntakeDateTime": "2019-07-25T08:00:00",
+          "MedicationDetails": [
+            {
+              "MedicineId": 2010503001105,
+              "Count": 1,
+              "PrescribedMedicine": "Paracetamol 500 mg Actavis - TEST49",
+              "IntakeAdvice": "Tabl  oblong  weiss1  ø1 - TEST49",
+              "PhysicianComment": "1.0",
+              "Physician": "Physician - TEST49"
+            },
+            {
+              "MedicineId": 2011457001104,
+              "Count": 1,
+              "PrescribedMedicine": "Keppra 250 mg - TEST49",
+              "IntakeAdvice": "Tabl  oval  blau3  ucb 250  ø1 - TEST49",
+              "PhysicianComment": "1.0",
+              "Physician": "Physician - TEST49"
+            },
+            {
+              "MedicineId": 2012689001108,
+              "Count": 1,
+              "PrescribedMedicine": "Sequase 25 mg - TEST49",
+              "IntakeAdvice": "Tabl  rund  rot6  SEROQUEL 25 - TEST49",
+              "PhysicianComment": "1.0",
+              "Physician": "Physician - TEST49"
+            },
+            {
+              "MedicineId": 2011210001105,
+              "Count": 1,
+              "PrescribedMedicine": "Oedemex 40 mg - TEST49",
+              "IntakeAdvice": "Tabl  rund  weiss1  ø1 - TEST49",
+              "PhysicianComment": "1.0",
+              "Physician": "Physician - TEST49"
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

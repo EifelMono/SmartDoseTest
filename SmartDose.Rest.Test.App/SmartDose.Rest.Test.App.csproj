@@ -13,4 +13,10 @@
     <ProjectReference Include="..\SmartDose.Rest\SmartDose.Rest.csproj" />
   </ItemGroup>
 
+  <ItemGroup>
+    <None Update="20180724-ROWATest49-JSON-working.json">
+      <CopyToOutputDirectory>Always</CopyToOutputDirectory>
+    </None>
+  </ItemGroup>
+
 </Project>

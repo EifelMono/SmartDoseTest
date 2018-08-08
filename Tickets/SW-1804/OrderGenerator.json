@@ -1,0 +1,91 @@
+{
+    "ExternalId": "MO_NoCustomer_08082018_151949",
+    "Timestamp": "2018-08-08T15:19:49",
+    "Customer": null,
+    "OrderDetails": [
+        {
+            "Pharmacy": {
+                "CustomerId": 0,
+                "Identifier": "640193",
+                "Name": "BD Rowa Germany GmbH Pharmacy",
+                "Description": null,
+                "Website": null,
+                "Fax": null,
+                "ContactAddress": {
+                    "Addressline2": null,
+                    "NameLine1": "BD Rowa Germany GmbH",
+                    "Addressline1": "Rowastraße 1-3",
+                    "Postalcode": "53539",
+                    "City": "Kelberg",
+                    "State": "Rheinland-Pfalz",
+                    "Country": "Germany"
+                },
+                "ContactPerson": {
+                    "Name": "Arnold Blisterherr",
+                    "TelephoneNumber": "0269292060",
+                    "Email": "Arnold.Blisterherr@bd.com"
+                }
+            },
+            "Patient": {
+                "Gender": 0,
+                "ExternalPatientNumber": "NW_70328",
+                "RoomNumber": "Room 6806",
+                "BedNumber": "Bed 1",
+                "WardName": "Radiotherapy",
+                "DateOfBirth": "1966-06-18T00:00:00",
+                "ContactPerson": {
+                    "Name": "Nico Weiß",
+                    "TelephoneNumber": "06255/7769902",
+                    "Email": "Nico.Weiß@generatedpatient.com"
+                },
+                "ContactAddress": {
+                    "Addressline2": null,
+                    "NameLine1": "Nico Weiß",
+                    "Addressline1": "Generated Patient Street 1",
+                    "Postalcode": "64678",
+                    "City": "Lindenfels",
+                    "State": "Hessen",
+                    "Country": "Germany"
+                }
+            },
+            "DestinationFacility": {
+                "DepartmentCode": null,
+                "DepartmentName": "d1",
+                "CustomerId": "0",
+                "Name": "c7976087-7784-4c63-8919-b43875311fb2",
+                "ContactAddress": {
+                    "Addressline2": null,
+                    "NameLine1": null,
+                    "Addressline1": null,
+                    "Postalcode": null,
+                    "City": null,
+                    "State": null,
+                    "Country": "None"
+                },
+                "ContactPerson": {
+                    "Name": null,
+                    "TelephoneNumber": null,
+                    "Email": null
+                }
+            },
+            "ExternalDetailPrintInfo1": null,
+            "ExternalDetailPrintInfo2": null,
+            "IntakeDetails": [
+                {
+                    "IntakeDateTime": "2018-08-09T08:00:00",
+                    "MedicationDetails": [
+                        {
+                            "MedicineId": "m1",
+                            "Count": 1.0,
+                            "IntakeAdvice": "IntakeAdvice",
+                            "Physician": "Physician",
+                            "PhysicianComment": "PhysicianComment",
+                            "PrescribedMedicine": "m1"
+                        }
+                    ]
+                }
+            ]
+        }
+    ],
+    "State": 0
+}

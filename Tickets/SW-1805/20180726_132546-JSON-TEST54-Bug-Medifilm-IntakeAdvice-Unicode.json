@@ -45,7 +45,7 @@
             "ExternalDetailPrintInfo2": "B 25.07.2018 - TEST54",
             "IntakeDetails": [
                 {
-                    "IntakeDateTime": "2018-07-25T08:00:00",
+                    "IntakeDateTime": "2018-10-25T08:00:00",
                     "MedicationDetails": [
                         {
                             "MedicineId": 2010503001105,

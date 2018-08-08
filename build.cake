@@ -217,10 +217,11 @@ async Task CreateCanisterFromExternalOrderAsync(Models.ExternalOrder externalOrd
 }
 */
 
-async Task CreateExternalOrderAsync(string jsonFilename)
+async Task CreateExternalOrderAsync(string jsonFilename, bool withMedicine= true)
 {
     var externalOrder= jsonFilename.FileReadJson<Models.ExternalOrder>();
     Information($"Order {externalOrder.ExternalId}");
+    if (withMedicine)
     await CreateMedicineFromExternalOrderAsync(externalOrder).ConfigureAwait(false);
     StatusMessage(await OrdersUrl.EmcPostJsonAsync(externalOrder).ConfigureAwait(false), $"Create External order");
 }
@@ -232,8 +233,18 @@ async Task CreateExternalOrderAsync(string jsonFilename)
 
 Task("Ticket-Sw-1804-Test")
     .Does(async ()=> {
-        await CreateExternalOrderAsync("./Tickets/SW-1804/Test.json");
+            await CreateExternalOrderAsync("./Tickets/SW-1804/test.json", true);
     });
+
+Task("Ticket-Sw-1804-OrderGenerator")
+    .Does(async ()=> {
+            await CreateExternalOrderAsync("./Tickets/SW-1804/OrderGenerator.json", true);
+    });    
+
+ Task("Ticket-Sw-1804-Working.MSSQL")
+    .Does(async ()=> {
+        await CreateExternalOrderAsync("./Tickets/SW-1804/20180724-ROWATest49-JSON-working.MSSQL.json");
+    });   
     
 Task("Ticket-Sw-1804-Working")
     .Does(async ()=> {
@@ -249,7 +260,12 @@ Task("Ticket-Sw-1804-LongText-not-Working")
 
 #region Ticket 1805
 
-Task("Ticket-Sw-1804")
+Task("Ticket-Sw-1805-Test")
+    .Does(async ()=> {
+        ;
+    });
+    
+Task("Ticket-Sw-1805")
     .Does(async ()=> {
         await CreateExternalOrderAsync("./Tickets/SW-1805/20180726_132546-JSON-TEST54-Bug-Medifilm-IntakeAdvice-Unicode.json");
     });

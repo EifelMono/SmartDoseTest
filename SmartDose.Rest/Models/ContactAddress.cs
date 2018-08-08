@@ -5,16 +5,18 @@ namespace SmartDose.Rest.Models
     public class ContactAddress
     {
         [JsonProperty("Addressline1")]
-        public string AddressLine1;
+        public string AddressLine1 { get; set; }
 
-        public string City;
+  
+        public string City { get; set; }
 
-        public string Country;
+        public string Country { get; set; }
 
-        public string NameLine1;
+        public string NameLine1 { get; set; }
 
-        public string Postalcode;
-
-        public string State;
+        [RestValidation(MaxStringLength = 25)]
+        public string Postalcode { get; set; }
+       
+        public string State { get; set; }
     }
 }
