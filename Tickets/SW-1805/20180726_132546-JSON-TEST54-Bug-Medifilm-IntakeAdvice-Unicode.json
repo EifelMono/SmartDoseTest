@@ -36,7 +36,7 @@
 					"ContactAddress": {
 						"NameLine1": "DestinationFacility NameLine1 - TEST54",
 						"Addressline1": "DestinationFacility AdressLine1 - TEST54",
-						"Postalcode": "DestinationFacility PostalCode - TEST54",
+						"Postalcode": "asdasd",
 						"City": "DestinationFacility City - TEST54",
 						"Country": "DestinationFacility Country - TEST54"
 			 }
@@ -45,7 +45,7 @@
             "ExternalDetailPrintInfo2": "B 25.07.2018 - TEST54",
             "IntakeDetails": [
                 {
-                    "IntakeDateTime": "2018-10-25T08:00:00",
+                    "IntakeDateTime": "2019-10-25T08:00:00",
                     "MedicationDetails": [
                         {
                             "MedicineId": 2010503001105,

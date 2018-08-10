@@ -23,6 +23,7 @@ namespace SmartDose.Rest.Extensions
         public bool IsTimeout { get; set; }
         public HttpStatusCode StatusCode { get; set; } = (HttpStatusCode)(EmcHttpStatusCode.Undefined);
         public Exception Exception { get; set; } = null;
+        public string ResponseMessage { get; set; } = "";
     }
 
     public class EmcFlurHttpResponse<T> : EmcFlurHttpResponse
@@ -65,6 +66,7 @@ namespace SmartDose.Rest.Extensions
             catch (FlurlHttpException ex1)
             {
                 emcResponse.StatusCode = ex1.Call.Response?.StatusCode ?? (HttpStatusCode)(EmcHttpStatusCode.FlurlException);
+                emcResponse.ResponseMessage = await ex1.Call.Response.Content.ReadAsStringAsync().ConfigureAwait(false);
                 emcResponse.Exception = ex1;
             }
             catch (Exception ex3)

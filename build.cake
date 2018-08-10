@@ -39,7 +39,7 @@ void StatusMessage(System.Net.HttpStatusCode statusCode, string message= "")
 }
 
 void StatusMessage(EmcFlurHttpResponse response, string message= "")
-    => StatusMessage(response.StatusCode, message);
+    => StatusMessage(response.StatusCode, string.IsNullOrEmpty(message) ? response.ResponseMessage: $"{message}\r\n{response.ResponseMessage}");
 
 #endregion
 
@@ -228,6 +228,7 @@ async Task CreateExternalOrderAsync(string jsonFilename, bool withMedicine= true
 
 
 #endregion
+
 #region Tickets 
 #region Ticket 1804
 
@@ -241,11 +242,6 @@ Task("Ticket-Sw-1804-OrderGenerator")
             await CreateExternalOrderAsync("./Tickets/SW-1804/OrderGenerator.json", true);
     });    
 
- Task("Ticket-Sw-1804-Working.MSSQL")
-    .Does(async ()=> {
-        await CreateExternalOrderAsync("./Tickets/SW-1804/20180724-ROWATest49-JSON-working.MSSQL.json");
-    });   
-    
 Task("Ticket-Sw-1804-Working")
     .Does(async ()=> {
         await CreateExternalOrderAsync("./Tickets/SW-1804/20180724-ROWATest49-JSON-working.json");

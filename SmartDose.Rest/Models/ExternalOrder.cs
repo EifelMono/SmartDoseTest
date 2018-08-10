@@ -6,7 +6,6 @@ namespace SmartDose.Rest.Models
     {
         public string ExternalId { get; set; }
 
-        [RestValidation(CheckDateTimeString =true)]
         public string Timestamp { get; set; }
 
         public Customer Customer { get; set; }

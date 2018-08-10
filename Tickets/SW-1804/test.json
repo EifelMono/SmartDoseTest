@@ -1,5 +1,5 @@
 {
-    "ExternalId": "20180724-TEST49",
+    "ExternalId": "201807234-TEST49",
     "Timestamp": "2018-07-24T10:47:00",
     "Customer": {
         "CustomerId": "11111 - TEST49",
@@ -35,7 +35,7 @@
 				"DepartmentName": "DepartmentName - TEST49",
                 "ContactAddress": {
                     "Addressline1": "DestinationFacility AdressLine1 - TEST49",
-                    "Postalcode": "",
+                    "Postalcode": "asasdasdasdasdasdasdasdasdasdasdasdasdsdd",
                     "City": "DestinationFacility City - TEST49",
                     "Country": "DestinationFacility Country - TEST49"
                 }
@@ -51,30 +51,6 @@
                             "Count": 1,
                             "PrescribedMedicine": "Paracetamol 500 mg Actavis - TEST49",
                             "IntakeAdvice": "Tabl  oblong  weiss1  ø1 - TEST49",
-                            "PhysicianComment": "1.0",
-                            "Physician": "Physician - TEST49"
-                        },
-                        {
-                            "MedicineId": 2011457001104,
-                            "Count": 1,
-                            "PrescribedMedicine": "Keppra 250 mg - TEST49",
-                            "IntakeAdvice": "Tabl  oval  blau3  ucb 250  ø1 - TEST49",
-                            "PhysicianComment": "1.0",
-                            "Physician": "Physician - TEST49"
-                        },
-                        {
-                            "MedicineId": 2012689001108,
-                            "Count": 1,
-                            "PrescribedMedicine": "Sequase 25 mg - TEST49",
-                            "IntakeAdvice": "Tabl  rund  rot6  SEROQUEL 25 - TEST49",
-                            "PhysicianComment": "1.0",
-                            "Physician": "Physician - TEST49"
-                        },
-                        {
-                            "MedicineId": 2011210001105,
-                            "Count": 1,
-                            "PrescribedMedicine": "Oedemex 40 mg - TEST49",
-                            "IntakeAdvice": "Tabl  rund  weiss1  ø1 - TEST49",
                             "PhysicianComment": "1.0",
                             "Physician": "Physician - TEST49"
                         }

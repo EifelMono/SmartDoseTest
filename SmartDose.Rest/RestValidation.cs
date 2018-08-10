@@ -1,45 +1,40 @@
 ﻿using System;
-using System.Collections.Generic;
 using System.Text;
 using System.Linq;
 using System.Reflection;
 using System.Collections;
 using System.Globalization;
 
-namespace SmartDose.Rest
+namespace SmartDose.REST.Base.Validation
 {
-    [AttributeUsage(AttributeTargets.Property)]
-    public class RestValidationAttribute : Attribute
-    {
-        public int MaxStringLength { get; set; } = -1;
-        public bool NullAllowed { get; set; } = true;
-        public bool CheckDateTimeString { get; set; } = false;
-    }
-
     /// <summary>
     /// RestValidation class 
     /// </summary>
-    public static class RestValidation
+    public static class RESTValidation
     {
         /// <summary>
-        /// Enable or disable the RestValidation Check
+        /// ENABLE or DISABLE the RestValidation Check 
+        /// This is FOR ALL Checks !!!!!!!!!!!!!!!!!!!
         /// by default the check is on ...
         /// </summary>
         public static bool Enabled { get; set; } = true;
 
         /// <summary>
-        /// Test function to check the property of the rootObject and childs objects
-        /// againt the RestValidationAttributes.
-        /// if there is an error Ok is false and Infos contains 
-        /// the wrong elments by path name and info about the error
+        /// Test function to check the properties of the root and childs
+        /// objects against the RestValidationAttributes.
+        /// If there is an error
+        /// Ok flag is false and Infos contains 
+        /// the wrong elments by path name and infos about the error
+        /// Also the default HttpStatusCode 412 HttpStatusCode.PreconditionFailed
+        /// is assigned in the StatusCode
         /// </summary>
         /// <param name="rootObject"></param>
         /// <param name="rootName"></param>
         /// <returns></returns>
-        public static (bool Ok, string Infos) Check(object rootObject, string rootName)
+        public static RESTValidationResult Check(object rootObject, string rootName)
         {
             if (!Enabled)
-                return (true, "");
+                return new RESTValidationResult(true, "");
 
             var sb = new StringBuilder();
             try
@@ -48,9 +43,9 @@ namespace SmartDose.Rest
             }
             catch (Exception ex)
             {
-                return (false, ex.ToString());
+                return new RESTValidationResult(false, ex.ToString());
             }
-            return (sb.Length is 0, sb.ToString());
+            return new RESTValidationResult(sb.Length is 0, sb.ToString());
 
 
             void InternallCheck(object detailObject, string detailName)
@@ -61,6 +56,7 @@ namespace SmartDose.Rest
                 {
                     var propertyName = property.Name;
                     var propertyValue = property.GetValue(detailObject);
+                    var propertyAttributeRESTValidation= (RESTValidationAttribute)property.GetCustomAttributes(typeof(RESTValidationAttribute), false).FirstOrDefault();
                     if (propertyValue != null)
                     {
                         var propertyType = propertyValue.GetType();
@@ -68,19 +64,23 @@ namespace SmartDose.Rest
                         {
                             case TypeCode.String:
                                 {
-                                    if (property.GetRestValidationAttribute() is var restValidationAttribute && restValidationAttribute != null)
+                                    if (propertyAttributeRESTValidation != null)
                                     {
-                                        if (restValidationAttribute.MaxStringLength != -1)
+                                        var text = (string)propertyValue;
+                                        if (propertyAttributeRESTValidation.MaxStringLength != -1)
                                         {
-                                            var text = (string)propertyValue;
-                                            if (text.Length > restValidationAttribute.MaxStringLength)
-                                                sb.AppendLine($"{detailName}.{propertyName} wrong length [{text.Length}>{restValidationAttribute.MaxStringLength}]");
+                                            if (text.Length > propertyAttributeRESTValidation.MaxStringLength)
+                                                sb.AppendLine($"{detailName}.{propertyName} has a wrong length [{text.Length}>{propertyAttributeRESTValidation.MaxStringLength}]");
                                         }
-                                        if (restValidationAttribute.CheckDateTimeString)
+                                        if (propertyAttributeRESTValidation.IsDateTimeString)
                                         {
-                                            var text = (string)propertyValue;
                                             if (!DateTime.TryParseExact(text, "yyyy-MM-ddTHH:mm:ss", CultureInfo.InvariantCulture, DateTimeStyles.None, out var result))
-                                                sb.AppendLine($"{detailName}.{propertyName} wrong DateTime format \"{text}\"");
+                                                sb.AppendLine($"{detailName}.{propertyName} has a wrong DateTime format \"{text}\"");
+                                        }
+                                        if (propertyAttributeRESTValidation.IsMandatory)
+                                        {
+                                            if (string.IsNullOrEmpty(text))
+                                                sb.AppendLine($"{detailName}.{propertyName} this is a mandatory field an this is empty");
                                         }
                                     }
                                     break;
@@ -111,14 +111,11 @@ namespace SmartDose.Rest
                     }
                     else
                     {
-                        if (property.GetRestValidationAttribute() is var restValidationAttribute && restValidationAttribute != null && !restValidationAttribute.NullAllowed)
+                        if (propertyAttributeRESTValidation != null && !propertyAttributeRESTValidation.NullAllowed)
                             sb.AppendLine($"{detailName}.{propertyName} null value not allowed");
                     }
                 }
             }
         }
-
-        private static RestValidationAttribute GetRestValidationAttribute(this PropertyInfo thisValue)
-            => (RestValidationAttribute)thisValue.GetCustomAttributes(typeof(RestValidationAttribute), false).FirstOrDefault();
     }
 }

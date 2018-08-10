@@ -14,7 +14,6 @@ namespace SmartDose.Rest.Models
 
         public string NameLine1 { get; set; }
 
-        [RestValidation(MaxStringLength = 25)]
         public string Postalcode { get; set; }
        
         public string State { get; set; }
