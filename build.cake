@@ -1,4 +1,5 @@
 
+#region Overhead to run the test 
 #region Setup
 #addin nuget:?package=Newtonsoft.Json&version=11.0.2
 #addin nuget:?package=Flurl&version=2.7.1
@@ -131,12 +132,15 @@ Task("DeleteCanisters")
 
 Task("GetMedicines")
     .Does(async ()=> {
+            var time= System.Diagnostics.Stopwatch.StartNew();
             if (await MedicinesUrl.EmcGetJsonAsync<List<Models.Medicine>>() is var medicines && medicines.IsHttpStatusCodeOK())
             {
+                time.Stop();
                 Information($"Medicines={medicines.Self.Count}");
-                Information(medicines.Self.Dump());
+                // Information(medicines.Self.Dump());
             }
             StatusMessage(medicines.StatusCode, "GetMedicines");
+            Information($"Elapsed time={time.Elapsed}");
 });
 
 Task("CreateMedicines")
@@ -144,7 +148,6 @@ Task("CreateMedicines")
         for(int i=1;i<= 10; i++)
         StatusMessage(await MedicinesUrl.EmcPostJsonAsync(Defaults.Medicine(i.ToString())), $"Create Medicine {i}");
 });
-
 
 Task("DeleteMedicines")
     .Does(async ()=> {
@@ -155,6 +158,21 @@ Task("DeleteMedicines")
                     StatusMessage(await MedicinesUrl.AppendPathSegment(medicine.MedicineId).EmcDeleteAsync(), $"Delete medicines id={medicine.MedicineId}");
             }
             StatusMessage(medicines.StatusCode, "DeleteMedicines");
+});
+
+Task("PostMedicines_11")
+    .Does(async ()=> {
+        StatusMessage(await MedicinesUrl.EmcPostJsonAsync(Defaults.Medicine("11")), $"Create Medicine 11");
+});
+
+Task("PutMedicines_11")
+    .Does(async ()=> {
+        StatusMessage(await MedicinesUrl.EmcPostJsonAsync(Defaults.Medicine("11")), $"Create Medicine 11");
+});
+
+Task("DeleteMedicines_11")
+    .Does(async ()=> {
+        StatusMessage(await MedicinesUrl.AppendPathSegment("11").EmcDeleteAsync(), $"Delete medicines id=11");
 });
 #endregion
 
@@ -226,16 +244,49 @@ async Task CreateExternalOrderAsync(string jsonFilename, bool withMedicine= true
     StatusMessage(await OrdersUrl.EmcPostJsonAsync(externalOrder).ConfigureAwait(false), $"Create External order");
 }
 
+async Task TestExternalOrderAsync(string jsonFilename, int count)
+{
+    var externalOrder= jsonFilename.FileReadJson<Models.ExternalOrder>();
+    var intakeDetails = externalOrder.OrderDetails.First().IntakeDetails;
+            intakeDetails.Clear();
+            for (int i = 0; i < count; i++)
+            {
+                intakeDetails.Add(new IntakeDetail
+                {
+                    IntakeDateTime = DateTime.Now.AddDays(i).ToString(),
+                    MedicationDetails = new List<MedicationDetail>
+                    {
+                        new MedicationDetail
+                        {
+                            MedicineId= i.ToString(),
+                            Count= 1,
+                            PrescribedMedicine= $"PrescribedMedicine {i}",
+                            IntakeAdvice= $"IntakeAdvice {i}",
+                            PhysicianComment= $"PhysicianComment {i}",
+                            Physician= $"Physician {i}",
+                        }
+                    }
+                });
+            }
+    StatusMessage(await OrdersUrl.EmcPostJsonAsync(externalOrder).ConfigureAwait(false), $"Create External order");
+}
+
+
+#endregion
 
 #endregion
 
 #region Tickets 
 #region Ticket 1804
 
-Task("Ticket-Sw-1804-Test")
+Task("Ticket-Sw-1804-test.json")
     .Does(async ()=> {
-            await CreateExternalOrderAsync("./Tickets/SW-1804/test.json", true);
+            await CreateExternalOrderAsync("./Tickets/SW-1804/test.json", false);
     });
+Task("Ticket-Sw-1804-test1MedicinNotExist.json")
+    .Does(async ()=> {
+            await CreateExternalOrderAsync("./Tickets/SW-1804/test1MedicinNotExist.json", false);
+    });    
 
 Task("Ticket-Sw-1804-OrderGenerator")
     .Does(async ()=> {
@@ -258,17 +309,121 @@ Task("Ticket-Sw-1804-LongText-not-Working")
 
 Task("Ticket-Sw-1805-Test")
     .Does(async ()=> {
-        ;
+        try
+        {
+            var s= System.Diagnostics.Stopwatch.StartNew();
+            await CreateExternalOrderAsync("./Tickets/SW-1805/test.json", false);
+            Information($"time={s.Elapsed}");
+        }
+        catch(Exception ex)
+        {
+            Error(ex.ToString());
+        }
     });
     
 Task("Ticket-Sw-1805")
     .Does(async ()=> {
-        await CreateExternalOrderAsync("./Tickets/SW-1805/20180726_132546-JSON-TEST54-Bug-Medifilm-IntakeAdvice-Unicode.json");
+        try {
+         await CreateExternalOrderAsync("./Tickets/SW-1805/20180726_132546-JSON-TEST54-Bug-Medifilm-IntakeAdvice-Unicode.json");
+        }
+        catch(Exception ex)
+        {
+            Error(ex.ToString());
+        }
     });
 
 #endregion
+
+
+#region GetMedicin
+
+Task("Ticket-GetMedicines-tictacwhite")
+    .Does(async ()=> {
+        try {
+            var time= System.Diagnostics.Stopwatch.StartNew();
+            if (await "http://localhost:6040/SmartDose/Medicines/tictacwhite".EmcGetJsonAsync<Models.Medicine>() is var medicines && medicines.IsHttpStatusCodeOK())
+            {
+                time.Stop();
+                Information(medicines.Self.Dump());
+            }
+            StatusMessage(medicines.StatusCode, "GetMedicines");
+            Information($"Elapsed time={time.Elapsed}");
+        }
+        catch(Exception ex)
+        {
+            Error(ex.ToString());
+        }
+});
+Task("Ticket-GetMedicines-All")
+    .Does(async ()=> {
+            var time= System.Diagnostics.Stopwatch.StartNew();
+            if (await MedicinesUrl.EmcGetJsonAsync<List<Models.Medicine>>() is var medicines && medicines.IsHttpStatusCodeOK())
+            {
+                time.Stop();
+                Information($"Medicines={medicines.Self.Count}");
+                // Information(medicines.Self.Dump());
+            }
+            StatusMessage(medicines.StatusCode, "GetMedicines");
+            Information($"Elapsed time={time.Elapsed}");
+});
+
+Task("Ticket-GetMedicines-16258721000171111")
+    .Does(async ()=> {
+        try {
+            var time= System.Diagnostics.Stopwatch.StartNew();
+            if (await "http://localhost:6040/SmartDose/Medicines/16258721000171111".EmcGetJsonAsync<Models.Medicine>() is var medicines && medicines.IsHttpStatusCodeOK())
+            {
+                time.Stop();
+                Information(medicines.Self.Dump());
+            }
+            StatusMessage(medicines.StatusCode, "GetMedicines");
+            Information($"Elapsed time={time.Elapsed}");
+        }
+        catch(Exception ex)
+        {
+            Error(ex.ToString());
+        }
+});
+
+Task("Ticket-GetMedicines")
+    .IsDependentOn("Ticket-GetMedicines-tictacwhite")
+    .IsDependentOn("Ticket-GetMedicines-All")
+    .IsDependentOn("Ticket-GetMedicines-16258721000171111")
+    .Does(()=> {
+});
+#endregion
 #endregion
 
+
+#region test
+Task("Ticket-Test.test.json")
+    .Does(async ()=> {
+            var times= new List<(int Count, long Time)>();
+            foreach(var count in new int [] {
+                1, 
+                10,
+                50,  
+                100, 
+                1000, 
+                100,
+                50, 
+                10, 
+                1})
+            {
+                var stopwatch= System.Diagnostics.Stopwatch.StartNew();
+                await TestExternalOrderAsync("./Tickets/Test/test.json", count);
+                stopwatch.Stop();
+                times.Add((count, stopwatch.ElapsedMilliseconds));
+                Information($"Count={count} time={stopwatch.ElapsedMilliseconds} ms time per element={stopwatch.ElapsedMilliseconds/count} ");
+            }
+            foreach(var time in times)
+                Information($"Count={time.Count,5}\ttime={time.Time, 10} ms\ttime per element={time.Time/time.Count, 10} ");
+
+    });
+
+
+
+#endregion
 #region Cake defaults
 var target = Argument("target", "Default");
 

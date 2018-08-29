@@ -1,0 +1,62 @@
+{
+    "ExternalId": "201807234-TEST49",
+    "Timestamp": "2018-07-24T10:47:00",
+    "Customer": {
+        "CustomerId": "11111 - TEST49",
+        "Name": "Customer Customer - TEST49"
+    },
+    "OrderDetails": [
+        {
+            "Pharmacy": {
+                "CustomerId": "11112 - TEST49",
+                "Name": "Customer Apotheke - TEST49"
+            },
+            "Patient": {
+                "ExternalPatientNumber": "081513 - TEST49",
+                "DateOfBirth": "1900-02-03T00:00:00",
+                "ContactPerson": {
+                    "Name": "Domi Tester - TEST49"
+                },
+                "ContactAddress": {
+                    "Addressline1": "Apotheke Nameline1 - TEST49",
+                    "City":  "Apotheke Nameline2 - TEST49",
+                    "Country": "de-DE - TEST49",
+                    "Postalcode": "0815-0850-20180724",
+                    "State": "01"
+                },
+                "RoomNumber": "PatRoom - TEST49",
+                "BedNumber": "PatBed - TEST49",
+                "WardName": "PadWard - TEST49"
+            },
+            "DestinationFacility": {
+                "CustomerId": "11123 - TEST49",
+                "Name": "DestinationName - TEST49",
+				"DepartmentCode": "10100 - TEST49",
+				"DepartmentName": "DepartmentName - TEST49",
+                "ContactAddress": {
+                    "Addressline1": "DestinationFacility AdressLine1 - TEST49",
+                    "Postalcode": "asasdasdasdasdasdasdasdasdasdasdasdasdsdd",
+                    "City": "DestinationFacility City - TEST49",
+                    "Country": "DestinationFacility Country - TEST49"
+                }
+			},
+            "ExternalDetailPrintInfo1": "A 25.07.2018 - TEST49",
+            "ExternalDetailPrintInfo2": "B 25.07.2018 - TEST49",
+            "IntakeDetails": [
+                {
+                    "IntakeDateTime": "2019-07-25T08:00:00",
+                    "MedicationDetails": [
+                        {
+                            "MedicineId": 200,
+                            "Count": 1,
+                            "PrescribedMedicine": "Paracetamol 500 mg Actavis - TEST49",
+                            "IntakeAdvice": "Tabl  oblong  weiss1  ø1 - TEST49",
+                            "PhysicianComment": "1.0",
+                            "Physician": "Physician - TEST49"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

@@ -83,6 +83,19 @@
                             "PrescribedMedicine": "m1"
                         }
                     ]
+                },
+                {
+                    "IntakeDateTime": "2018-08-09T08:00:00",
+                    "MedicationDetails": [
+                        {
+                            "MedicineId": "m2",
+                            "Count": 1.0,
+                            "IntakeAdvice": "IntakeAdvice",
+                            "Physician": "Physician",
+                            "PhysicianComment": "PhysicianComment",
+                            "PrescribedMedicine": "m1"
+                        }
+                    ]
                 }
             ]
         }

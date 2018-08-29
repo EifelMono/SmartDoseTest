@@ -1,5 +1,5 @@
 {
-    "ExternalId": "20180724-TEST54-10",
+    "ExternalId": "20180724-TEST54-5",
     "Timestamp": "2018-07-24T10:47:00",
     "Customer": {
         "CustomerId": "11111 - TEST54",
@@ -41,41 +41,53 @@
 						"Country": "DestinationFacility Country - TEST54"
 			 }
 			},
-            "ExternalDetailPrintInfo1": "A 25.01.2019 - TEST54",
-            "ExternalDetailPrintInfo2": "B 25.01.2019 - TEST54",
+            "ExternalDetailPrintInfo1": "A 25.07.2018 - TEST54",
+            "ExternalDetailPrintInfo2": "B 25.07.2018 - TEST54",
             "IntakeDetails": [
                 {
                     "IntakeDateTime": "2019-01-25T08:00:00",
                     "MedicationDetails": [
                         {
-                            "MedicineId": 2010503001105,
+                            "MedicineId": 111111122333,
                             "Count": 1,
                             "PrescribedMedicine": "ĀāĂăĄąĆćĈĉĊċČčĎďĐđĒēĔĕĖėĘęĚěĜĝĞğĠġĢ",
                             "IntakeAdvice": "ģĤĥĦħĨĩĪīĬĭĮįİıĲĳĴĵĶķĸĹĺĻļĽľĿŀŁł",
                             "PhysicianComment": "1.0",
                             "Physician": "Physician - TEST54"
                         }
-						,
+                    ]
+                },
+                {
+                    "IntakeDateTime": "2019-01-25T09:00:00",
+                    "MedicationDetails": [
                         {
-                            "MedicineId": 2011457001104,
+                            "MedicineId": 123,
                             "Count": 1,
                             "PrescribedMedicine": "ŅņŇňŉŊŋŌōŎŏŐőŒœŔŕŖŗŘřŚśŜŝŞ",
-                            "IntakeAdvice": "şŠšŢţŤťŦŧŨũŪūŬŭŮůŰűŲųŴŵŶŷŸŹźŻżŽžſ",
+                            "IntakeAdvice": "IntakeAdvice 1",
                             "PhysicianComment": "1.0",
                             "Physician": "Physician - TEST54"
                         }
-						,
+                    ]
+                },
+                {
+                    "IntakeDateTime": "2019-01-25T10:00:00",
+                    "MedicationDetails": [
                         {
-                            "MedicineId": 2012689001108,
+                            "MedicineId": 456,
                             "Count": 1,
                             "PrescribedMedicine": "ƀƁƂƃƄƅƆƇƈƉƊƋƌƍƎƏƐƑƒƓƔƕƖƗƘƙƚƛ",
                             "IntakeAdvice": "ƜƝƞƟƠơƢƣƤƥƦƧƨƩƪƫƬƭƮƯưƱƲƳƴƵƶƷƸƹƺƻƼƽƾƿ",
                             "PhysicianComment": "1.0",
                             "Physician": "Physician - TEST54"
                         }
-						,
+                    ]
+                },
+                {
+                    "IntakeDateTime": "2019-01-25T11:00:00",
+                    "MedicationDetails": [
                         {
-                            "MedicineId": 2011210001105,
+                            "MedicineId": 789,
                             "Count": 1,
                             "PrescribedMedicine": "ǀǁǂǃǄǅǆǇǈǉǊǋǌǍǎǏǐǑǒǓǔǕǖǗǘǙǚǛǜǝǞǟǠǡ",
                             "IntakeAdvice": "ǣǤǥǦǧǨǩǪǫǬǭǮǯǰǱǲǳǴǵǶǷǸǹǺǻǼǽǾǿ",

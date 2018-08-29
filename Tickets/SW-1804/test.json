@@ -47,7 +47,137 @@
                     "IntakeDateTime": "2019-07-25T08:00:00",
                     "MedicationDetails": [
                         {
-                            "MedicineId": 2010503001105,
+                            "MedicineId": 100,
+                            "Count": 1,
+                            "PrescribedMedicine": "Paracetamol 500 mg Actavis - TEST49",
+                            "IntakeAdvice": "Tabl  oblong  weiss1  ø1 - TEST49",
+                            "PhysicianComment": "1.0",
+                            "Physician": "Physician - TEST49"
+                        }
+                    ]
+                },
+                {
+                    "IntakeDateTime": "2019-07-25T08:00:00",
+                    "MedicationDetails": [
+                        {
+                            "MedicineId": 200,
+                            "Count": 1,
+                            "PrescribedMedicine": "Paracetamol 500 mg Actavis - TEST49",
+                            "IntakeAdvice": "Tabl  oblong  weiss1  ø1 - TEST49",
+                            "PhysicianComment": "1.0",
+                            "Physician": "Physician - TEST49"
+                        }
+                    ]
+                },
+                {
+                    "IntakeDateTime": "2019-07-25T08:00:00",
+                    "MedicationDetails": [
+                        {
+                            "MedicineId": 300,
+                            "Count": 1,
+                            "PrescribedMedicine": "Paracetamol 500 mg Actavis - TEST49",
+                            "IntakeAdvice": "Tabl  oblong  weiss1  ø1 - TEST49",
+                            "PhysicianComment": "1.0",
+                            "Physician": "Physician - TEST49"
+                        }
+                    ]
+                },
+                {
+                    "IntakeDateTime": "2019-07-25T08:00:00",
+                    "MedicationDetails": [
+                        {
+                            "MedicineId": 400,
+                            "Count": 1,
+                            "PrescribedMedicine": "Paracetamol 500 mg Actavis - TEST49",
+                            "IntakeAdvice": "Tabl  oblong  weiss1  ø1 - TEST49",
+                            "PhysicianComment": "1.0",
+                            "Physician": "Physician - TEST49"
+                        }
+                    ]
+                },
+                {
+                    "IntakeDateTime": "2019-07-25T08:00:00",
+                    "MedicationDetails": [
+                        {
+                            "MedicineId": 500,
+                            "Count": 1,
+                            "PrescribedMedicine": "Paracetamol 500 mg Actavis - TEST49",
+                            "IntakeAdvice": "Tabl  oblong  weiss1  ø1 - TEST49",
+                            "PhysicianComment": "1.0",
+                            "Physician": "Physician - TEST49"
+                        }
+                    ]
+                },
+                {
+                    "IntakeDateTime": "2019-07-25T08:00:00",
+                    "MedicationDetails": [
+                        {
+                            "MedicineId": 500,
+                            "Count": 1,
+                            "PrescribedMedicine": "Paracetamol 500 mg Actavis - TEST49",
+                            "IntakeAdvice": "Tabl  oblong  weiss1  ø1 - TEST49",
+                            "PhysicianComment": "1.0",
+                            "Physician": "Physician - TEST49"
+                        }
+                    ]
+                },
+                {
+                    "IntakeDateTime": "2019-07-25T08:00:00",
+                    "MedicationDetails": [
+                        {
+                            "MedicineId": 600,
+                            "Count": 1,
+                            "PrescribedMedicine": "Paracetamol 500 mg Actavis - TEST49",
+                            "IntakeAdvice": "Tabl  oblong  weiss1  ø1 - TEST49",
+                            "PhysicianComment": "1.0",
+                            "Physician": "Physician - TEST49"
+                        }
+                    ]
+                },
+                {
+                    "IntakeDateTime": "2019-07-25T08:00:00",
+                    "MedicationDetails": [
+                        {
+                            "MedicineId": 700,
+                            "Count": 1,
+                            "PrescribedMedicine": "Paracetamol 500 mg Actavis - TEST49",
+                            "IntakeAdvice": "Tabl  oblong  weiss1  ø1 - TEST49",
+                            "PhysicianComment": "1.0",
+                            "Physician": "Physician - TEST49"
+                        }
+                    ]
+                },
+                {
+                    "IntakeDateTime": "2019-07-25T08:00:00",
+                    "MedicationDetails": [
+                        {
+                            "MedicineId": 800,
+                            "Count": 1,
+                            "PrescribedMedicine": "Paracetamol 500 mg Actavis - TEST49",
+                            "IntakeAdvice": "Tabl  oblong  weiss1  ø1 - TEST49",
+                            "PhysicianComment": "1.0",
+                            "Physician": "Physician - TEST49"
+                        }
+                    ]
+                },
+                {
+                    "IntakeDateTime": "2019-07-25T08:00:00",
+                    "MedicationDetails": [
+                        {
+                            "MedicineId": 900,
+                            "Count": 1,
+                            "PrescribedMedicine": "Paracetamol 500 mg Actavis - TEST49",
+                            "IntakeAdvice": "Tabl  oblong  weiss1  ø1 - TEST49",
+                            "PhysicianComment": "1.0",
+                            "Physician": "Physician - TEST49"
+                        }
+                    ]
+                },
+                {
+                    "IntakeDateTime": "2019-07-25T08:00:00",
+                    "MedicationDetails": [
+                        {
+                            "MedicineId": 1000,
                             "Count": 1,
                             "PrescribedMedicine": "Paracetamol 500 mg Actavis - TEST49",
                             "IntakeAdvice": "Tabl  oblong  weiss1  ø1 - TEST49",
