@@ -244,32 +244,7 @@ async Task CreateExternalOrderAsync(string jsonFilename, bool withMedicine= true
     StatusMessage(await OrdersUrl.EmcPostJsonAsync(externalOrder).ConfigureAwait(false), $"Create External order");
 }
 
-async Task TestExternalOrderAsync(string jsonFilename, int count)
-{
-    var externalOrder= jsonFilename.FileReadJson<Models.ExternalOrder>();
-    var intakeDetails = externalOrder.OrderDetails.First().IntakeDetails;
-            intakeDetails.Clear();
-            for (int i = 0; i < count; i++)
-            {
-                intakeDetails.Add(new IntakeDetail
-                {
-                    IntakeDateTime = DateTime.Now.AddDays(i).ToString(),
-                    MedicationDetails = new List<MedicationDetail>
-                    {
-                        new MedicationDetail
-                        {
-                            MedicineId= i.ToString(),
-                            Count= 1,
-                            PrescribedMedicine= $"PrescribedMedicine {i}",
-                            IntakeAdvice= $"IntakeAdvice {i}",
-                            PhysicianComment= $"PhysicianComment {i}",
-                            Physician= $"Physician {i}",
-                        }
-                    }
-                });
-            }
-    StatusMessage(await OrdersUrl.EmcPostJsonAsync(externalOrder).ConfigureAwait(false), $"Create External order");
-}
+
 
 
 #endregion
@@ -395,19 +370,52 @@ Task("Ticket-GetMedicines")
 #endregion
 
 
-#region test
+#region Test
+
+async Task TestExternalOrderAsync(string jsonFilename, int count)
+{
+    var externalOrder= jsonFilename.FileReadJson<Models.ExternalOrder>();
+    var intakeDetails = externalOrder.OrderDetails.First().IntakeDetails;
+            intakeDetails.Clear();
+            for (int i = 0; i < count; i++)
+            {
+                intakeDetails.Add(new IntakeDetail
+                {
+                    IntakeDateTime = DateTime.Now.AddDays(i).ToString(),
+                    MedicationDetails = new List<MedicationDetail>
+                    {
+                        new MedicationDetail
+                        {
+                            MedicineId= i.ToString(),
+                            Count= 1,
+                            PrescribedMedicine= $"PrescribedMedicine {i}",
+                            IntakeAdvice= $"IntakeAdvice {i}",
+                            PhysicianComment= $"PhysicianComment {i}",
+                            Physician= $"Physician {i}",
+                        }
+                    }
+                });
+            }
+    var ordersUrl= "http://localhost:6040/SmartDose/Orders?CheckMedicine=true"; 
+    StatusMessage(await ordersUrl.EmcPostJsonAsync(externalOrder).ConfigureAwait(false), $"Create External order");
+}
+
 Task("Ticket-Test.test.json")
     .Does(async ()=> {
             var times= new List<(int Count, long Time)>();
             foreach(var count in new int [] {
-                1, 
+                1,
+                2,
+                5,
                 10,
-                50,  
+                50, 
                 100, 
                 1000, 
                 100,
                 50, 
-                10, 
+                10,
+                5,
+                2,
                 1})
             {
                 var stopwatch= System.Diagnostics.Stopwatch.StartNew();
@@ -418,9 +426,7 @@ Task("Ticket-Test.test.json")
             }
             foreach(var time in times)
                 Information($"Count={time.Count,5}\ttime={time.Time, 10} ms\ttime per element={time.Time/time.Count, 10} ");
-
     });
-
 
 
 #endregion
