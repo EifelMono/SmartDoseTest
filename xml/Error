@@ -1,0 +1,360 @@
+Opened connection at 13/09/2018 16:10:31 +02:00
+Started transaction at 13/09/2018 16:10:31 +02:00
+INSERT INTO [Contact]([Name], [AddressLine], [AdditionalAddressLine], [PostalCode], [City], [State], [Country], [LandlineNumber], [CellphoneNumber], [Email], [Website], [Fax])
+ VALUES (@p0, NULL, NULL, NULL, @p1, NULL, NULL, NULL, @p2, @p3, NULL, NULL);
+SELECT [Id]
+FROM [Contact]
+WHERE last_rows_affected() > 0 AND [Id] = last_insert_rowid()
+;
+-- @p0: 'Name_9' (Type = String)
+-- @p1: 'City_9' (Type = String)
+-- @p2: 'TelephoneNumber_9' (Type = String)
+-- @p3: 'Email_9' (Type = String)
+-- Executing at 13/09/2018 16:10:31 +02:00
+-- Completed in 0 ms with result: SQLiteDataReader
+
+INSERT INTO [Contact]([Name], [AddressLine], [AdditionalAddressLine], [PostalCode], [City], [State], [Country], [LandlineNumber], [CellphoneNumber], [Email], [Website], [Fax])
+ VALUES (@p0, @p1, @p2, NULL, @p3, NULL, NULL, NULL, @p4, @p5, NULL, NULL);
+SELECT [Id]
+FROM [Contact]
+WHERE last_rows_affected() > 0 AND [Id] = last_insert_rowid()
+;
+-- @p0: 'Name_1' (Type = String)
+-- @p1: 'AddressLine_1' (Type = String)
+-- @p2: 'AdditionalAddressLine_1' (Type = String)
+-- @p3: 'City_1' (Type = String)
+-- @p4: 'TelephoneNumber_1' (Type = String)
+-- @p5: 'Email_1' (Type = String)
+-- Executing at 13/09/2018 16:10:31 +02:00
+-- Completed in 0 ms with result: SQLiteDataReader
+
+INSERT INTO [Contact]([Name], [AddressLine], [AdditionalAddressLine], [PostalCode], [City], [State], [Country], [LandlineNumber], [CellphoneNumber], [Email], [Website], [Fax])
+ VALUES (NULL, NULL, NULL, NULL, @p0, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+SELECT [Id]
+FROM [Contact]
+WHERE last_rows_affected() > 0 AND [Id] = last_insert_rowid()
+;
+-- @p0: 'City_9' (Type = String)
+-- Executing at 13/09/2018 16:10:31 +02:00
+-- Completed in 0 ms with result: SQLiteDataReader
+
+INSERT INTO [Contact]([Name], [AddressLine], [AdditionalAddressLine], [PostalCode], [City], [State], [Country], [LandlineNumber], [CellphoneNumber], [Email], [Website], [Fax])
+ VALUES (@p0, @p1, @p2, NULL, @p3, NULL, NULL, NULL, @p4, @p5, NULL, NULL);
+SELECT [Id]
+FROM [Contact]
+WHERE last_rows_affected() > 0 AND [Id] = last_insert_rowid()
+;
+-- @p0: 'Name_9' (Type = String)
+-- @p1: 'AddressLine_9' (Type = String)
+-- @p2: 'AdditionalAddressLine_9' (Type = String)
+-- @p3: 'City_9' (Type = String)
+-- @p4: 'TelephoneNumber_9' (Type = String)
+-- @p5: 'Email_9' (Type = String)
+-- Executing at 13/09/2018 16:10:31 +02:00
+-- Completed in 0 ms with result: SQLiteDataReader
+
+INSERT INTO [MachineOrder]([Identifier], [ParentOrderIdentifier], [ExternalOrderName], [MachineNumber], [MachineOrderStatus], [RollId])
+ VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [MachineOrder]
+WHERE last_rows_affected() > 0 AND [Id] = last_insert_rowid()
+;
+-- @p0: 'f78cd3d9-2179-4598-b35b-4c0fdf7aa745' (Type = String)
+-- @p1: 'Identifier_9' (Type = String)
+-- @p2: 'Name_9' (Type = String)
+-- @p3: '9' (Type = Int32)
+-- @p4: '0' (Type = Int32)
+-- @p5: 'M092017-12-20T12:21:44' (Type = String)
+-- Executing at 13/09/2018 16:10:31 +02:00
+-- Completed in 0 ms with result: SQLiteDataReader
+
+INSERT INTO [Customer]([Identifier], [Description], [Name], [OriginalId], [CustomerId], [PouchSchemeId], [Contact_Id], [MachineOrder_Id])
+ VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+SELECT [Id]
+FROM [Customer]
+WHERE last_rows_affected() > 0 AND [Id] = last_insert_rowid()
+;
+-- @p0: 'Identifier_9' (Type = String)
+-- @p1: 'Description_9' (Type = String)
+-- @p2: 'Name_9' (Type = String)
+-- @p3: '2' (Type = Int64)
+-- @p4: '9' (Type = Int64)
+-- @p5: '0' (Type = Int64)
+-- @p6: '28' (Type = Int64)
+-- @p7: '3' (Type = Int64)
+-- Executing at 13/09/2018 16:10:31 +02:00
+-- Failed in 0 ms with error: constraint failed
+UNIQUE constraint failed: Customer.Identifier
+
+Closed connection at 13/09/2018 16:10:31 +02:00
+Disposed transaction at 13/09/2018 16:10:31 +02:00
+Opened connection at 13/09/2018 16:10:31 +02:00
+Started transaction at 13/09/2018 16:10:31 +02:00
+INSERT INTO [Contact]([Name], [AddressLine], [AdditionalAddressLine], [PostalCode], [City], [State], [Country], [LandlineNumber], [CellphoneNumber], [Email], [Website], [Fax])
+ VALUES (@p0, NULL, NULL, NULL, @p1, NULL, NULL, NULL, @p2, @p3, NULL, NULL);
+SELECT [Id]
+FROM [Contact]
+WHERE last_rows_affected() > 0 AND [Id] = last_insert_rowid()
+;
+-- @p0: 'Name_9' (Type = String)
+-- @p1: 'City_9' (Type = String)
+-- @p2: 'TelephoneNumber_9' (Type = String)
+-- @p3: 'Email_9' (Type = String)
+-- Executing at 13/09/2018 16:10:31 +02:00
+-- Completed in 0 ms with result: SQLiteDataReader
+
+INSERT INTO [Contact]([Name], [AddressLine], [AdditionalAddressLine], [PostalCode], [City], [State], [Country], [LandlineNumber], [CellphoneNumber], [Email], [Website], [Fax])
+ VALUES (@p0, @p1, @p2, NULL, @p3, NULL, NULL, NULL, @p4, @p5, NULL, NULL);
+SELECT [Id]
+FROM [Contact]
+WHERE last_rows_affected() > 0 AND [Id] = last_insert_rowid()
+;
+-- @p0: 'Name_1' (Type = String)
+-- @p1: 'AddressLine_1' (Type = String)
+-- @p2: 'AdditionalAddressLine_1' (Type = String)
+-- @p3: 'City_1' (Type = String)
+-- @p4: 'TelephoneNumber_1' (Type = String)
+-- @p5: 'Email_1' (Type = String)
+-- Executing at 13/09/2018 16:10:31 +02:00
+-- Completed in 0 ms with result: SQLiteDataReader
+
+INSERT INTO [Contact]([Name], [AddressLine], [AdditionalAddressLine], [PostalCode], [City], [State], [Country], [LandlineNumber], [CellphoneNumber], [Email], [Website], [Fax])
+ VALUES (NULL, NULL, NULL, NULL, @p0, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+SELECT [Id]
+FROM [Contact]
+WHERE last_rows_affected() > 0 AND [Id] = last_insert_rowid()
+;
+-- @p0: 'City_9' (Type = String)
+-- Executing at 13/09/2018 16:10:31 +02:00
+-- Completed in 0 ms with result: SQLiteDataReader
+
+INSERT INTO [Contact]([Name], [AddressLine], [AdditionalAddressLine], [PostalCode], [City], [State], [Country], [LandlineNumber], [CellphoneNumber], [Email], [Website], [Fax])
+ VALUES (@p0, @p1, @p2, NULL, @p3, NULL, NULL, NULL, @p4, @p5, NULL, NULL);
+SELECT [Id]
+FROM [Contact]
+WHERE last_rows_affected() > 0 AND [Id] = last_insert_rowid()
+;
+-- @p0: 'Name_9' (Type = String)
+-- @p1: 'AddressLine_9' (Type = String)
+-- @p2: 'AdditionalAddressLine_9' (Type = String)
+-- @p3: 'City_9' (Type = String)
+-- @p4: 'TelephoneNumber_9' (Type = String)
+-- @p5: 'Email_9' (Type = String)
+-- Executing at 13/09/2018 16:10:31 +02:00
+-- Completed in 0 ms with result: SQLiteDataReader
+
+INSERT INTO [MachineOrder]([Identifier], [ParentOrderIdentifier], [ExternalOrderName], [MachineNumber], [MachineOrderStatus], [RollId])
+ VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [MachineOrder]
+WHERE last_rows_affected() > 0 AND [Id] = last_insert_rowid()
+;
+-- @p0: 'f78cd3d9-2179-4598-b35b-4c0fdf7aa745' (Type = String)
+-- @p1: 'Identifier_9' (Type = String)
+-- @p2: 'Name_9' (Type = String)
+-- @p3: '9' (Type = Int32)
+-- @p4: '0' (Type = Int32)
+-- @p5: 'M092017-12-20T12:21:44' (Type = String)
+-- Executing at 13/09/2018 16:10:31 +02:00
+-- Completed in 0 ms with result: SQLiteDataReader
+
+INSERT INTO [Customer]([Identifier], [Description], [Name], [OriginalId], [CustomerId], [PouchSchemeId], [Contact_Id], [MachineOrder_Id])
+ VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+SELECT [Id]
+FROM [Customer]
+WHERE last_rows_affected() > 0 AND [Id] = last_insert_rowid()
+;
+-- @p0: 'Identifier_9' (Type = String)
+-- @p1: 'Description_9' (Type = String)
+-- @p2: 'Name_9' (Type = String)
+-- @p3: '2' (Type = Int64)
+-- @p4: '9' (Type = Int64)
+-- @p5: '0' (Type = Int64)
+-- @p6: '28' (Type = Int64)
+-- @p7: '3' (Type = Int64)
+-- Executing at 13/09/2018 16:10:31 +02:00
+-- Failed in 0 ms with error: constraint failed
+UNIQUE constraint failed: Customer.Identifier
+
+Closed connection at 13/09/2018 16:10:31 +02:00
+Disposed transaction at 13/09/2018 16:10:31 +02:00
+Opened connection at 13/09/2018 16:10:31 +02:00
+Started transaction at 13/09/2018 16:10:31 +02:00
+INSERT INTO [Contact]([Name], [AddressLine], [AdditionalAddressLine], [PostalCode], [City], [State], [Country], [LandlineNumber], [CellphoneNumber], [Email], [Website], [Fax])
+ VALUES (@p0, NULL, NULL, NULL, @p1, NULL, NULL, NULL, @p2, @p3, NULL, NULL);
+SELECT [Id]
+FROM [Contact]
+WHERE last_rows_affected() > 0 AND [Id] = last_insert_rowid()
+;
+-- @p0: 'Name_9' (Type = String)
+-- @p1: 'City_9' (Type = String)
+-- @p2: 'TelephoneNumber_9' (Type = String)
+-- @p3: 'Email_9' (Type = String)
+-- Executing at 13/09/2018 16:10:31 +02:00
+-- Completed in 0 ms with result: SQLiteDataReader
+
+INSERT INTO [Contact]([Name], [AddressLine], [AdditionalAddressLine], [PostalCode], [City], [State], [Country], [LandlineNumber], [CellphoneNumber], [Email], [Website], [Fax])
+ VALUES (@p0, @p1, @p2, NULL, @p3, NULL, NULL, NULL, @p4, @p5, NULL, NULL);
+SELECT [Id]
+FROM [Contact]
+WHERE last_rows_affected() > 0 AND [Id] = last_insert_rowid()
+;
+-- @p0: 'Name_1' (Type = String)
+-- @p1: 'AddressLine_1' (Type = String)
+-- @p2: 'AdditionalAddressLine_1' (Type = String)
+-- @p3: 'City_1' (Type = String)
+-- @p4: 'TelephoneNumber_1' (Type = String)
+-- @p5: 'Email_1' (Type = String)
+-- Executing at 13/09/2018 16:10:31 +02:00
+-- Completed in 0 ms with result: SQLiteDataReader
+
+INSERT INTO [Contact]([Name], [AddressLine], [AdditionalAddressLine], [PostalCode], [City], [State], [Country], [LandlineNumber], [CellphoneNumber], [Email], [Website], [Fax])
+ VALUES (NULL, NULL, NULL, NULL, @p0, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+SELECT [Id]
+FROM [Contact]
+WHERE last_rows_affected() > 0 AND [Id] = last_insert_rowid()
+;
+-- @p0: 'City_9' (Type = String)
+-- Executing at 13/09/2018 16:10:31 +02:00
+-- Completed in 0 ms with result: SQLiteDataReader
+
+INSERT INTO [Contact]([Name], [AddressLine], [AdditionalAddressLine], [PostalCode], [City], [State], [Country], [LandlineNumber], [CellphoneNumber], [Email], [Website], [Fax])
+ VALUES (@p0, @p1, @p2, NULL, @p3, NULL, NULL, NULL, @p4, @p5, NULL, NULL);
+SELECT [Id]
+FROM [Contact]
+WHERE last_rows_affected() > 0 AND [Id] = last_insert_rowid()
+;
+-- @p0: 'Name_9' (Type = String)
+-- @p1: 'AddressLine_9' (Type = String)
+-- @p2: 'AdditionalAddressLine_9' (Type = String)
+-- @p3: 'City_9' (Type = String)
+-- @p4: 'TelephoneNumber_9' (Type = String)
+-- @p5: 'Email_9' (Type = String)
+-- Executing at 13/09/2018 16:10:31 +02:00
+-- Completed in 0 ms with result: SQLiteDataReader
+
+INSERT INTO [MachineOrder]([Identifier], [ParentOrderIdentifier], [ExternalOrderName], [MachineNumber], [MachineOrderStatus], [RollId])
+ VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [MachineOrder]
+WHERE last_rows_affected() > 0 AND [Id] = last_insert_rowid()
+;
+-- @p0: 'f78cd3d9-2179-4598-b35b-4c0fdf7aa745' (Type = String)
+-- @p1: 'Identifier_9' (Type = String)
+-- @p2: 'Name_9' (Type = String)
+-- @p3: '9' (Type = Int32)
+-- @p4: '0' (Type = Int32)
+-- @p5: 'M092017-12-20T12:21:44' (Type = String)
+-- Executing at 13/09/2018 16:10:31 +02:00
+-- Completed in 0 ms with result: SQLiteDataReader
+
+INSERT INTO [Customer]([Identifier], [Description], [Name], [OriginalId], [CustomerId], [PouchSchemeId], [Contact_Id], [MachineOrder_Id])
+ VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+SELECT [Id]
+FROM [Customer]
+WHERE last_rows_affected() > 0 AND [Id] = last_insert_rowid()
+;
+-- @p0: 'Identifier_9' (Type = String)
+-- @p1: 'Description_9' (Type = String)
+-- @p2: 'Name_9' (Type = String)
+-- @p3: '2' (Type = Int64)
+-- @p4: '9' (Type = Int64)
+-- @p5: '0' (Type = Int64)
+-- @p6: '28' (Type = Int64)
+-- @p7: '3' (Type = Int64)
+-- Executing at 13/09/2018 16:10:31 +02:00
+-- Failed in 0 ms with error: constraint failed
+UNIQUE constraint failed: Customer.Identifier
+
+Closed connection at 13/09/2018 16:10:31 +02:00
+Disposed transaction at 13/09/2018 16:10:31 +02:00
+Opened connection at 13/09/2018 16:10:32 +02:00
+Started transaction at 13/09/2018 16:10:32 +02:00
+INSERT INTO [Contact]([Name], [AddressLine], [AdditionalAddressLine], [PostalCode], [City], [State], [Country], [LandlineNumber], [CellphoneNumber], [Email], [Website], [Fax])
+ VALUES (@p0, NULL, NULL, NULL, @p1, NULL, NULL, NULL, @p2, @p3, NULL, NULL);
+SELECT [Id]
+FROM [Contact]
+WHERE last_rows_affected() > 0 AND [Id] = last_insert_rowid()
+;
+-- @p0: 'Name_9' (Type = String)
+-- @p1: 'City_9' (Type = String)
+-- @p2: 'TelephoneNumber_9' (Type = String)
+-- @p3: 'Email_9' (Type = String)
+-- Executing at 13/09/2018 16:10:32 +02:00
+-- Completed in 0 ms with result: SQLiteDataReader
+
+INSERT INTO [Contact]([Name], [AddressLine], [AdditionalAddressLine], [PostalCode], [City], [State], [Country], [LandlineNumber], [CellphoneNumber], [Email], [Website], [Fax])
+ VALUES (@p0, @p1, @p2, NULL, @p3, NULL, NULL, NULL, @p4, @p5, NULL, NULL);
+SELECT [Id]
+FROM [Contact]
+WHERE last_rows_affected() > 0 AND [Id] = last_insert_rowid()
+;
+-- @p0: 'Name_1' (Type = String)
+-- @p1: 'AddressLine_1' (Type = String)
+-- @p2: 'AdditionalAddressLine_1' (Type = String)
+-- @p3: 'City_1' (Type = String)
+-- @p4: 'TelephoneNumber_1' (Type = String)
+-- @p5: 'Email_1' (Type = String)
+-- Executing at 13/09/2018 16:10:32 +02:00
+-- Completed in 0 ms with result: SQLiteDataReader
+
+INSERT INTO [Contact]([Name], [AddressLine], [AdditionalAddressLine], [PostalCode], [City], [State], [Country], [LandlineNumber], [CellphoneNumber], [Email], [Website], [Fax])
+ VALUES (NULL, NULL, NULL, NULL, @p0, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
+SELECT [Id]
+FROM [Contact]
+WHERE last_rows_affected() > 0 AND [Id] = last_insert_rowid()
+;
+-- @p0: 'City_9' (Type = String)
+-- Executing at 13/09/2018 16:10:32 +02:00
+-- Completed in 0 ms with result: SQLiteDataReader
+
+INSERT INTO [Contact]([Name], [AddressLine], [AdditionalAddressLine], [PostalCode], [City], [State], [Country], [LandlineNumber], [CellphoneNumber], [Email], [Website], [Fax])
+ VALUES (@p0, @p1, @p2, NULL, @p3, NULL, NULL, NULL, @p4, @p5, NULL, NULL);
+SELECT [Id]
+FROM [Contact]
+WHERE last_rows_affected() > 0 AND [Id] = last_insert_rowid()
+;
+-- @p0: 'Name_9' (Type = String)
+-- @p1: 'AddressLine_9' (Type = String)
+-- @p2: 'AdditionalAddressLine_9' (Type = String)
+-- @p3: 'City_9' (Type = String)
+-- @p4: 'TelephoneNumber_9' (Type = String)
+-- @p5: 'Email_9' (Type = String)
+-- Executing at 13/09/2018 16:10:32 +02:00
+-- Completed in 0 ms with result: SQLiteDataReader
+
+INSERT INTO [MachineOrder]([Identifier], [ParentOrderIdentifier], [ExternalOrderName], [MachineNumber], [MachineOrderStatus], [RollId])
+ VALUES (@p0, @p1, @p2, @p3, @p4, @p5);
+SELECT [Id]
+FROM [MachineOrder]
+WHERE last_rows_affected() > 0 AND [Id] = last_insert_rowid()
+;
+-- @p0: 'f78cd3d9-2179-4598-b35b-4c0fdf7aa745' (Type = String)
+-- @p1: 'Identifier_9' (Type = String)
+-- @p2: 'Name_9' (Type = String)
+-- @p3: '9' (Type = Int32)
+-- @p4: '0' (Type = Int32)
+-- @p5: 'M092017-12-20T12:21:44' (Type = String)
+-- Executing at 13/09/2018 16:10:32 +02:00
+-- Completed in 0 ms with result: SQLiteDataReader
+
+INSERT INTO [Customer]([Identifier], [Description], [Name], [OriginalId], [CustomerId], [PouchSchemeId], [Contact_Id], [MachineOrder_Id])
+ VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+SELECT [Id]
+FROM [Customer]
+WHERE last_rows_affected() > 0 AND [Id] = last_insert_rowid()
+;
+-- @p0: 'Identifier_9' (Type = String)
+-- @p1: 'Description_9' (Type = String)
+-- @p2: 'Name_9' (Type = String)
+-- @p3: '2' (Type = Int64)
+-- @p4: '9' (Type = Int64)
+-- @p5: '0' (Type = Int64)
+-- @p6: '28' (Type = Int64)
+-- @p7: '3' (Type = Int64)
+-- Executing at 13/09/2018 16:10:32 +02:00
+-- Failed in 0 ms with error: constraint failed
+UNIQUE constraint failed: Customer.Identifier
+
+Closed connection at 13/09/2018 16:10:32 +02:00
+Disposed transaction at 13/09/2018 16:10:32 +02:00

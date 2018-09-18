@@ -1,0 +1,71 @@
+{
+    "ExternalId": "TrayBatch",
+    "Timestamp": "2020-07-24T10:47:00",
+    "Customer": {
+        "CustomerId": "Customer1",
+        "Name": "Customer1"
+    },
+    "OrderDetails": [
+        {
+            "Pharmacy": {
+                "CustomerId": "Customer1",
+                "Name": "Pharmacy1"
+            },
+            "Patient": {
+                "ExternalPatientNumber": "Patient.ExternalPatientNumber1",
+                "DateOfBirth": "1900-02-03T00:00:00",
+                "ContactPerson": {
+                    "Name": "Patient.ExternalPatientNumber1"
+                },
+                "ContactAddress": {
+                    "Addressline1": "Patient.ContactAddress1",
+                    "City": "City1",
+                    "Country": "Country1",
+                    "Postalcode": "Postalcode1",
+                    "State": "Sta1te"
+
+                },
+                "RoomNumber": "RoomNumber1",
+                "BedNumber": "BedNumber1",
+                "WardName": "WardName1"
+            },
+            "DestinationFacility": {
+                "CustomerId": "DestinationFacility1",
+                "Name": "DestinationFacility1",
+                "ContactAddress": {
+                    "Addressline1": "DestinationFacility.ContactAddress1",
+                }
+            },
+            "ExternalDetailPrintInfo1": "ExternalDetailPrintInfo1",
+            "ExternalDetailPrintInfo2": "ExternalDetailPrintInfo2",
+            "IntakeDetails": [
+                {
+                    "IntakeDateTime": "2020-01-25T08:00:00",
+                    "MedicationDetails": [
+                        {
+                            "MedicineId": 1,
+                            "Count": 2,
+                            "PrescribedMedicine": "PrescribedMedicine1",
+                            "IntakeAdvice": "IntakeAdvice1",
+                            "PhysicianComment": "PhysicianComment1",
+                            "Physician": "Physician1"
+                        }
+                    ]
+                },
+                {
+                    "IntakeDateTime": "2019-01-25T09:00:00",
+                    "MedicationDetails": [
+                        {
+                            "MedicineId": 2,
+                            "Count": 2,
+                            "PrescribedMedicine": "PrescribedMedicine2",
+                            "IntakeAdvice": "IntakeAdvice2",
+                            "PhysicianComment": "PhysicianComment2",
+                            "Physician": "Physician2"
+                        }
+                    ]
+                }
+            ]
+        }
+    ]
+}

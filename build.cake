@@ -256,7 +256,7 @@ async Task CreateExternalOrderAsync(string jsonFilename, bool withMedicine= true
 
 Task("Ticket-Sw-1804-test.json")
     .Does(async ()=> {
-            await CreateExternalOrderAsync("./Tickets/SW-1804/test.json", false);
+            await CreateExternalOrderAsync("./Tickets/SW-1804/test.json", true);
     });
 Task("Ticket-Sw-1804-test1MedicinNotExist.json")
     .Does(async ()=> {
@@ -287,7 +287,7 @@ Task("Ticket-Sw-1805-Test")
         try
         {
             var s= System.Diagnostics.Stopwatch.StartNew();
-            await CreateExternalOrderAsync("./Tickets/SW-1805/test.json", false);
+            await CreateExternalOrderAsync("./Tickets/SW-1805/test.json", true);
             Information($"time={s.Elapsed}");
         }
         catch(Exception ex)
@@ -369,6 +369,13 @@ Task("Ticket-GetMedicines")
 #endregion
 #endregion
 
+#region Ticket 2195
+Task("Ticket-Sw-2195-TrayBatch.json")
+    .Does(async ()=> {
+            await CreateExternalOrderAsync("./Tickets/SW-2195/TrayBatch.json", true);
+    });
+
+#endregion
 
 #region Test
 
@@ -396,7 +403,7 @@ async Task TestExternalOrderAsync(string jsonFilename, int count)
                     }
                 });
             }
-    var ordersUrl= "http://localhost:6040/SmartDose/Orders?CheckMedicine=true"; 
+    var ordersUrl= "http://localhost:6040/SmartDose/Orders?CheckMedicine=false"; 
     StatusMessage(await ordersUrl.EmcPostJsonAsync(externalOrder).ConfigureAwait(false), $"Create External order");
 }
 

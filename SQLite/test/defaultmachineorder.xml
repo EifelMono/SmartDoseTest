@@ -1,0 +1,550 @@
+<?xml version="1.0" encoding="us-ascii"?>
+<MachineOrder xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:xsd="http://www.w3.org/2001/XMLSchema">
+  <Id>0</Id>
+  <HistoryDate>0001-01-01T00:00:00</HistoryDate>
+  <Identifier>f78cd3d9-2179-4598-b35b-4c0fdf7aa745</Identifier>
+  <ParentOrderIdentifier>Identifier_9</ParentOrderIdentifier>
+  <ExternalOrderName>Name_9</ExternalOrderName>
+  <MachineNumber>9</MachineNumber>
+  <MachineOrderStatus>InQueue</MachineOrderStatus>
+  <Pouches>
+    <Pouch>
+      <Id>0</Id>
+      <HistoryDate>0001-01-01T00:00:00</HistoryDate>
+      <AdditionalIdentifier>1712200900001</AdditionalIdentifier>
+      <Barcode>1712200900001</Barcode>
+      <BatchNumber>2017122000000001</BatchNumber>
+      <CanisterPills />
+      <SequenceIndex>1</SequenceIndex>
+      <IntakeTime>0001-01-01T00:00:00</IntakeTime>
+      <LabelDesignIdentifier>28</LabelDesignIdentifier>
+      <PatientIdentifier>55</PatientIdentifier>
+      <DestinationFacilityIdentifier>2</DestinationFacilityIdentifier>
+      <CultureName>en-US</CultureName>
+      <CustomerIdentifier>3</CustomerIdentifier>
+      <PharmacyIdentifier>3</PharmacyIdentifier>
+      <PouchIdentifier>1712200900006</PouchIdentifier>
+      <ExternalIntakePrintInfo1>ExternalDetailPrintInfo1_9</ExternalIntakePrintInfo1>
+      <ExternalIntakePrintInfo2>ExternalDetailPrintInfo2_9</ExternalIntakePrintInfo2>
+      <PillReports />
+    </Pouch>
+    <Pouch>
+      <Id>0</Id>
+      <HistoryDate>0001-01-01T00:00:00</HistoryDate>
+      <AdditionalIdentifier>1712200900002</AdditionalIdentifier>
+      <Barcode>1712200900002</Barcode>
+      <BatchNumber>2017122000000001</BatchNumber>
+      <CanisterPills />
+      <SequenceIndex>2</SequenceIndex>
+      <IntakeTime>2017-12-29T09:00:00</IntakeTime>
+      <LabelDesignIdentifier>29</LabelDesignIdentifier>
+      <PatientIdentifier>55</PatientIdentifier>
+      <DestinationFacilityIdentifier>2</DestinationFacilityIdentifier>
+      <CultureName>en-US</CultureName>
+      <CustomerIdentifier>3</CustomerIdentifier>
+      <PharmacyIdentifier>3</PharmacyIdentifier>
+      <PouchIdentifier>1712200900007</PouchIdentifier>
+      <ExternalIntakePrintInfo1>ExternalDetailPrintInfo1_9</ExternalIntakePrintInfo1>
+      <ExternalIntakePrintInfo2>ExternalDetailPrintInfo2_9</ExternalIntakePrintInfo2>
+      <PillReports />
+    </Pouch>
+    <Pouch>
+      <Id>0</Id>
+      <HistoryDate>0001-01-01T00:00:00</HistoryDate>
+      <AdditionalIdentifier>1712200900003</AdditionalIdentifier>
+      <Barcode>1712200900003</Barcode>
+      <BatchNumber>2017122000000001</BatchNumber>
+      <CanisterPills />
+      <SequenceIndex>3</SequenceIndex>
+      <IntakeTime>2017-12-30T10:00:00</IntakeTime>
+      <LabelDesignIdentifier>29</LabelDesignIdentifier>
+      <PatientIdentifier>55</PatientIdentifier>
+      <DestinationFacilityIdentifier>2</DestinationFacilityIdentifier>
+      <CultureName>en-US</CultureName>
+      <CustomerIdentifier>3</CustomerIdentifier>
+      <PharmacyIdentifier>3</PharmacyIdentifier>
+      <PouchIdentifier>1712200900008</PouchIdentifier>
+      <ExternalIntakePrintInfo1>ExternalDetailPrintInfo1_9</ExternalIntakePrintInfo1>
+      <ExternalIntakePrintInfo2>ExternalDetailPrintInfo2_9</ExternalIntakePrintInfo2>
+      <PillReports />
+    </Pouch>
+    <Pouch>
+      <Id>0</Id>
+      <HistoryDate>0001-01-01T00:00:00</HistoryDate>
+      <AdditionalIdentifier>1712200900004</AdditionalIdentifier>
+      <Barcode>1712200900004</Barcode>
+      <BatchNumber>2017122000000001</BatchNumber>
+      <CanisterPills />
+      <SequenceIndex>4</SequenceIndex>
+      <IntakeTime>2017-12-31T11:00:00</IntakeTime>
+      <LabelDesignIdentifier>29</LabelDesignIdentifier>
+      <PatientIdentifier>55</PatientIdentifier>
+      <DestinationFacilityIdentifier>2</DestinationFacilityIdentifier>
+      <CultureName>en-US</CultureName>
+      <CustomerIdentifier>3</CustomerIdentifier>
+      <PharmacyIdentifier>3</PharmacyIdentifier>
+      <PouchIdentifier>1712200900009</PouchIdentifier>
+      <ExternalIntakePrintInfo1>ExternalDetailPrintInfo1_9</ExternalIntakePrintInfo1>
+      <ExternalIntakePrintInfo2>ExternalDetailPrintInfo2_9</ExternalIntakePrintInfo2>
+      <PillReports />
+    </Pouch>
+    <Pouch>
+      <Id>0</Id>
+      <HistoryDate>0001-01-01T00:00:00</HistoryDate>
+      <AdditionalIdentifier>1712200900005</AdditionalIdentifier>
+      <Barcode>1712200900005</Barcode>
+      <BatchNumber>2017122000000001</BatchNumber>
+      <CanisterPills />
+      <SequenceIndex>5</SequenceIndex>
+      <IntakeTime>0001-01-01T00:00:00</IntakeTime>
+      <LabelDesignIdentifier>30</LabelDesignIdentifier>
+      <PatientIdentifier>55</PatientIdentifier>
+      <DestinationFacilityIdentifier>2</DestinationFacilityIdentifier>
+      <CultureName>en-US</CultureName>
+      <CustomerIdentifier>3</CustomerIdentifier>
+      <PharmacyIdentifier>3</PharmacyIdentifier>
+      <PouchIdentifier>1712200900010</PouchIdentifier>
+      <ExternalIntakePrintInfo1>ExternalDetailPrintInfo1_9</ExternalIntakePrintInfo1>
+      <ExternalIntakePrintInfo2>ExternalDetailPrintInfo2_9</ExternalIntakePrintInfo2>
+      <PillReports />
+    </Pouch>
+  </Pouches>
+  <TrayOrderIdentifiers>
+    <string>f78cd3d9-2179-4598-b35b-4c0fdf7aa745_1</string>
+  </TrayOrderIdentifiers>
+  <TrayOrders>
+    <TrayOrder>
+      <Id>0</Id>
+      <HistoryDate>0001-01-01T00:00:00</HistoryDate>
+      <Identifier>f78cd3d9-2179-4598-b35b-4c0fdf7aa745_1</Identifier>
+      <SequenceIndex>1</SequenceIndex>
+      <Status>Queued</Status>
+      <TrayFillings>
+        <TrayFilling>
+          <Id>0</Id>
+          <HistoryDate>0001-01-01T00:00:00</HistoryDate>
+          <MedicineAdditionalIdentifier>33333333</MedicineAdditionalIdentifier>
+          <TrayPills>
+            <TrayPill>
+              <Id>0</Id>
+              <HistoryDate>0001-01-01T00:00:00</HistoryDate>
+              <PouchAdditionalIdentifier>1712200900002</PouchAdditionalIdentifier>
+              <MedicineIdentifier>3</MedicineIdentifier>
+              <AdditionalMedicineIdentifier>33333333</AdditionalMedicineIdentifier>
+              <MedicineContentIdentifier>0</MedicineContentIdentifier>
+              <CellIndex>0</CellIndex>
+              <LotNumber />
+              <ExpiryDate>0001-01-01T00:00:00</ExpiryDate>
+              <IsPlaced>false</IsPlaced>
+              <FractionalAmount>1</FractionalAmount>
+              <PouchPrintSequenceNumber>0</PouchPrintSequenceNumber>
+              <RepairPillAmount>0</RepairPillAmount>
+              <MedicinePrescriptionIdentifier>PrescribedMedication_9</MedicinePrescriptionIdentifier>
+              <CorrectionReason>MissingPills</CorrectionReason>
+            </TrayPill>
+            <TrayPill>
+              <Id>0</Id>
+              <HistoryDate>0001-01-01T00:00:00</HistoryDate>
+              <PouchAdditionalIdentifier>1712200900003</PouchAdditionalIdentifier>
+              <MedicineIdentifier>3</MedicineIdentifier>
+              <AdditionalMedicineIdentifier>33333333</AdditionalMedicineIdentifier>
+              <MedicineContentIdentifier>0</MedicineContentIdentifier>
+              <CellIndex>1</CellIndex>
+              <LotNumber />
+              <ExpiryDate>0001-01-01T00:00:00</ExpiryDate>
+              <IsPlaced>false</IsPlaced>
+              <FractionalAmount>1</FractionalAmount>
+              <PouchPrintSequenceNumber>0</PouchPrintSequenceNumber>
+              <RepairPillAmount>0</RepairPillAmount>
+              <MedicinePrescriptionIdentifier>PrescribedMedication_10</MedicinePrescriptionIdentifier>
+              <CorrectionReason>MissingPills</CorrectionReason>
+            </TrayPill>
+            <TrayPill>
+              <Id>0</Id>
+              <HistoryDate>0001-01-01T00:00:00</HistoryDate>
+              <PouchAdditionalIdentifier>1712200900004</PouchAdditionalIdentifier>
+              <MedicineIdentifier>3</MedicineIdentifier>
+              <AdditionalMedicineIdentifier>33333333</AdditionalMedicineIdentifier>
+              <MedicineContentIdentifier>0</MedicineContentIdentifier>
+              <CellIndex>2</CellIndex>
+              <LotNumber />
+              <ExpiryDate>0001-01-01T00:00:00</ExpiryDate>
+              <IsPlaced>false</IsPlaced>
+              <FractionalAmount>1</FractionalAmount>
+              <PouchPrintSequenceNumber>0</PouchPrintSequenceNumber>
+              <RepairPillAmount>0</RepairPillAmount>
+              <MedicinePrescriptionIdentifier>PrescribedMedication_11</MedicinePrescriptionIdentifier>
+              <CorrectionReason>MissingPills</CorrectionReason>
+            </TrayPill>
+          </TrayPills>
+          <Done>false</Done>
+        </TrayFilling>
+      </TrayFillings>
+      <InternalOrderIdentifier>Identifier_9</InternalOrderIdentifier>
+      <TrayId>0</TrayId>
+      <JobType>TrayFill</JobType>
+      <ParentTrayOrderId>0</ParentTrayOrderId>
+    </TrayOrder>
+  </TrayOrders>
+  <LabelDesigns>
+    <LabelDesign>
+      <Id>0</Id>
+      <HistoryDate>0001-01-01T00:00:00</HistoryDate>
+      <Description>Import</Description>
+      <CreateDate>0001-01-01T00:00:00</CreateDate>
+      <Type>PatientHeader</Type>
+      <SerializedContent>
+        &lt;?xml version="1.0" encoding="utf-8"?&gt;
+        &lt;XtraReportsLayoutSerializer SerializerVersion="16.2.3.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v16.2, Version=16.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="Pouch_PatientHeader" ScriptsSource="&amp;#xD;&amp;#xA;" SnapGridSize="25" ReportUnit="TenthsOfAMillimeter" Margins="0, 0, 595, 0" PaperKind="Custom" PageWidth="525" PageHeight="600" Version="17.1" DataSource="#Ref-0" TextAlignment="MiddleCenter" Dpi="254" Font="Microsoft Sans Serif, 8.25pt, charSet=0"&gt;
+        &lt;FormattingRuleSheet&gt;
+        &lt;Item1 Ref="2" Name="formattingRule1" Condition="Len([MedicineName]) == 0"&gt;
+        &lt;Formatting Ref="3" Visible="False" BorderStyle="Inset" StringFormat="Near;Near;0;None;Character;Default" /&gt;
+        &lt;/Item1&gt;
+        &lt;/FormattingRuleSheet&gt;
+        &lt;Bands&gt;
+        &lt;Item1 Ref="4" ControlType="DetailBand" Name="detailBand1" HeightF="0" Dpi="254" BorderColor="Transparent"&gt;
+        &lt;StylePriority Ref="5" UseBorderColor="false" /&gt;
+        &lt;/Item1&gt;
+        &lt;Item2 Ref="6" ControlType="TopMarginBand" Name="topMarginBand1" HeightF="595.34845" TextAlignment="MiddleCenter" Dpi="254"&gt;
+        &lt;Controls&gt;
+        &lt;Item1 Ref="7" ControlType="XRBarCode" Name="barCode2" Module="5.08" AutoModule="true" Alignment="MiddleCenter" TextAlignment="MiddleCenter" ShowText="false" SizeF="179.171509,114.785248" LocationFloat="170.268677, 340.823273" Dpi="254" Padding="25,25,0,0,254"&gt;
+        &lt;Symbology Ref="8" Name="DataMatrix" CompactionMode="Text" /&gt;
+        &lt;DataBindings&gt;
+        &lt;Item1 Ref="9" PropertyName="Text" DataMember="RollId" /&gt;
+        &lt;/DataBindings&gt;
+        &lt;StylePriority Ref="10" UseTextAlignment="false" /&gt;
+        &lt;/Item1&gt;
+        &lt;Item2 Ref="11" ControlType="XRLabel" Name="label5" CanGrow="false" TextAlignment="MiddleCenter" WordWrap="false" SizeF="523.3862,42.7837753" LocationFloat="0, 262.4962" Dpi="254" Font="Arial, 10pt, style=Bold" ForeColor="Black" Borders="None"&gt;
+        &lt;DataBindings&gt;
+        &lt;Item1 Ref="12" PropertyName="Text" DataMember="PharmacyData.Name" /&gt;
+        &lt;/DataBindings&gt;
+        &lt;StylePriority Ref="13" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" /&gt;
+        &lt;/Item2&gt;
+        &lt;Item3 Ref="14" ControlType="XRLabel" Name="label4" CanGrow="false" TextAlignment="MiddleCenter" WordWrap="false" SizeF="523.3862,42.7837753" LocationFloat="1.06787682, 184.996841" Dpi="254" Font="Arial, 8pt, style=Bold" ForeColor="Black" Borders="None"&gt;
+        &lt;DataBindings&gt;
+        &lt;Item1 Ref="15" FormatString="Zimmer:{0}" PropertyName="Text" DataMember="PatientData.RoomNumber" /&gt;
+        &lt;/DataBindings&gt;
+        &lt;StylePriority Ref="16" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" /&gt;
+        &lt;/Item3&gt;
+        &lt;Item4 Ref="17" ControlType="XRLabel" Name="label2" CanGrow="false" TextAlignment="MiddleCenter" WordWrap="false" SizeF="523.3862,42.7837753" LocationFloat="0.4539961, 142.2131" Dpi="254" Font="Arial, 10pt, style=Bold" ForeColor="Black" Borders="None"&gt;
+        &lt;DataBindings&gt;
+        &lt;Item1 Ref="18" FormatString="Station:{0}" PropertyName="Text" DataMember="CustomerData.Name" /&gt;
+        &lt;/DataBindings&gt;
+        &lt;StylePriority Ref="19" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" /&gt;
+        &lt;/Item4&gt;
+        &lt;Item5 Ref="20" ControlType="XRLabel" Name="label1" Text="Patienten Vorlaufblister" TextAlignment="MiddleCenter" SizeF="523.3862,42.7837753" LocationFloat="0, 11.7708416" Dpi="254" Font="Arial, 8pt, style=Bold" ForeColor="Black" Borders="None"&gt;
+        &lt;StylePriority Ref="21" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" /&gt;
+        &lt;/Item5&gt;
+        &lt;Item6 Ref="22" ControlType="XRLabel" Name="label3" CanGrow="false" Text="[PatientData.FirstName] [PatientData.LastName]" TextAlignment="MiddleCenter" WordWrap="false" SizeF="523.3862,42.7837753" LocationFloat="0, 99.429306" Dpi="254" Font="Arial, 10pt, style=Bold" ForeColor="Black" Borders="None"&gt;
+        &lt;StylePriority Ref="23" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" /&gt;
+        &lt;/Item6&gt;
+        &lt;Item7 Ref="24" ControlType="XRBarCode" Name="barCode1" Module="5.08" AutoModule="true" Alignment="MiddleCenter" TextAlignment="BottomCenter" SizeF="521.840332,75.60495" LocationFloat="0.9999434, 494.7435" Dpi="254" Font="Arial, 8pt, style=Bold" Padding="11,11,0,0,254"&gt;
+        &lt;Symbology Ref="25" Name="Code128" /&gt;
+        &lt;DataBindings&gt;
+        &lt;Item1 Ref="26" PropertyName="Text" DataMember="PouchIdentifier" /&gt;
+        &lt;/DataBindings&gt;
+        &lt;StylePriority Ref="27" UseFont="false" UsePadding="false" UseTextAlignment="false" /&gt;
+        &lt;/Item7&gt;
+        &lt;Item8 Ref="28" ControlType="XRLine" Name="line2" LineWidth="3" SizeF="525.000061,5" LocationFloat="0, 67.78377" Dpi="254" /&gt;
+        &lt;/Controls&gt;
+        &lt;StylePriority Ref="29" UseTextAlignment="false" /&gt;
+        &lt;/Item2&gt;
+        &lt;Item3 Ref="30" ControlType="BottomMarginBand" Name="bottomMarginBand1" HeightF="0" Dpi="254" /&gt;
+        &lt;/Bands&gt;
+        &lt;Scripts Ref="31" OnBeforePrint="Pouch_PatientHeader_BeforePrint" /&gt;
+        &lt;ExportOptions Ref="32"&gt;
+        &lt;Image Ref="33" PageBorderWidth="0" ExportMode="SingleFilePageByPage" PageRange="1" Format="Bmp" Resolution="300" /&gt;
+        &lt;/ExportOptions&gt;
+        &lt;Watermark Ref="34" TextTransparency="0" /&gt;
+        &lt;ComponentStorage&gt;
+        &lt;Item1 Ref="0" ObjectType="DevExpress.DataAccess.ObjectBinding.ObjectDataSource,DevExpress.DataAccess.v16.2" Name="DataSourcePouch" Base64="PE9iamVjdERhdGFTb3VyY2U+PE5hbWU+RGF0YVNvdXJjZVBvdWNoPC9OYW1lPjxEYXRhU291cmNlIFR5cGU9IlJvd2EuU21hcnREb3NlLlNkbWMuQ29udHJvbGxlci5Qcm9kdWN0aW9uLk9yZGVyRm9yUHJvZHVjdGlvbi5QRFRSLlBvdWNoRGF0YSwgUG91Y2hEYXRhVG9SZW5kZXIsIFZlcnNpb249MS4yLjAuMTA0LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPW51bGwiIC8+PC9PYmplY3REYXRhU291cmNlPg==" /&gt;
+        &lt;/ComponentStorage&gt;
+        &lt;/XtraReportsLayoutSerializer&gt;
+      </SerializedContent>
+      <SizeLimitX>0</SizeLimitX>
+      <SizeLimitY>0</SizeLimitY>
+      <IsSystemTemplate>false</IsSystemTemplate>
+      <Name>Patient Header Asklepios</Name>
+      <OriginalId>20</OriginalId>
+    </LabelDesign>
+    <LabelDesign>
+      <Id>0</Id>
+      <HistoryDate>0001-01-01T00:00:00</HistoryDate>
+      <Description>Import</Description>
+      <CreateDate>0001-01-01T00:00:00</CreateDate>
+      <Type>PatientDetail</Type>
+      <SerializedContent>
+        &lt;?xml version="1.0" encoding="utf-8"?&gt;
+        &lt;XtraReportsLayoutSerializer SerializerVersion="17.1.4.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="XtraReport" ScriptsSource="&amp;#xD;&amp;#xA;private void XtraReport_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e) &amp;#xD;&amp;#xA;{&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;&amp;#x9;&amp;#xD;&amp;#xA;&amp;#x9;//Set pouchcounter visible / not visible&amp;#xD;&amp;#xA;&amp;#x9;int pouchCountTotal = (int)GetCurrentColumnValue(&amp;quot;PouchCountTotal&amp;quot;);&amp;#xD;&amp;#xA;&amp;#x9;&amp;#xD;&amp;#xA;&amp;#x9;lblPouchCountTop.Visible=false;&amp;#xD;&amp;#xA;&amp;#x9;lblPouchCountBottom.Visible=false;&amp;#xD;&amp;#xA;&amp;#x9;&amp;#xD;&amp;#xA;&amp;#x9;if (pouchCountTotal &amp;gt; 1)&amp;#xD;&amp;#xA;&amp;#x9;{&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;int pouchCountCurrent = (int)GetCurrentColumnValue(&amp;quot;PouchCountCurrent&amp;quot;);&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;if(pouchCountCurrent &amp;gt;1)&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;#x9;lblPouchCountTop.Visible = true;&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;if(pouchCountCurrent &amp;lt; pouchCountTotal)&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;#x9;lblPouchCountBottom.Visible = true;&amp;#xD;&amp;#xA;&amp;#x9;}&amp;#xD;&amp;#xA;}&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;private void DetailReport_DataSourceRowChanged(object sender, DevExpress.XtraReports.UI.DataSourceRowEventArgs e) &amp;#xD;&amp;#xA;{&amp;#xD;&amp;#xA;&amp;#x9;//double amount= Convert.ToDouble(DetailReport.GetCurrentColumnValue(&amp;quot;CurrentAmount&amp;quot;));&amp;#xD;&amp;#xA;}&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;private void label2_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e) &amp;#xD;&amp;#xA;{&amp;#xD;&amp;#xA;&amp;#x9;if (label2.Text!=string.Empty)&amp;#xD;&amp;#xA;&amp;#x9;label2.Text =ConvertDecimalToFraction(Convert.ToDouble(label2.Text));&amp;#xD;&amp;#xA;}&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;private string ConvertDecimalToFraction(double amount)&amp;#xD;&amp;#xA;{&amp;#xD;&amp;#xA;&amp;#x9;string result;&amp;#xD;&amp;#xA;&amp;#x9;bool hasDecimalPart = !(amount-System.Math.Truncate(amount) == 0);&amp;#x9;&amp;#xD;&amp;#xA;&amp;#x9;&amp;#xD;&amp;#xA;&amp;#x9;if (hasDecimalPart)&amp;#xD;&amp;#xA;      {&amp;#xD;&amp;#xA;      &amp;#x9;string wholePart = string.Empty;&amp;#xD;&amp;#xA;                string fractionPart = string.Empty;&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;                if (true)&amp;#xD;&amp;#xA;                {&amp;#xD;&amp;#xA;                    int whole = (int)amount;&amp;#xD;&amp;#xA;                    double decimals = (whole &amp;gt; 0) ? amount% whole : amount;&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;                    if (whole &amp;gt; 0)&amp;#xD;&amp;#xA;                    {&amp;#xD;&amp;#xA;                        wholePart = whole.ToString()+&amp;quot; &amp;quot;;&amp;#xD;&amp;#xA;                    }&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;                    if (decimals == 0.25)&amp;#xD;&amp;#xA;                    {&amp;#xD;&amp;#xA;                        fractionPart = &amp;quot;1/4&amp;quot;;&amp;#xD;&amp;#xA;                    }&amp;#xD;&amp;#xA;                    else if (decimals &amp;gt;= 0.3 &amp;amp;&amp;amp; decimals &amp;lt;= 0.5)&amp;#xD;&amp;#xA;                    {&amp;#xD;&amp;#xA;                        fractionPart = &amp;quot;1/3&amp;quot;;&amp;#xD;&amp;#xA;                    }&amp;#xD;&amp;#xA;                    else if (decimals == 0.5)&amp;#xD;&amp;#xA;                    {&amp;#xD;&amp;#xA;                        fractionPart = &amp;quot;1/2&amp;quot;;&amp;#xD;&amp;#xA;                    }&amp;#xD;&amp;#xA;                    else if (decimals &amp;gt;= 0.60 &amp;amp;&amp;amp; decimals &amp;lt;= 0.7)&amp;#xD;&amp;#xA;                    {&amp;#xD;&amp;#xA;                        fractionPart = &amp;quot;2/3&amp;quot;;&amp;#xD;&amp;#xA;                    }&amp;#xD;&amp;#xA;                    else if (decimals == 0.75)&amp;#xD;&amp;#xA;                    {&amp;#xD;&amp;#xA;                        fractionPart = &amp;quot;3/4&amp;quot;;&amp;#xD;&amp;#xA;                    }&amp;#xD;&amp;#xA;                }&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;                if (fractionPart == string.Empty)&amp;#xD;&amp;#xA;                {&amp;#xD;&amp;#xA;                    result = amount.ToString(&amp;quot;0.00&amp;quot;).TrimEnd('0');&amp;#xD;&amp;#xA;                }&amp;#xD;&amp;#xA;                else&amp;#xD;&amp;#xA;                {&amp;#xD;&amp;#xA;                    result = wholePart + fractionPart;&amp;#xD;&amp;#xA;                }&amp;#xD;&amp;#xA;&amp;#x9;&amp;#x9;&amp;#xD;&amp;#xA;            }&amp;#xD;&amp;#xA;            else&amp;#xD;&amp;#xA;            {&amp;#xD;&amp;#xA;                result = amount.ToString(&amp;quot;#&amp;quot;);&amp;#xD;&amp;#xA;            }&amp;#xD;&amp;#xA;&amp;#x9;return result;&amp;#xD;&amp;#xA;&amp;#xD;&amp;#xA;}&amp;#xD;&amp;#xA;" SnapGridSize="25" ReportUnit="TenthsOfAMillimeter" Margins="0, 0, 0, 123" PaperKind="Custom" PageWidth="525" PageHeight="600" Version="17.1" DataSource="#Ref-0" Dpi="254"&gt;
+        &lt;FormattingRuleSheet&gt;
+        &lt;Item1 Ref="2" Name="formattingRule1"&gt;
+        &lt;Formatting Ref="3" BorderStyle="Inset" StringFormat="Near;Near;0;None;Character;Default" /&gt;
+        &lt;/Item1&gt;
+        &lt;/FormattingRuleSheet&gt;
+        &lt;Bands&gt;
+        &lt;Item1 Ref="4" ControlType="TopMarginBand" Name="topMarginBand1" HeightF="0" Dpi="254" /&gt;
+        &lt;Item2 Ref="5" ControlType="DetailBand" Name="detailBand1" HeightF="190.819489" Dpi="254"&gt;
+        &lt;Scripts Ref="6" OnBeforePrint="detailBand1_BeforePrint" /&gt;
+        &lt;Controls&gt;
+        &lt;Item1 Ref="7" ControlType="XRLabel" Name="label3" Text="[PatientData.FirstName] [PatientData.LastName]" TextAlignment="MiddleCenter" SizeF="524.000061,34.6074829" LocationFloat="0.999615967, 151.367462" Dpi="254" Font="Arial, 8.25pt"&gt;
+        &lt;StylePriority Ref="8" UseFont="false" UseTextAlignment="false" /&gt;
+        &lt;/Item1&gt;
+        &lt;Item2 Ref="9" ControlType="XRLabel" Name="lblPouchCountTop" Text="[PouchCountCurrent] of [PouchCountTotal]" TextAlignment="TopRight" SizeF="85.52417,36.2577248" LocationFloat="428.833, 0" Dpi="254" Font="Microsoft Sans Serif, 6pt" Padding="5,5,0,0,254"&gt;
+        &lt;StylePriority Ref="10" UseFont="false" UseTextAlignment="false" /&gt;
+        &lt;/Item2&gt;
+        &lt;Item3 Ref="11" ControlType="XRLabel" Name="xrLabel2" SizeF="372.078033,102.6904" LocationFloat="0, 0" Dpi="254" Font="Microsoft Sans Serif, 24pt, style=Bold" Padding="0,0,0,0,254"&gt;
+        &lt;DataBindings&gt;
+        &lt;Item1 Ref="12" FormatString="{0:t}" PropertyName="Text" DataMember="IntakeDateTime" /&gt;
+        &lt;/DataBindings&gt;
+        &lt;StylePriority Ref="13" UseFont="false" UsePadding="false" /&gt;
+        &lt;/Item3&gt;
+        &lt;Item4 Ref="14" ControlType="XRLabel" Name="label4" TextAlignment="BottomLeft" SizeF="372.0779,76.36749" LocationFloat="0.999293, 74.9999847" Dpi="254" Font="Microsoft Sans Serif, 15.75pt, style=Bold" Padding="0,0,0,0,254"&gt;
+        &lt;DataBindings&gt;
+        &lt;Item1 Ref="15" FormatString="{0:dddd}" PropertyName="Text" DataMember="IntakeDateTime" /&gt;
+        &lt;/DataBindings&gt;
+        &lt;StylePriority Ref="16" UseFont="false" UsePadding="false" UseTextAlignment="false" /&gt;
+        &lt;/Item4&gt;
+        &lt;/Controls&gt;
+        &lt;/Item2&gt;
+        &lt;Item3 Ref="17" ControlType="BottomMarginBand" Name="bottomMarginBand1" HeightF="123" Dpi="254"&gt;
+        &lt;Controls&gt;
+        &lt;Item1 Ref="18" ControlType="XRLabel" Name="lblPouchCountBottom" Text="[PouchCountCurrent] of [PouchCountTotal]" TextAlignment="BottomRight" SizeF="96.166626,36.25773" LocationFloat="428.833, 25.0000076" Dpi="254" Font="Microsoft Sans Serif, 6pt" Padding="5,5,0,0,254"&gt;
+        &lt;StylePriority Ref="19" UseFont="false" UseTextAlignment="false" /&gt;
+        &lt;/Item1&gt;
+        &lt;Item2 Ref="20" ControlType="XRBarCode" Name="barCode1" Module="5.08" AutoModule="true" Alignment="MiddleCenter" ShowText="false" SizeF="524.999634,50" LocationFloat="0, 72.9999847" Dpi="254" Padding="11,11,0,0,254"&gt;
+        &lt;Symbology Ref="21" Name="Code128" /&gt;
+        &lt;DataBindings&gt;
+        &lt;Item1 Ref="22" PropertyName="Text" DataMember="PouchIdentifier" /&gt;
+        &lt;/DataBindings&gt;
+        &lt;StylePriority Ref="23" UsePadding="false" /&gt;
+        &lt;/Item2&gt;
+        &lt;/Controls&gt;
+        &lt;/Item3&gt;
+        &lt;Item4 Ref="24" ControlType="DetailReportBand" Name="DetailReport" Level="0" DataMember="MedicineData" DataSource="#Ref-0" Dpi="254"&gt;
+        &lt;Bands&gt;
+        &lt;Item1 Ref="25" ControlType="DetailBand" Name="Detail" HeightF="60" Dpi="254"&gt;
+        &lt;Scripts Ref="26" OnBeforePrint="Detail_BeforePrint" /&gt;
+        &lt;Controls&gt;
+        &lt;Item1 Ref="27" ControlType="XRLabel" Name="label6" CanGrow="false" Text="label6" SizeF="273.909668,30" LocationFloat="251.090408, 30" Dpi="254" Font="Microsoft Sans Serif, 6pt" Padding="2,2,0,0,96"&gt;
+        &lt;DataBindings&gt;
+        &lt;Item1 Ref="28" PropertyName="Text" DataMember="MedicineData.LotInfos.LotNumber" /&gt;
+        &lt;/DataBindings&gt;
+        &lt;StylePriority Ref="29" UseFont="false" /&gt;
+        &lt;/Item1&gt;
+        &lt;Item2 Ref="30" ControlType="XRLabel" Name="label5" CanGrow="false" Text="label5" SizeF="168.451385,30" LocationFloat="82.6390152, 30" Dpi="254" Font="Microsoft Sans Serif, 6pt" Padding="2,2,0,0,96"&gt;
+        &lt;DataBindings&gt;
+        &lt;Item1 Ref="31" PropertyName="Text" DataMember="MedicineData.LotInfos.ExpiryDate" /&gt;
+        &lt;/DataBindings&gt;
+        &lt;StylePriority Ref="32" UseFont="false" /&gt;
+        &lt;/Item2&gt;
+        &lt;Item3 Ref="33" ControlType="XRLabel" Name="label1" CanGrow="false" WordWrap="false" SizeF="442.36087,30" LocationFloat="82.6390152, 0" Dpi="254" Font="Microsoft Sans Serif, 6pt"&gt;
+        &lt;DataBindings&gt;
+        &lt;Item1 Ref="34" PropertyName="Text" DataMember="MedicineData.MedicineName" /&gt;
+        &lt;/DataBindings&gt;
+        &lt;StylePriority Ref="35" UseFont="false" /&gt;
+        &lt;/Item3&gt;
+        &lt;Item4 Ref="36" ControlType="XRLabel" Name="label2" CanGrow="false" TextAlignment="TopRight" WordWrap="false" SizeF="68.35149,30" LocationFloat="0.999293, 0" Dpi="254" Font="Microsoft Sans Serif, 6pt"&gt;
+        &lt;Scripts Ref="37" OnBeforePrint="label2_BeforePrint" /&gt;
+        &lt;DataBindings&gt;
+        &lt;Item1 Ref="38" PropertyName="Text" DataMember="MedicineData.CurrentAmount" /&gt;
+        &lt;/DataBindings&gt;
+        &lt;StylePriority Ref="39" UseFont="false" UseTextAlignment="false" /&gt;
+        &lt;/Item4&gt;
+        &lt;/Controls&gt;
+        &lt;/Item1&gt;
+        &lt;/Bands&gt;
+        &lt;Scripts Ref="40" OnDataSourceRowChanged="DetailReport_DataSourceRowChanged" OnBeforePrint="DetailReport_BeforePrint" /&gt;
+        &lt;/Item4&gt;
+        &lt;/Bands&gt;
+        &lt;Scripts Ref="41" OnBeforePrint="XtraReport_BeforePrint" /&gt;
+        &lt;ExportOptions Ref="42"&gt;
+        &lt;Image Ref="43" PageBorderWidth="0" ExportMode="SingleFilePageByPage" PageRange="1" Format="Bmp" Resolution="300" /&gt;
+        &lt;/ExportOptions&gt;
+        &lt;Watermark Ref="44" ShowBehind="false" TextDirection="BackwardDiagonal" ForeColor="Black" TextTransparency="0" /&gt;
+        &lt;ComponentStorage&gt;
+        &lt;Item1 Ref="0" ObjectType="DevExpress.DataAccess.ObjectBinding.ObjectDataSource,DevExpress.DataAccess.v17.1" Name="PouchObjectData" Base64="PE9iamVjdERhdGFTb3VyY2U+PE5hbWU+UG91Y2hPYmplY3REYXRhPC9OYW1lPjxEYXRhU291cmNlIFR5cGU9IlJvd2EuU21hcnREb3NlLlNkbWMuQ29udHJvbGxlci5Qcm9kdWN0aW9uLk9yZGVyRm9yUHJvZHVjdGlvbi5QRFRSLlBvdWNoRGF0YSwgUG91Y2hEYXRhVG9SZW5kZXIsIFZlcnNpb249MS4wLjAuMTk1LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPW51bGwiIC8+PC9PYmplY3REYXRhU291cmNlPg==" /&gt;
+        &lt;/ComponentStorage&gt;
+        &lt;/XtraReportsLayoutSerializer&gt;
+      </SerializedContent>
+      <SizeLimitX>0</SizeLimitX>
+      <SizeLimitY>0</SizeLimitY>
+      <IsSystemTemplate>false</IsSystemTemplate>
+      <Name>Patient Detail AddInfo</Name>
+      <OriginalId>11</OriginalId>
+    </LabelDesign>
+    <LabelDesign>
+      <Id>0</Id>
+      <HistoryDate>0001-01-01T00:00:00</HistoryDate>
+      <Description>Import</Description>
+      <CreateDate>0001-01-01T00:00:00</CreateDate>
+      <Type>PatientFooter</Type>
+      <SerializedContent>
+        &lt;?xml version="1.0" encoding="utf-8"?&gt;
+        &lt;XtraReportsLayoutSerializer SerializerVersion="16.2.3.0" Ref="1" ControlType="DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v16.2, Version=16.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a" Name="Pouch_PatientFooter" SnapGridSize="25" ReportUnit="TenthsOfAMillimeter" Margins="0, 0, 610, 0" PaperKind="Custom" PageWidth="525" PageHeight="600" Version="17.1" DataSource="#Ref-0" Dpi="254" Font="Arial, 8pt"&gt;
+        &lt;FormattingRuleSheet&gt;
+        &lt;Item1 Ref="2" Name="formattingRule1" Condition="Len([MedicineName]) == 0"&gt;
+        &lt;Formatting Ref="3" Visible="False" BorderStyle="Inset" StringFormat="Near;Near;0;None;Character;Default" /&gt;
+        &lt;/Item1&gt;
+        &lt;/FormattingRuleSheet&gt;
+        &lt;Bands&gt;
+        &lt;Item1 Ref="4" ControlType="DetailBand" Name="detailBand1" HeightF="0" Dpi="254" /&gt;
+        &lt;Item2 Ref="5" ControlType="TopMarginBand" Name="topMarginBand1" HeightF="610.3395" Dpi="254"&gt;
+        &lt;Controls&gt;
+        &lt;Item1 Ref="6" ControlType="XRLabel" Name="label2" Text="Patienten Endblister" TextAlignment="MiddleCenter" SizeF="523.3862,42.7837753" LocationFloat="0, 11.2570629" Dpi="254" Font="Arial, 8pt, style=Bold" ForeColor="Black" Borders="None"&gt;
+        &lt;StylePriority Ref="7" UseFont="false" UseForeColor="false" UseBorders="false" UseTextAlignment="false" /&gt;
+        &lt;/Item1&gt;
+        &lt;Item2 Ref="8" ControlType="XRBarCode" Name="barCode1" Module="5.08" AutoModule="true" Alignment="MiddleCenter" TextAlignment="BottomCenter" SizeF="521.840332,75.60495" LocationFloat="3.15966129, 523.8981" Dpi="254" Font="Microsoft Sans Serif, 6pt" Padding="11,11,0,0,254"&gt;
+        &lt;Symbology Ref="9" Name="Code128" /&gt;
+        &lt;DataBindings&gt;
+        &lt;Item1 Ref="10" PropertyName="Text" DataMember="PouchIdentifier" /&gt;
+        &lt;/DataBindings&gt;
+        &lt;StylePriority Ref="11" UseFont="false" UsePadding="false" UseTextAlignment="false" /&gt;
+        &lt;/Item2&gt;
+        &lt;Item3 Ref="12" ControlType="XRLabel" Name="label1" TextAlignment="MiddleCenter" SizeF="519.8404,58.42" LocationFloat="3.15966, 177.759186" Dpi="254" Font="Arial, 9pt, style=Bold" Padding="5,5,0,0,254"&gt;
+        &lt;DataBindings&gt;
+        &lt;Item1 Ref="13" PropertyName="Text" DataMember="RollId" /&gt;
+        &lt;/DataBindings&gt;
+        &lt;StylePriority Ref="14" UseFont="false" UseTextAlignment="false" /&gt;
+        &lt;/Item3&gt;
+        &lt;Item4 Ref="15" ControlType="XRBarCode" Name="barCode2" Module="5.08" AutoModule="true" Alignment="MiddleCenter" TextAlignment="MiddleCenter" ShowText="false" SizeF="179.171509,114.785248" LocationFloat="172.69957, 318.1902" Dpi="254" Padding="25,25,0,0,254"&gt;
+        &lt;Symbology Ref="16" Name="DataMatrix" CompactionMode="Text" /&gt;
+        &lt;DataBindings&gt;
+        &lt;Item1 Ref="17" PropertyName="Text" DataMember="RollId" /&gt;
+        &lt;/DataBindings&gt;
+        &lt;StylePriority Ref="18" UseTextAlignment="false" /&gt;
+        &lt;/Item4&gt;
+        &lt;Item5 Ref="19" ControlType="XRLine" Name="line2" LineWidth="3" SizeF="523.000061,5" LocationFloat="0, 64.28006" Dpi="254" /&gt;
+        &lt;/Controls&gt;
+        &lt;/Item2&gt;
+        &lt;Item3 Ref="20" ControlType="BottomMarginBand" Name="bottomMarginBand1" HeightF="0" Dpi="254" /&gt;
+        &lt;/Bands&gt;
+        &lt;ExportOptions Ref="21"&gt;
+        &lt;Image Ref="22" PageBorderWidth="0" ExportMode="SingleFilePageByPage" Format="Bmp" Resolution="300" /&gt;
+        &lt;/ExportOptions&gt;
+        &lt;Watermark Ref="23" TextTransparency="0" /&gt;
+        &lt;ComponentStorage&gt;
+        &lt;Item1 Ref="0" ObjectType="DevExpress.DataAccess.ObjectBinding.ObjectDataSource,DevExpress.DataAccess.v16.2" Name="DataSourcePouch" Base64="PE9iamVjdERhdGFTb3VyY2U+PE5hbWU+RGF0YVNvdXJjZVBvdWNoPC9OYW1lPjxEYXRhU291cmNlIFR5cGU9IlJvd2EuU21hcnREb3NlLlNkbWMuQ29udHJvbGxlci5Qcm9kdWN0aW9uLk9yZGVyRm9yUHJvZHVjdGlvbi5QRFRSLlBvdWNoRGF0YSwgUG91Y2hEYXRhVG9SZW5kZXIsIFZlcnNpb249MS4yLjAuMTA0LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPW51bGwiIC8+PC9PYmplY3REYXRhU291cmNlPg==" /&gt;
+        &lt;/ComponentStorage&gt;
+        &lt;/XtraReportsLayoutSerializer&gt;
+      </SerializedContent>
+      <SizeLimitX>0</SizeLimitX>
+      <SizeLimitY>0</SizeLimitY>
+      <IsSystemTemplate>false</IsSystemTemplate>
+      <Name>Patient Footer Asklepios</Name>
+      <OriginalId>16</OriginalId>
+    </LabelDesign>
+  </LabelDesigns>
+  <Patients>
+    <Patient>
+      <Id>0</Id>
+      <HistoryDate>0001-01-01T00:00:00</HistoryDate>
+      <FirstName>John</FirstName>
+      <LastName>Smith</LastName>
+      <Birthday>2017-12-20T00:00:00</Birthday>
+      <Gender>Male</Gender>
+      <ExternalPatientNumber>9</ExternalPatientNumber>
+      <MiddleName>Joseph</MiddleName>
+      <Comment>Comment_9</Comment>
+      <Language>en-US</Language>
+      <CareLocation>
+        <Id>0</Id>
+        <HistoryDate>0001-01-01T00:00:00</HistoryDate>
+        <Addressline1>Addressline1_9</Addressline1>
+        <Addressline2>Addressline2_9</Addressline2>
+        <City>City_9</City>
+        <Comment>Comment_9</Comment>
+        <Contact>
+          <Id>0</Id>
+          <HistoryDate>0001-01-01T00:00:00</HistoryDate>
+          <Name>Name_9</Name>
+          <CellphoneNumber>TelephoneNumber_9</CellphoneNumber>
+          <Email>Email_9</Email>
+        </Contact>
+      </CareLocation>
+      <CareLocationName>CLN_9</CareLocationName>
+      <WardName>Wardname_9</WardName>
+      <RoomNumber>9</RoomNumber>
+      <BedNumber>BedNumber_9</BedNumber>
+      <CustomField1>CF1</CustomField1>
+      <CustomField2>CF2</CustomField2>
+      <OriginalId>2</OriginalId>
+    </Patient>
+  </Patients>
+  <DestinationFacilities>
+    <DestinationFacility>
+      <Id>0</Id>
+      <HistoryDate>0001-01-01T00:00:00</HistoryDate>
+      <PouchSchemaDesign>
+        <Id>0</Id>
+        <HistoryDate>0001-01-01T00:00:00</HistoryDate>
+        <LabelDesigns />
+        <IsFromDestinationFacility>false</IsFromDestinationFacility>
+        <IsFromFullFillmentCenter>false</IsFromFullFillmentCenter>
+      </PouchSchemaDesign>
+      <Identifier>Identifier_1</Identifier>
+      <Status>true</Status>
+      <DepartmentName>DepartmentName_1</DepartmentName>
+      <DepartmentCode>DepartmentCode_1</DepartmentCode>
+      <Description>Description_1</Description>
+      <Patients />
+      <Contact>
+        <Id>0</Id>
+        <HistoryDate>0001-01-01T00:00:00</HistoryDate>
+        <AddressLine>AddressLine_1</AddressLine>
+        <AdditionalAddressLine>AdditionalAddressLine_1</AdditionalAddressLine>
+        <City>City_1</City>
+        <Name>Name_1</Name>
+        <CellphoneNumber>TelephoneNumber_1</CellphoneNumber>
+        <Email>Email_1</Email>
+      </Contact>
+      <CustomerId>1</CustomerId>
+      <OriginalId>1</OriginalId>
+    </DestinationFacility>
+  </DestinationFacilities>
+  <Customers>
+    <Customer>
+      <Id>0</Id>
+      <HistoryDate>0001-01-01T00:00:00</HistoryDate>
+      <PouchSchemeId>0</PouchSchemeId>
+      <Name>Name_9</Name>
+      <Identifier>Identifier_9</Identifier>
+      <CustomerId>9</CustomerId>
+      <Contact>
+        <Id>0</Id>
+        <City>City_9</City>
+        <Name>Name_9</Name>
+        <CellphoneNumber>TelephoneNumber_9</CellphoneNumber>
+        <Email>Email_9</Email>
+      </Contact>
+      <Fax>Fax_9</Fax>
+      <Description>Description_9</Description>
+      <OriginalId>2</OriginalId>
+    </Customer>
+  </Customers>
+  <Pharmacies>
+    <Pharmacy>
+      <Id>0</Id>
+      <HistoryDate>0001-01-01T00:00:00</HistoryDate>
+      <PouchSchemeId>0</PouchSchemeId>
+      <Name>Name_9</Name>
+      <Identifier>Identifier_9</Identifier>
+      <CustomerId>5</CustomerId>
+      <Contact>
+        <Id>0</Id>
+        <HistoryDate>0001-01-01T00:00:00</HistoryDate>
+        <AddressLine>AddressLine_9</AddressLine>
+        <AdditionalAddressLine>AdditionalAddressLine_9</AdditionalAddressLine>
+        <City>City_9</City>
+        <Name>Name_9</Name>
+        <CellphoneNumber>TelephoneNumber_9</CellphoneNumber>
+        <Email>Email_9</Email>
+      </Contact>
+      <Fax>Fax_9</Fax>
+      <Website />
+      <Description>Description_9</Description>
+      <OriginalId>2</OriginalId>
+      <Patients />
+    </Pharmacy>
+  </Pharmacies>
+  <RollId>M092017-12-20T12:21:44</RollId>
+</MachineOrder>

@@ -18,6 +18,8 @@ public HttpResponseMessage Post([FromBody] RestExternalOrder restexternalOrder, 
 
 # SQLite und leerer Datenbank
 
+## Create Order mit Medizineprüfung
+
 | Medicine Count | Time     | Time per Element  |
 |:--------------:|:--------:|:-----------------:|
 |              1 |  2563 ms |              2563 |
@@ -37,6 +39,8 @@ public HttpResponseMessage Post([FromBody] RestExternalOrder restexternalOrder, 
 
 # MSSQL 10.240.140.69 SmartDoseTrunk 42347 Medizineinträge
 
+## Create Order mit Medizineprüfung
+
 | Medicine Count | Time     | Time per Element  |
 |:--------------:|:--------:|:-----------------:|
 |              1 |     1412 |              1412 |
@@ -53,8 +57,8 @@ public HttpResponseMessage Post([FromBody] RestExternalOrder restexternalOrder, 
 |              2 |       64 |                32 |
 |              1 |       31 |                31 |
 
-GetMedicines mit DeSerialisierung
-<hr>
+## GetMedicines mit DeSerialisierung
+
 Medicines=42347
 
 GetMedicines StatusCode=OK [200]
@@ -62,6 +66,8 @@ GetMedicines StatusCode=OK [200]
 Elapsed time=00:00:09.8213863
 
 # MSSQL 127.0.0.1 SmartDoseAKTest 42347 Medizineinträge
+
+## Create Order mit Medizineprüfung
 
 | Medicine Count | Time     | Time per Element  |
 |:--------------:|:--------:|:-----------------:|
@@ -79,9 +85,27 @@ Elapsed time=00:00:09.8213863
 |              2 |   220 ms |               110 |
 |              1 |   122 ms |               122 |
 
+## Create Order ohne Medizineprüfung
+(Order ist  vorhanden und wird nicht angelegt!)
 
-GetMedicines mit DeSerialisierung
-<hr>
+| Medicine Count | Time     | Time per Element  |
+|:--------------:|:--------:|:-----------------:|
+|              1 |  1396 ms |              1396 |
+|              2 |    87 ms |                43 |
+|              5 |    79 ms |                15 |
+|             10 |    96 ms |                 9 |
+|             50 |    69 ms |                 1 |
+|            100 |    65 ms |                 0 |
+|           1000 |   100 ms |                 0 |
+|            100 |    63 ms |                 0 |
+|             50 |    63 ms |                 1 |
+|             10 |    68 ms |                 6 |
+|              5 |    68 ms |                13 |
+|              2 |    94 ms |                47 |
+|              1 |   102 ms |               102 |
+
+## GetMedicines mit DeSerialisierung
+
 Medicines=43144
 
 GetMedicines StatusCode=OK [200]

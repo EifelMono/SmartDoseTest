@@ -1,0 +1,773 @@
+---------------------------------------------------------------------------------------------------
+
+new Medicine()
+
+----------------------------------------------------------------------------------------------------
+
+_productiveFactory.GetRepository<IMedicineRepository>().AddOrUpdate(med1)
+Opened connection at 11/09/2018 15:03:12 +02:00
+Started transaction at 11/09/2018 15:03:12 +02:00
+Opened connection at 11/09/2018 15:03:13 +02:00
+SELECT 
+[Project2].[Status] AS [Status], 
+[Project2].[Id] AS [Id], 
+[Project2].[Identifier] AS [Identifier], 
+[Project2].[MachineNumber] AS [MachineNumber], 
+[Project2].[MachineOrderIdentifier] AS [MachineOrderIdentifier], 
+[Project2].[Timestamp] AS [Timestamp], 
+[Project2].[ProductionFinishedTimeStamp] AS [ProductionFinishedTimeStamp], 
+[Project2].[ExternalId] AS [ExternalId], 
+[Project2].[InternalId] AS [InternalId], 
+[Project2].[HasSkippedMedication] AS [HasSkippedMedication], 
+[Project2].[Source] AS [Source], 
+[Project2].[ValidationErrors] AS [ValidationErrors], 
+[Project2].[Id1] AS [Id1], 
+[Project2].[PouchSchemeId] AS [PouchSchemeId], 
+[Project2].[Name] AS [Name], 
+[Project2].[Identifier1] AS [Identifier1], 
+[Project2].[CustomerId] AS [CustomerId], 
+[Project2].[Fax] AS [Fax], 
+[Project2].[Website] AS [Website], 
+[Project2].[Description] AS [Description], 
+[Project2].[OriginalId] AS [OriginalId], 
+[Project2].[C1] AS [C1], 
+[Project2].[Id2] AS [Id2], 
+[Project2].[DestinationFacilityId] AS [DestinationFacilityId], 
+[Project2].[ExternalDetailPrintInfo1] AS [ExternalDetailPrintInfo1], 
+[Project2].[ExternalDetailPrintInfo2] AS [ExternalDetailPrintInfo2]
+FROM ( SELECT 
+	[Limit1].[Id] AS [Id], 
+	[Limit1].[Identifier] AS [Identifier], 
+	[Limit1].[MachineNumber] AS [MachineNumber], 
+	[Limit1].[MachineOrderIdentifier] AS [MachineOrderIdentifier], 
+	[Limit1].[Status] AS [Status], 
+	[Limit1].[Timestamp] AS [Timestamp], 
+	[Limit1].[ProductionFinishedTimeStamp] AS [ProductionFinishedTimeStamp], 
+	[Limit1].[ExternalId] AS [ExternalId], 
+	[Limit1].[InternalId] AS [InternalId], 
+	[Limit1].[HasSkippedMedication] AS [HasSkippedMedication], 
+	[Limit1].[Source] AS [Source], 
+	[Limit1].[ValidationErrors] AS [ValidationErrors], 
+	[Limit1].[Id1] AS [Id1], 
+	[Limit1].[PouchSchemeId] AS [PouchSchemeId], 
+	[Limit1].[Name] AS [Name], 
+	[Limit1].[Identifier1] AS [Identifier1], 
+	[Limit1].[CustomerId] AS [CustomerId], 
+	[Limit1].[Fax] AS [Fax], 
+	[Limit1].[Website] AS [Website], 
+	[Limit1].[Description] AS [Description], 
+	[Limit1].[OriginalId] AS [OriginalId], 
+	[Extent3].[Id] AS [Id2], 
+	[Extent3].[DestinationFacilityId] AS [DestinationFacilityId], 
+	[Extent3].[ExternalDetailPrintInfo1] AS [ExternalDetailPrintInfo1], 
+	[Extent3].[ExternalDetailPrintInfo2] AS [ExternalDetailPrintInfo2], 
+	CASE WHEN ([Extent3].[Id] IS NULL) THEN NULL ELSE 1 END AS [C1]
+	FROM   (SELECT 
+		[Extent1].[Id] AS [Id], 
+		[Extent1].[Identifier] AS [Identifier], 
+		[Extent1].[MachineNumber] AS [MachineNumber], 
+		[Extent1].[MachineOrderIdentifier] AS [MachineOrderIdentifier], 
+		[Extent1].[Status] AS [Status], 
+		[Extent1].[Timestamp] AS [Timestamp], 
+		[Extent1].[ProductionFinishedTimeStamp] AS [ProductionFinishedTimeStamp], 
+		[Extent1].[ExternalId] AS [ExternalId], 
+		[Extent1].[InternalId] AS [InternalId], 
+		[Extent1].[HasSkippedMedication] AS [HasSkippedMedication], 
+		[Extent1].[Source] AS [Source], 
+		[Extent1].[ValidationErrors] AS [ValidationErrors], 
+		[Extent2].[Id] AS [Id1], 
+		[Extent2].[PouchSchemeId] AS [PouchSchemeId], 
+		[Extent2].[Name] AS [Name], 
+		[Extent2].[Identifier] AS [Identifier1], 
+		[Extent2].[CustomerId] AS [CustomerId], 
+		[Extent2].[Fax] AS [Fax], 
+		[Extent2].[Website] AS [Website], 
+		[Extent2].[Description] AS [Description], 
+		[Extent2].[OriginalId] AS [OriginalId]
+		FROM  [InternalOrder] AS [Extent1]
+		LEFT OUTER JOIN [Customer] AS [Extent2] ON [Extent1].[Customer_Id] = [Extent2].[Id]
+		WHERE [Extent1].[Id] = @p__linq__0 LIMIT 1 ) AS [Limit1]
+	LEFT OUTER JOIN [OrderDetail] AS [Extent3] ON [Limit1].[Id] = [Extent3].[InternalOrder_Id]
+)  AS [Project2]
+ORDER BY [Project2].[Id] ASC, [Project2].[Id1] ASC, [Project2].[C1] ASC
+-- p__linq__0: '1' (Type = Int64, IsNullable = false)
+-- Executing at 11/09/2018 15:03:13 +02:00
+-- Completed in 0 ms with result: SQLiteDataReader
+
+Closed connection at 11/09/2018 15:03:13 +02:00
+Opened connection at 11/09/2018 15:03:13 +02:00
+SELECT 
+[Project2].[Status] AS [Status], 
+[Project2].[Id] AS [Id], 
+[Project2].[Identifier] AS [Identifier], 
+[Project2].[MachineNumber] AS [MachineNumber], 
+[Project2].[MachineOrderIdentifier] AS [MachineOrderIdentifier], 
+[Project2].[Timestamp] AS [Timestamp], 
+[Project2].[ProductionFinishedTimeStamp] AS [ProductionFinishedTimeStamp], 
+[Project2].[ExternalId] AS [ExternalId], 
+[Project2].[InternalId] AS [InternalId], 
+[Project2].[HasSkippedMedication] AS [HasSkippedMedication], 
+[Project2].[Source] AS [Source], 
+[Project2].[ValidationErrors] AS [ValidationErrors], 
+[Project2].[Id1] AS [Id1], 
+[Project2].[PouchSchemeId] AS [PouchSchemeId], 
+[Project2].[Name] AS [Name], 
+[Project2].[Identifier1] AS [Identifier1], 
+[Project2].[CustomerId] AS [CustomerId], 
+[Project2].[Fax] AS [Fax], 
+[Project2].[Website] AS [Website], 
+[Project2].[Description] AS [Description], 
+[Project2].[OriginalId] AS [OriginalId], 
+[Project2].[C1] AS [C1], 
+[Project2].[Id2] AS [Id2], 
+[Project2].[DestinationFacilityId] AS [DestinationFacilityId], 
+[Project2].[ExternalDetailPrintInfo1] AS [ExternalDetailPrintInfo1], 
+[Project2].[ExternalDetailPrintInfo2] AS [ExternalDetailPrintInfo2]
+FROM ( SELECT 
+	[Limit1].[Id] AS [Id], 
+	[Limit1].[Identifier] AS [Identifier], 
+	[Limit1].[MachineNumber] AS [MachineNumber], 
+	[Limit1].[MachineOrderIdentifier] AS [MachineOrderIdentifier], 
+	[Limit1].[Status] AS [Status], 
+	[Limit1].[Timestamp] AS [Timestamp], 
+	[Limit1].[ProductionFinishedTimeStamp] AS [ProductionFinishedTimeStamp], 
+	[Limit1].[ExternalId] AS [ExternalId], 
+	[Limit1].[InternalId] AS [InternalId], 
+	[Limit1].[HasSkippedMedication] AS [HasSkippedMedication], 
+	[Limit1].[Source] AS [Source], 
+	[Limit1].[ValidationErrors] AS [ValidationErrors], 
+	[Limit1].[Id1] AS [Id1], 
+	[Limit1].[PouchSchemeId] AS [PouchSchemeId], 
+	[Limit1].[Name] AS [Name], 
+	[Limit1].[Identifier1] AS [Identifier1], 
+	[Limit1].[CustomerId] AS [CustomerId], 
+	[Limit1].[Fax] AS [Fax], 
+	[Limit1].[Website] AS [Website], 
+	[Limit1].[Description] AS [Description], 
+	[Limit1].[OriginalId] AS [OriginalId], 
+	[Extent3].[Id] AS [Id2], 
+	[Extent3].[DestinationFacilityId] AS [DestinationFacilityId], 
+	[Extent3].[ExternalDetailPrintInfo1] AS [ExternalDetailPrintInfo1], 
+	[Extent3].[ExternalDetailPrintInfo2] AS [ExternalDetailPrintInfo2], 
+	CASE WHEN ([Extent3].[Id] IS NULL) THEN NULL ELSE 1 END AS [C1]
+	FROM   (SELECT 
+		[Extent1].[Id] AS [Id], 
+		[Extent1].[Identifier] AS [Identifier], 
+		[Extent1].[MachineNumber] AS [MachineNumber], 
+		[Extent1].[MachineOrderIdentifier] AS [MachineOrderIdentifier], 
+		[Extent1].[Status] AS [Status], 
+		[Extent1].[Timestamp] AS [Timestamp], 
+		[Extent1].[ProductionFinishedTimeStamp] AS [ProductionFinishedTimeStamp], 
+		[Extent1].[ExternalId] AS [ExternalId], 
+		[Extent1].[InternalId] AS [InternalId], 
+		[Extent1].[HasSkippedMedication] AS [HasSkippedMedication], 
+		[Extent1].[Source] AS [Source], 
+		[Extent1].[ValidationErrors] AS [ValidationErrors], 
+		[Extent2].[Id] AS [Id1], 
+		[Extent2].[PouchSchemeId] AS [PouchSchemeId], 
+		[Extent2].[Name] AS [Name], 
+		[Extent2].[Identifier] AS [Identifier1], 
+		[Extent2].[CustomerId] AS [CustomerId], 
+		[Extent2].[Fax] AS [Fax], 
+		[Extent2].[Website] AS [Website], 
+		[Extent2].[Description] AS [Description], 
+		[Extent2].[OriginalId] AS [OriginalId]
+		FROM  [InternalOrder] AS [Extent1]
+		LEFT OUTER JOIN [Customer] AS [Extent2] ON [Extent1].[Customer_Id] = [Extent2].[Id]
+		WHERE [Extent1].[Id] = @p__linq__0 LIMIT 1 ) AS [Limit1]
+	LEFT OUTER JOIN [OrderDetail] AS [Extent3] ON [Limit1].[Id] = [Extent3].[InternalOrder_Id]
+)  AS [Project2]
+ORDER BY [Project2].[Id] ASC, [Project2].[Id1] ASC, [Project2].[C1] ASC
+-- p__linq__0: '2' (Type = Int64, IsNullable = false)
+-- Executing at 11/09/2018 15:03:13 +02:00
+-- Completed in 0 ms with result: SQLiteDataReader
+
+Closed connection at 11/09/2018 15:03:13 +02:00
+Opened connection at 11/09/2018 15:03:13 +02:00
+SELECT 
+[Project2].[Status] AS [Status], 
+[Project2].[Id] AS [Id], 
+[Project2].[Identifier] AS [Identifier], 
+[Project2].[MachineNumber] AS [MachineNumber], 
+[Project2].[MachineOrderIdentifier] AS [MachineOrderIdentifier], 
+[Project2].[Timestamp] AS [Timestamp], 
+[Project2].[ProductionFinishedTimeStamp] AS [ProductionFinishedTimeStamp], 
+[Project2].[ExternalId] AS [ExternalId], 
+[Project2].[InternalId] AS [InternalId], 
+[Project2].[HasSkippedMedication] AS [HasSkippedMedication], 
+[Project2].[Source] AS [Source], 
+[Project2].[ValidationErrors] AS [ValidationErrors], 
+[Project2].[Id1] AS [Id1], 
+[Project2].[PouchSchemeId] AS [PouchSchemeId], 
+[Project2].[Name] AS [Name], 
+[Project2].[Identifier1] AS [Identifier1], 
+[Project2].[CustomerId] AS [CustomerId], 
+[Project2].[Fax] AS [Fax], 
+[Project2].[Website] AS [Website], 
+[Project2].[Description] AS [Description], 
+[Project2].[OriginalId] AS [OriginalId], 
+[Project2].[C1] AS [C1], 
+[Project2].[Id2] AS [Id2], 
+[Project2].[DestinationFacilityId] AS [DestinationFacilityId], 
+[Project2].[ExternalDetailPrintInfo1] AS [ExternalDetailPrintInfo1], 
+[Project2].[ExternalDetailPrintInfo2] AS [ExternalDetailPrintInfo2]
+FROM ( SELECT 
+	[Limit1].[Id] AS [Id], 
+	[Limit1].[Identifier] AS [Identifier], 
+	[Limit1].[MachineNumber] AS [MachineNumber], 
+	[Limit1].[MachineOrderIdentifier] AS [MachineOrderIdentifier], 
+	[Limit1].[Status] AS [Status], 
+	[Limit1].[Timestamp] AS [Timestamp], 
+	[Limit1].[ProductionFinishedTimeStamp] AS [ProductionFinishedTimeStamp], 
+	[Limit1].[ExternalId] AS [ExternalId], 
+	[Limit1].[InternalId] AS [InternalId], 
+	[Limit1].[HasSkippedMedication] AS [HasSkippedMedication], 
+	[Limit1].[Source] AS [Source], 
+	[Limit1].[ValidationErrors] AS [ValidationErrors], 
+	[Limit1].[Id1] AS [Id1], 
+	[Limit1].[PouchSchemeId] AS [PouchSchemeId], 
+	[Limit1].[Name] AS [Name], 
+	[Limit1].[Identifier1] AS [Identifier1], 
+	[Limit1].[CustomerId] AS [CustomerId], 
+	[Limit1].[Fax] AS [Fax], 
+	[Limit1].[Website] AS [Website], 
+	[Limit1].[Description] AS [Description], 
+	[Limit1].[OriginalId] AS [OriginalId], 
+	[Extent3].[Id] AS [Id2], 
+	[Extent3].[DestinationFacilityId] AS [DestinationFacilityId], 
+	[Extent3].[ExternalDetailPrintInfo1] AS [ExternalDetailPrintInfo1], 
+	[Extent3].[ExternalDetailPrintInfo2] AS [ExternalDetailPrintInfo2], 
+	CASE WHEN ([Extent3].[Id] IS NULL) THEN NULL ELSE 1 END AS [C1]
+	FROM   (SELECT 
+		[Extent1].[Id] AS [Id], 
+		[Extent1].[Identifier] AS [Identifier], 
+		[Extent1].[MachineNumber] AS [MachineNumber], 
+		[Extent1].[MachineOrderIdentifier] AS [MachineOrderIdentifier], 
+		[Extent1].[Status] AS [Status], 
+		[Extent1].[Timestamp] AS [Timestamp], 
+		[Extent1].[ProductionFinishedTimeStamp] AS [ProductionFinishedTimeStamp], 
+		[Extent1].[ExternalId] AS [ExternalId], 
+		[Extent1].[InternalId] AS [InternalId], 
+		[Extent1].[HasSkippedMedication] AS [HasSkippedMedication], 
+		[Extent1].[Source] AS [Source], 
+		[Extent1].[ValidationErrors] AS [ValidationErrors], 
+		[Extent2].[Id] AS [Id1], 
+		[Extent2].[PouchSchemeId] AS [PouchSchemeId], 
+		[Extent2].[Name] AS [Name], 
+		[Extent2].[Identifier] AS [Identifier1], 
+		[Extent2].[CustomerId] AS [CustomerId], 
+		[Extent2].[Fax] AS [Fax], 
+		[Extent2].[Website] AS [Website], 
+		[Extent2].[Description] AS [Description], 
+		[Extent2].[OriginalId] AS [OriginalId]
+		FROM  [InternalOrder] AS [Extent1]
+		LEFT OUTER JOIN [Customer] AS [Extent2] ON [Extent1].[Customer_Id] = [Extent2].[Id]
+		WHERE [Extent1].[Id] = @p__linq__0 LIMIT 1 ) AS [Limit1]
+	LEFT OUTER JOIN [OrderDetail] AS [Extent3] ON [Limit1].[Id] = [Extent3].[InternalOrder_Id]
+)  AS [Project2]
+ORDER BY [Project2].[Id] ASC, [Project2].[Id1] ASC, [Project2].[C1] ASC
+-- p__linq__0: '2' (Type = Int64, IsNullable = false)
+-- Executing at 11/09/2018 15:03:13 +02:00
+-- Completed in 0 ms with result: SQLiteDataReader
+
+Closed connection at 11/09/2018 15:03:13 +02:00
+INSERT INTO [MedicineSpecialHandling]([Narcotic], [SeperatePouch], [RobotHandling], [ExpiryTimeInDays], [ExpiryTimeInDaysForPouch], [Splitable], [MaxAmountPerPouch], [NeedsCooling])
+ VALUES (@p0, @p1, @p2, @p3, @p4, @p5, @p6, @p7);
+SELECT [Id]
+FROM [MedicineSpecialHandling]
+WHERE last_rows_affected() > 0 AND [Id] = last_insert_rowid()
+;
+-- @p0: 'False' (Type = Boolean)
+-- @p1: 'False' (Type = Boolean)
+-- @p2: 'False' (Type = Boolean)
+-- @p3: '30' (Type = Int32)
+-- @p4: '30' (Type = Int32)
+-- @p5: 'False' (Type = Boolean)
+-- @p6: '0' (Type = Int32)
+-- @p7: 'False' (Type = Boolean)
+-- Executing at 11/09/2018 15:03:13 +02:00
+-- Completed in 0 ms with result: SQLiteDataReader
+
+ValentinaStudio:
+INSERT INTO "MedicineSpecialHandling"(
+    "Id",
+    "Narcotic",
+    "SeperatePouch",
+    "RobotHandling",
+    "ExpiryTimeInDays",
+    "ExpiryTimeInDaysForPouch",
+    "Splitable",
+    "MaxAmountPerPouch",
+    "NeedsCooling"
+) VALUES (
+    101,
+    'false',
+    'false',
+    'false',
+    30,
+    30,
+    'false',
+    0,
+    'false'
+ );
+
+
+
+
+INSERT INTO [Medicine]([AdditionalIdentifier], [Name], [Description], [Comment], [IsTrayFillOnly], [ReleaseStatus], [PouchMode], [Manufacturer_Id], [PillDetail_Id], [SpecialHandling_Id])
+ VALUES (@p0, NULL, @p1, @p2, @p3, @p4, @p5, NULL, NULL, @p6);
+SELECT [Id]
+FROM [Medicine]
+WHERE last_rows_affected() > 0 AND [Id] = last_insert_rowid()
+;
+-- @p0: '12345678' (Type = String)
+-- @p1: '12345678' (Type = String)
+-- @p2: '12345678' (Type = String)
+-- @p3: 'False' (Type = Boolean)
+-- @p4: '0' (Type = Int32)
+-- @p5: '0' (Type = Int32)
+-- @p6: '101' (Type = Int64)
+-- Executing at 11/09/2018 15:03:13 +02:00
+-- Completed in 0 ms with result: SQLiteDataReader
+
+ValentinaStudio:
+INSERT INTO "Medicine"(
+    "Id",
+    "AdditionalIdentifier",
+    "Name",
+    "Description",
+    "Comment",
+    "IsTrayFillOnly",
+    "ReleaseStatus",
+    "PouchMode",
+    "Manufacturer_Id",
+    "PillDetail_Id",
+    "SpecialHandling_Id"
+) VALUES (
+    7,
+    '12345678',
+    NULL,
+    '12345678',
+    '12345678',
+    'false',
+    0,
+    0,
+    NULL,
+    NULL,
+    101
+ );
+
+
+
+
+Committed transaction at 11/09/2018 15:03:13 +02:00
+Closed connection at 11/09/2018 15:03:13 +02:00
+
+----------------------------------------------------------------------------------------------------
+
+After create MedicineProductiveRepository.GetAll()
+Opened connection at 11/09/2018 15:03:13 +02:00
+SELECT 
+[UnionAll2].[C2] AS [C1], 
+[UnionAll2].[C3] AS [C2], 
+[UnionAll2].[C4] AS [C3], 
+[UnionAll2].[C5] AS [C4], 
+[UnionAll2].[C6] AS [C5], 
+[UnionAll2].[C7] AS [C6], 
+[UnionAll2].[C8] AS [C7], 
+[UnionAll2].[C9] AS [C8], 
+[UnionAll2].[C10] AS [C9], 
+[UnionAll2].[C11] AS [C10], 
+[UnionAll2].[C12] AS [C11], 
+[UnionAll2].[C13] AS [C12], 
+[UnionAll2].[C14] AS [C13], 
+[UnionAll2].[C15] AS [C14], 
+[UnionAll2].[C16] AS [C15], 
+[UnionAll2].[C17] AS [C16], 
+[UnionAll2].[C18] AS [C17], 
+[UnionAll2].[C19] AS [C18], 
+[UnionAll2].[C20] AS [C19], 
+[UnionAll2].[C21] AS [C20], 
+[UnionAll2].[C22] AS [C21], 
+[UnionAll2].[C23] AS [C22], 
+[UnionAll2].[C24] AS [C23], 
+[UnionAll2].[C25] AS [C24], 
+[UnionAll2].[C26] AS [C25], 
+[UnionAll2].[C27] AS [C26], 
+[UnionAll2].[C28] AS [C27], 
+[UnionAll2].[C29] AS [C28], 
+[UnionAll2].[C30] AS [C29], 
+[UnionAll2].[C31] AS [C30], 
+[UnionAll2].[C32] AS [C31], 
+[UnionAll2].[C33] AS [C32], 
+[UnionAll2].[C34] AS [C33], 
+[UnionAll2].[C35] AS [C34], 
+[UnionAll2].[C36] AS [C35], 
+[UnionAll2].[C37] AS [C36], 
+[UnionAll2].[C38] AS [C37], 
+[UnionAll2].[C39] AS [C38], 
+[UnionAll2].[C40] AS [C39], 
+[UnionAll2].[C41] AS [C40], 
+[UnionAll2].[C42] AS [C41], 
+[UnionAll2].[C43] AS [C42], 
+[UnionAll2].[C44] AS [C43], 
+[UnionAll2].[C45] AS [C44], 
+[UnionAll2].[C46] AS [C45], 
+[UnionAll2].[C47] AS [C46], 
+[UnionAll2].[C48] AS [C47], 
+[UnionAll2].[C1] AS [C48], 
+[UnionAll2].[C49] AS [C49], 
+[UnionAll2].[C50] AS [C50], 
+[UnionAll2].[C51] AS [C51], 
+[UnionAll2].[C52] AS [C52], 
+[UnionAll2].[C53] AS [C53], 
+[UnionAll2].[C54] AS [C54], 
+[UnionAll2].[C55] AS [C55], 
+[UnionAll2].[C56] AS [C56], 
+[UnionAll2].[C57] AS [C57], 
+[UnionAll2].[C58] AS [C58], 
+[UnionAll2].[C59] AS [C59], 
+[UnionAll2].[C60] AS [C60], 
+[UnionAll2].[C61] AS [C61], 
+[UnionAll2].[C62] AS [C62], 
+[UnionAll2].[C63] AS [C63], 
+[UnionAll2].[C64] AS [C64], 
+[UnionAll2].[C65] AS [C65], 
+[UnionAll2].[C66] AS [C66]
+FROM  (SELECT 
+	[UnionAll1].[C1] AS [C1], 
+	[UnionAll1].[Id] AS [C2], 
+	[UnionAll1].[Id1] AS [C3], 
+	[UnionAll1].[Manufacturer_Id] AS [C4], 
+	[UnionAll1].[Id2] AS [C5], 
+	[UnionAll1].[Id3] AS [C6], 
+	[UnionAll1].[ReleaseStatus] AS [C7], 
+	[UnionAll1].[Id4] AS [C8], 
+	[UnionAll1].[AdditionalIdentifier] AS [C9], 
+	[UnionAll1].[Name] AS [C10], 
+	[UnionAll1].[Description] AS [C11], 
+	[UnionAll1].[Comment] AS [C12], 
+	[UnionAll1].[IsTrayFillOnly] AS [C13], 
+	[UnionAll1].[ReleaseStatus1] AS [C14], 
+	[UnionAll1].[PouchMode] AS [C15], 
+	[UnionAll1].[ReleaseStatus2] AS [C16], 
+	[UnionAll1].[Id5] AS [C17], 
+	[UnionAll1].[Identifier] AS [C18], 
+	[UnionAll1].[Name1] AS [C19], 
+	[UnionAll1].[Comment1] AS [C20], 
+	[UnionAll1].[Id6] AS [C21], 
+	[UnionAll1].[Name2] AS [C22], 
+	[UnionAll1].[AddressLine] AS [C23], 
+	[UnionAll1].[PostalCode] AS [C24], 
+	[UnionAll1].[City] AS [C25], 
+	[UnionAll1].[State] AS [C26], 
+	[UnionAll1].[Country] AS [C27], 
+	[UnionAll1].[LandlineNumber] AS [C28], 
+	[UnionAll1].[CellphoneNumber] AS [C29], 
+	[UnionAll1].[Email] AS [C30], 
+	[UnionAll1].[Website] AS [C31], 
+	[UnionAll1].[Fax] AS [C32], 
+	[UnionAll1].[Id7] AS [C33], 
+	[UnionAll1].[C2] AS [C34], 
+	[UnionAll1].[C3] AS [C35], 
+	[UnionAll1].[C4] AS [C36], 
+	[UnionAll1].[C5] AS [C37], 
+	[UnionAll1].[C6] AS [C38], 
+	[UnionAll1].[Imprint] AS [C39], 
+	[UnionAll1].[Id8] AS [C40], 
+	[UnionAll1].[Narcotic] AS [C41], 
+	[UnionAll1].[SeperatePouch] AS [C42], 
+	[UnionAll1].[RobotHandling] AS [C43], 
+	[UnionAll1].[ExpiryTimeInDays] AS [C44], 
+	[UnionAll1].[ExpiryTimeInDaysForPouch] AS [C45], 
+	[UnionAll1].[Splitable] AS [C46], 
+	[UnionAll1].[MaxAmountPerPouch] AS [C47], 
+	[UnionAll1].[NeedsCooling] AS [C48], 
+	[UnionAll1].[Id9] AS [C49], 
+	[UnionAll1].[Identifier1] AS [C50], 
+	[UnionAll1].[Amount] AS [C51], 
+	[UnionAll1].[Description1] AS [C52], 
+	[UnionAll1].[Price] AS [C53], 
+	[UnionAll1].[C7] AS [C54], 
+	[UnionAll1].[C8] AS [C55], 
+	[UnionAll1].[C9] AS [C56], 
+	[UnionAll1].[C10] AS [C57], 
+	[UnionAll1].[C11] AS [C58], 
+	[UnionAll1].[C12] AS [C59], 
+	[UnionAll1].[C13] AS [C60], 
+	[UnionAll1].[C14] AS [C61], 
+	[UnionAll1].[C15] AS [C62], 
+	[UnionAll1].[C16] AS [C63], 
+	[UnionAll1].[C17] AS [C64], 
+	[UnionAll1].[C18] AS [C65], 
+	[UnionAll1].[C19] AS [C66]
+	FROM  (SELECT 
+		CASE WHEN ([Extent7].[Amount] IS NULL) THEN NULL ELSE 1 END AS [C1], 
+		[Extent1].[Id] AS [Id], 
+		[Join2].[Id1] AS [Id1], 
+		[Extent1].[Manufacturer_Id] AS [Manufacturer_Id], 
+		[Extent1].[Id] AS [Id2], 
+		[Extent1].[Id] AS [Id3], 
+		[Extent1].[ReleaseStatus] AS [ReleaseStatus], 
+		[Extent1].[Id] AS [Id4], 
+		[Extent1].[AdditionalIdentifier] AS [AdditionalIdentifier], 
+		[Extent1].[Name] AS [Name], 
+		[Extent1].[Description] AS [Description], 
+		[Extent1].[Comment] AS [Comment], 
+		[Extent1].[IsTrayFillOnly] AS [IsTrayFillOnly], 
+		[Extent1].[ReleaseStatus] AS [ReleaseStatus1], 
+		[Extent1].[PouchMode] AS [PouchMode], 
+		[Extent1].[ReleaseStatus] AS [ReleaseStatus2], 
+		[Extent2].[Id] AS [Id5], 
+		[Extent2].[Identifier] AS [Identifier], 
+		[Extent2].[Name] AS [Name1], 
+		[Extent2].[Comment] AS [Comment1], 
+		[Join2].[Id2] AS [Id6], 
+		[Join2].[Name1] AS [Name2], 
+		[Join2].[AddressLine] AS [AddressLine], 
+		[Join2].[PostalCode] AS [PostalCode], 
+		[Join2].[City] AS [City], 
+		[Join2].[State] AS [State], 
+		[Join2].[Country] AS [Country], 
+		[Join2].[LandlineNumber] AS [LandlineNumber], 
+		[Join2].[CellphoneNumber] AS [CellphoneNumber], 
+		[Join2].[Email] AS [Email], 
+		[Join2].[Website] AS [Website], 
+		[Join2].[Fax] AS [Fax], 
+		[Extent5].[Id] AS [Id7], 
+		CASE WHEN ([Extent5].[Id] IS NULL) THEN NULL ELSE [Extent5].[Width] END AS [C2], 
+		CASE WHEN ([Extent5].[Id] IS NULL) THEN NULL ELSE [Extent5].[Height] END AS [C3], 
+		CASE WHEN ([Extent5].[Id] IS NULL) THEN NULL ELSE [Extent5].[Size] END AS [C4], 
+		CASE WHEN ([Extent5].[Id] IS NULL) THEN NULL ELSE [Extent5].[Weight] END AS [C5], 
+		CASE WHEN ([Extent5].[Id] IS NULL) THEN NULL ELSE [Extent5].[WeightTolerance] END AS [C6], 
+		[Extent5].[Imprint] AS [Imprint], 
+		[Extent6].[Id] AS [Id8], 
+		[Extent6].[Narcotic] AS [Narcotic], 
+		[Extent6].[SeperatePouch] AS [SeperatePouch], 
+		[Extent6].[RobotHandling] AS [RobotHandling], 
+		[Extent6].[ExpiryTimeInDays] AS [ExpiryTimeInDays], 
+		[Extent6].[ExpiryTimeInDaysForPouch] AS [ExpiryTimeInDaysForPouch], 
+		[Extent6].[Splitable] AS [Splitable], 
+		[Extent6].[MaxAmountPerPouch] AS [MaxAmountPerPouch], 
+		[Extent6].[NeedsCooling] AS [NeedsCooling], 
+		[Extent7].[Id] AS [Id9], 
+		[Extent7].[Identifier] AS [Identifier1], 
+		[Extent7].[Amount] AS [Amount], 
+		[Extent7].[Description] AS [Description1], 
+		[Extent7].[Price] AS [Price], 
+		NULL AS [C7], 
+		NULL AS [C8], 
+		NULL AS [C9], 
+		NULL AS [C10], 
+		NULL AS [C11], 
+		NULL AS [C12], 
+		NULL AS [C13], 
+		NULL AS [C14], 
+		NULL AS [C15], 
+		NULL AS [C16], 
+		NULL AS [C17], 
+		NULL AS [C18], 
+		NULL AS [C19]
+		FROM      [Medicine] AS [Extent1]
+		LEFT OUTER JOIN [Manufacturer] AS [Extent2] ON [Extent1].[Manufacturer_Id] = [Extent2].[Id]
+		LEFT OUTER JOIN  (SELECT [Extent3].[Id] AS [Id2], [Extent3].[Name] AS [Name1], [Extent3].[AddressLine] AS [AddressLine], [Extent3].[PostalCode] AS [PostalCode], [Extent3].[City] AS [City], [Extent3].[State] AS [State], [Extent3].[Country] AS [Country], [Extent3].[LandlineNumber] AS [LandlineNumber], [Extent3].[CellphoneNumber] AS [CellphoneNumber], [Extent3].[Email] AS [Email], [Extent3].[Website] AS [Website], [Extent3].[Fax] AS [Fax], [Extent4].[Id] AS [Id1], [Extent4].[Identifier] AS [Identifier], [Extent4].[Name] AS [Name2], [Extent4].[Comment] AS [Comment], [Extent4].[Contact_Id] AS [Contact_Id]
+			FROM  [Contact] AS [Extent3]
+			LEFT OUTER JOIN [Manufacturer] AS [Extent4] ON ([Extent3].[Id] = [Extent4].[Contact_Id]) AND ([Extent4].[Contact_Id] IS NOT NULL) ) AS [Join2] ON [Join2].[Id1] = [Extent1].[Manufacturer_Id]
+		LEFT OUTER JOIN [MedicinePillDetail] AS [Extent5] ON ([Extent5].[Id] = [Extent1].[PillDetail_Id]) AND ([Extent1].[PillDetail_Id] IS NOT NULL)
+		LEFT OUTER JOIN [MedicineSpecialHandling] AS [Extent6] ON ([Extent6].[Id] = [Extent1].[SpecialHandling_Id]) AND ([Extent1].[SpecialHandling_Id] IS NOT NULL)
+		LEFT OUTER JOIN [MedicineSynonym] AS [Extent7] ON [Extent1].[Id] = [Extent7].[Medicine_Id]
+	UNION ALL
+		SELECT 
+		2 AS [C1], 
+		[Extent8].[Id] AS [Id], 
+		[Join8].[Id3] AS [Id1], 
+		[Extent8].[Manufacturer_Id] AS [Manufacturer_Id], 
+		[Extent8].[Id] AS [Id2], 
+		[Extent8].[Id] AS [Id3], 
+		[Extent8].[ReleaseStatus] AS [ReleaseStatus], 
+		[Extent8].[Id] AS [Id4], 
+		[Extent8].[AdditionalIdentifier] AS [AdditionalIdentifier], 
+		[Extent8].[Name] AS [Name], 
+		[Extent8].[Description] AS [Description], 
+		[Extent8].[Comment] AS [Comment], 
+		[Extent8].[IsTrayFillOnly] AS [IsTrayFillOnly], 
+		[Extent8].[ReleaseStatus] AS [ReleaseStatus1], 
+		[Extent8].[PouchMode] AS [PouchMode], 
+		[Extent8].[ReleaseStatus] AS [ReleaseStatus2], 
+		[Extent9].[Id] AS [Id5], 
+		[Extent9].[Identifier] AS [Identifier], 
+		[Extent9].[Name] AS [Name1], 
+		[Extent9].[Comment] AS [Comment1], 
+		[Join8].[Id4] AS [Id6], 
+		[Join8].[Name3] AS [Name2], 
+		[Join8].[AddressLine] AS [AddressLine], 
+		[Join8].[PostalCode] AS [PostalCode], 
+		[Join8].[City] AS [City], 
+		[Join8].[State] AS [State], 
+		[Join8].[Country] AS [Country], 
+		[Join8].[LandlineNumber] AS [LandlineNumber], 
+		[Join8].[CellphoneNumber] AS [CellphoneNumber], 
+		[Join8].[Email] AS [Email], 
+		[Join8].[Website] AS [Website], 
+		[Join8].[Fax] AS [Fax], 
+		[Extent12].[Id] AS [Id7], 
+		CASE WHEN ([Extent12].[Id] IS NULL) THEN NULL ELSE [Extent12].[Width] END AS [C2], 
+		CASE WHEN ([Extent12].[Id] IS NULL) THEN NULL ELSE [Extent12].[Height] END AS [C3], 
+		CASE WHEN ([Extent12].[Id] IS NULL) THEN NULL ELSE [Extent12].[Size] END AS [C4], 
+		CASE WHEN ([Extent12].[Id] IS NULL) THEN NULL ELSE [Extent12].[Weight] END AS [C5], 
+		CASE WHEN ([Extent12].[Id] IS NULL) THEN NULL ELSE [Extent12].[WeightTolerance] END AS [C6], 
+		[Extent12].[Imprint] AS [Imprint], 
+		[Extent13].[Id] AS [Id8], 
+		[Extent13].[Narcotic] AS [Narcotic], 
+		[Extent13].[SeperatePouch] AS [SeperatePouch], 
+		[Extent13].[RobotHandling] AS [RobotHandling], 
+		[Extent13].[ExpiryTimeInDays] AS [ExpiryTimeInDays], 
+		[Extent13].[ExpiryTimeInDaysForPouch] AS [ExpiryTimeInDaysForPouch], 
+		[Extent13].[Splitable] AS [Splitable], 
+		[Extent13].[MaxAmountPerPouch] AS [MaxAmountPerPouch], 
+		[Extent13].[NeedsCooling] AS [NeedsCooling], 
+		NULL AS [C7], 
+		NULL AS [C8], 
+		NULL AS [C9], 
+		NULL AS [C10], 
+		NULL AS [C11], 
+		[Extent14].[Id] AS [Id9], 
+		[Extent14].[Name] AS [Name3], 
+		[Extent14].[IntakeAdvice] AS [IntakeAdvice], 
+		[Extent14].[Comment] AS [Comment2], 
+		[Extent14].[Color] AS [Color], 
+		[Extent14].[FormType] AS [FormType], 
+		[Extent14].[Imprint] AS [Imprint1], 
+		[Extent14].[CultureName] AS [CultureName], 
+		[Extent14].[GenericName] AS [GenericName], 
+		[Extent14].[AdditionalAdvice] AS [AdditionalAdvice], 
+		[Extent14].[MedicineId] AS [MedicineId], 
+		NULL AS [C12], 
+		NULL AS [C13]
+		FROM      [Medicine] AS [Extent8]
+		LEFT OUTER JOIN [Manufacturer] AS [Extent9] ON [Extent8].[Manufacturer_Id] = [Extent9].[Id]
+		LEFT OUTER JOIN  (SELECT [Extent10].[Id] AS [Id4], [Extent10].[Name] AS [Name3], [Extent10].[AddressLine] AS [AddressLine], [Extent10].[PostalCode] AS [PostalCode], [Extent10].[City] AS [City], [Extent10].[State] AS [State], [Extent10].[Country] AS [Country], [Extent10].[LandlineNumber] AS [LandlineNumber], [Extent10].[CellphoneNumber] AS [CellphoneNumber], [Extent10].[Email] AS [Email], [Extent10].[Website] AS [Website], [Extent10].[Fax] AS [Fax], [Extent11].[Id] AS [Id3], [Extent11].[Identifier] AS [Identifier], [Extent11].[Name] AS [Name4], [Extent11].[Comment] AS [Comment], [Extent11].[Contact_Id] AS [Contact_Id]
+			FROM  [Contact] AS [Extent10]
+			LEFT OUTER JOIN [Manufacturer] AS [Extent11] ON ([Extent10].[Id] = [Extent11].[Contact_Id]) AND ([Extent11].[Contact_Id] IS NOT NULL) ) AS [Join8] ON [Join8].[Id3] = [Extent8].[Manufacturer_Id]
+		LEFT OUTER JOIN [MedicinePillDetail] AS [Extent12] ON ([Extent12].[Id] = [Extent8].[PillDetail_Id]) AND ([Extent8].[PillDetail_Id] IS NOT NULL)
+		LEFT OUTER JOIN [MedicineSpecialHandling] AS [Extent13] ON ([Extent13].[Id] = [Extent8].[SpecialHandling_Id]) AND ([Extent8].[SpecialHandling_Id] IS NOT NULL)
+		INNER JOIN [MedicinePrintDetail] AS [Extent14] ON [Extent8].[Id] = [Extent14].[MedicineId]) AS [UnionAll1]
+UNION ALL
+	SELECT 
+	3 AS [C1], 
+	[Extent15].[Id] AS [Id], 
+	[Join14].[Id5] AS [Id1], 
+	[Extent15].[Manufacturer_Id] AS [Manufacturer_Id], 
+	[Extent15].[Id] AS [Id2], 
+	[Extent15].[Id] AS [Id3], 
+	[Extent15].[ReleaseStatus] AS [ReleaseStatus], 
+	[Extent15].[Id] AS [Id4], 
+	[Extent15].[AdditionalIdentifier] AS [AdditionalIdentifier], 
+	[Extent15].[Name] AS [Name], 
+	[Extent15].[Description] AS [Description], 
+	[Extent15].[Comment] AS [Comment], 
+	[Extent15].[IsTrayFillOnly] AS [IsTrayFillOnly], 
+	[Extent15].[ReleaseStatus] AS [ReleaseStatus1], 
+	[Extent15].[PouchMode] AS [PouchMode], 
+	[Extent15].[ReleaseStatus] AS [ReleaseStatus2], 
+	[Extent16].[Id] AS [Id5], 
+	[Extent16].[Identifier] AS [Identifier], 
+	[Extent16].[Name] AS [Name1], 
+	[Extent16].[Comment] AS [Comment1], 
+	[Join14].[Id6] AS [Id6], 
+	[Join14].[Name5] AS [Name2], 
+	[Join14].[AddressLine] AS [AddressLine], 
+	[Join14].[PostalCode] AS [PostalCode], 
+	[Join14].[City] AS [City], 
+	[Join14].[State] AS [State], 
+	[Join14].[Country] AS [Country], 
+	[Join14].[LandlineNumber] AS [LandlineNumber], 
+	[Join14].[CellphoneNumber] AS [CellphoneNumber], 
+	[Join14].[Email] AS [Email], 
+	[Join14].[Website] AS [Website], 
+	[Join14].[Fax] AS [Fax], 
+	[Extent19].[Id] AS [Id7], 
+	CASE WHEN ([Extent19].[Id] IS NULL) THEN NULL ELSE [Extent19].[Width] END AS [C2], 
+	CASE WHEN ([Extent19].[Id] IS NULL) THEN NULL ELSE [Extent19].[Height] END AS [C3], 
+	CASE WHEN ([Extent19].[Id] IS NULL) THEN NULL ELSE [Extent19].[Size] END AS [C4], 
+	CASE WHEN ([Extent19].[Id] IS NULL) THEN NULL ELSE [Extent19].[Weight] END AS [C5], 
+	CASE WHEN ([Extent19].[Id] IS NULL) THEN NULL ELSE [Extent19].[WeightTolerance] END AS [C6], 
+	[Extent19].[Imprint] AS [Imprint], 
+	[Extent20].[Id] AS [Id8], 
+	[Extent20].[Narcotic] AS [Narcotic], 
+	[Extent20].[SeperatePouch] AS [SeperatePouch], 
+	[Extent20].[RobotHandling] AS [RobotHandling], 
+	[Extent20].[ExpiryTimeInDays] AS [ExpiryTimeInDays], 
+	[Extent20].[ExpiryTimeInDaysForPouch] AS [ExpiryTimeInDaysForPouch], 
+	[Extent20].[Splitable] AS [Splitable], 
+	[Extent20].[MaxAmountPerPouch] AS [MaxAmountPerPouch], 
+	[Extent20].[NeedsCooling] AS [NeedsCooling], 
+	NULL AS [C7], 
+	NULL AS [C8], 
+	NULL AS [C9], 
+	NULL AS [C10], 
+	NULL AS [C11], 
+	NULL AS [C12], 
+	NULL AS [C13], 
+	NULL AS [C14], 
+	NULL AS [C15], 
+	NULL AS [C16], 
+	NULL AS [C17], 
+	NULL AS [C18], 
+	NULL AS [C19], 
+	NULL AS [C20], 
+	NULL AS [C21], 
+	NULL AS [C22], 
+	[Extent21].[Id] AS [Id9], 
+	[Extent21].[Picture] AS [Picture]
+	FROM      [Medicine] AS [Extent15]
+	LEFT OUTER JOIN [Manufacturer] AS [Extent16] ON [Extent15].[Manufacturer_Id] = [Extent16].[Id]
+	LEFT OUTER JOIN  (SELECT [Extent17].[Id] AS [Id6], [Extent17].[Name] AS [Name5], [Extent17].[AddressLine] AS [AddressLine], [Extent17].[PostalCode] AS [PostalCode], [Extent17].[City] AS [City], [Extent17].[State] AS [State], [Extent17].[Country] AS [Country], [Extent17].[LandlineNumber] AS [LandlineNumber], [Extent17].[CellphoneNumber] AS [CellphoneNumber], [Extent17].[Email] AS [Email], [Extent17].[Website] AS [Website], [Extent17].[Fax] AS [Fax], [Extent18].[Id] AS [Id5], [Extent18].[Identifier] AS [Identifier], [Extent18].[Name] AS [Name6], [Extent18].[Comment] AS [Comment], [Extent18].[Contact_Id] AS [Contact_Id]
+		FROM  [Contact] AS [Extent17]
+		LEFT OUTER JOIN [Manufacturer] AS [Extent18] ON ([Extent17].[Id] = [Extent18].[Contact_Id]) AND ([Extent18].[Contact_Id] IS NOT NULL) ) AS [Join14] ON [Join14].[Id5] = [Extent15].[Manufacturer_Id]
+	LEFT OUTER JOIN [MedicinePillDetail] AS [Extent19] ON ([Extent19].[Id] = [Extent15].[PillDetail_Id]) AND ([Extent15].[PillDetail_Id] IS NOT NULL)
+	LEFT OUTER JOIN [MedicineSpecialHandling] AS [Extent20] ON ([Extent20].[Id] = [Extent15].[SpecialHandling_Id]) AND ([Extent15].[SpecialHandling_Id] IS NOT NULL)
+	INNER JOIN [MedicinePicture] AS [Extent21] ON [Extent15].[Id] = [Extent21].[Medicine_Id]) AS [UnionAll2]
+ORDER BY [UnionAll2].[C2] ASC, [UnionAll2].[C3] ASC, [UnionAll2].[C4] ASC, [UnionAll2].[C5] ASC, [UnionAll2].[C6] ASC, [UnionAll2].[C17] ASC, [UnionAll2].[C21] ASC, [UnionAll2].[C33] ASC, [UnionAll2].[C40] ASC, [UnionAll2].[C1] ASC
+-- Executing at 11/09/2018 15:03:13 +02:00
+-- Completed in 1 ms with result: SQLiteDataReader
+
+Closed connection at 11/09/2018 15:03:13 +02:00
+
+----------------------------------------------------------------------------------------------------
+
+[
+  {
+    "Manufacturer": null,
+    "MedicinePictures": [],
+    "PillDetail": null,
+    "PrintDetails": [],
+    "SpecialHandling": {
+      "Id": 101,
+      "Narcotic": false,
+      "SeperatePouch": false,
+      "RobotHandling": false,
+      "ExpiryTimeInDays": 30,
+      "ExpiryTimeInDaysForPouch": 30,
+      "Splitable": false,
+      "MaxAmountPerPouch": 0,
+      "NeedsCooling": false,
+      "HistoryDate": "0001-01-01T00:00:00",
+      "IsDeleted": false
+    },
+    "Synonyms": [],
+    "AdditionalIdentifier": "12345678",
+    "Name": null,
+    "Description": "12345678",
+    "Comment": "12345678",
+    "IsTrayFillOnly": false,
+    "ReleaseStatus": 0,
+    "PouchMode": 0,
+    "Id": 7,
+    "HistoryDate": "0001-01-01T00:00:00",
+    "IsDeleted": false
+  }
+]
+
+----------------------------------------------------------------------------------------------------
+
