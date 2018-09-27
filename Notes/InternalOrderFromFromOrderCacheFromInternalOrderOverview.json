@@ -1,0 +1,349 @@
+{
+    "Customer": {
+        "Identifier": "Identifier_1",
+        "Description": "Description_1",
+        "Name": "Name_1",
+        "OriginalId": 0,
+        "CustomerId": 1,
+        "PouchSchemeId": 0,
+        "Contact": {
+            "Name": "Name_1",
+            "AddressLine": "Addressline1_1",
+            "AdditionalAddressLine": "Addressline2_1",
+            "PostalCode": null,
+            "City": "City_1",
+            "State": null,
+            "Country": null,
+            "LandlineNumber": "TelephoneNumber_1",
+            "CellphoneNumber": null,
+            "Email": "Email_1",
+            "Website": null,
+            "Fax": null,
+            "Id": 22,
+            "HistoryDate": "0001-01-01T00:00:00",
+            "IsDeleted": false
+        },
+        "Patients": [],
+        "Id": 2,
+        "HistoryDate": "0001-01-01T00:00:00",
+        "IsDeleted": false
+    },
+    "Identifier": "Identifier_1",
+    "MachineNumber": 0,
+    "MachineOrderIdentifier": "MachineOrderIdentifier_1",
+    "Status": 0,
+    "Timestamp": "0001-01-01T00:00:00",
+    "ProductionFinishedTimeStamp": "0001-01-01T00:00:00",
+    "ExternalId": "Name_1",
+    "InternalId": "InternalId_1",
+    "HasSkippedMedication": false,
+    "Source": 0,
+    "ValidationErrors": 0,
+    "OrderDetails": [
+        {
+            "Patient": {
+                "Identifier": "1",
+                "FirstName": "John",
+                "LastName": "Smith",
+                "PrintName": "Joseph",
+                "Birthday": "2018-09-24T00:00:00+02:00",
+                "Gender": 2,
+                "CultureName": "en-US",
+                "CareLocation": {
+                    "Name": "Name_1",
+                    "AddressLine": "Addressline1_1",
+                    "AdditionalAddressLine": "Addressline2_1",
+                    "PostalCode": null,
+                    "City": "City_1",
+                    "State": null,
+                    "Country": null,
+                    "LandlineNumber": "TelephoneNumber_1",
+                    "CellphoneNumber": null,
+                    "Email": "Email_1",
+                    "Website": null,
+                    "Fax": null,
+                    "Id": 23,
+                    "HistoryDate": "0001-01-01T00:00:00",
+                    "IsDeleted": false
+                },
+                "CareLocationName": "CLN_1",
+                "WardName": "Wardname_1",
+                "RoomNumber": "1",
+                "BedNumber": "BedNumber_1",
+                "AdditionalAttributes": [
+                    {
+                        "Key": "CustomField1",
+                        "Value": "CF1",
+                        "Description": null,
+                        "Id": 831,
+                        "HistoryDate": "0001-01-01T00:00:00",
+                        "IsDeleted": false
+                    },
+                    {
+                        "Key": "CustomField2",
+                        "Value": "CF2",
+                        "Description": null,
+                        "Id": 832,
+                        "HistoryDate": "0001-01-01T00:00:00",
+                        "IsDeleted": false
+                    }
+                ],
+                "OriginalId": 0,
+                "ReplacementPharmacy": 0,
+                "Id": 7,
+                "HistoryDate": "0001-01-01T00:00:00",
+                "IsDeleted": false
+            },
+            "Pharmacy": {
+                "Name": "Name_1",
+                "NameFirstLine": null,
+                "NameSecondLine": null,
+                "Identifier": "Identifier_1",
+                "CustomerId": 5,
+                "Contact": {
+                    "Name": "Name_1",
+                    "AddressLine": "Addressline1_1",
+                    "AdditionalAddressLine": "Addressline2_1",
+                    "PostalCode": null,
+                    "City": "City_1",
+                    "State": null,
+                    "Country": null,
+                    "LandlineNumber": "TelephoneNumber_1",
+                    "CellphoneNumber": null,
+                    "Email": "Email_1",
+                    "Website": null,
+                    "Fax": null,
+                    "Id": 24,
+                    "HistoryDate": "0001-01-01T00:00:00",
+                    "IsDeleted": false
+                },
+                "Description": "Description_1",
+                "OriginalId": 0,
+                "Patients": [],
+                "Id": 7,
+                "HistoryDate": "0001-01-01T00:00:00",
+                "IsDeleted": false
+            },
+            "DestinationFacility": {
+                "Identifier": "Identifier_1",
+                "Description": "Description_1",
+                "DepartmentName": "DepartmentName_1",
+                "DepartmentCode": "DepartmentCode_1",
+                "PouchSchemaDesign": {
+                    "Name": null,
+                    "Description": null,
+                    "LabelDesigns": [],
+                    "IsFromDestinationFacility": false,
+                    "IsFromFullFillmentCenter": false,
+                    "Id": 5,
+                    "HistoryDate": "0001-01-01T00:00:00",
+                    "IsDeleted": false
+                },
+                "Status": true,
+                "Logo": null,
+                "Patients": [],
+                "Contact": {
+                    "Name": "Name_1",
+                    "AddressLine": "Addressline1_1",
+                    "AdditionalAddressLine": "Addressline2_1",
+                    "PostalCode": null,
+                    "City": "City_1",
+                    "State": null,
+                    "Country": null,
+                    "LandlineNumber": "TelephoneNumber_1",
+                    "CellphoneNumber": null,
+                    "Email": "Email_1",
+                    "Website": null,
+                    "Fax": null,
+                    "Id": 21,
+                    "HistoryDate": "0001-01-01T00:00:00",
+                    "IsDeleted": false
+                },
+                "CustomerId": 1,
+                "OriginalId": 0,
+                "Id": 2,
+                "HistoryDate": "0001-01-01T00:00:00",
+                "IsDeleted": false
+            },
+            "IntakeDetails": [
+                {
+                    "IntakeDateTime": "2018-09-25T01:00:00+02:00",
+                    "MedicationDetails": [
+                        {
+                            "MedicineIdentifier": "33333333",
+                            "Quantity": 1.0,
+                            "AdditionalAttributes": [
+                                {
+                                    "Key": "IntakeAdvice",
+                                    "Value": "IntakeAdvice_1",
+                                    "Description": null,
+                                    "Id": 835,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Key": "Physician",
+                                    "Value": "Physician_1",
+                                    "Description": null,
+                                    "Id": 836,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Key": "PhysicianComment",
+                                    "Value": "PhysicianComment_1",
+                                    "Description": null,
+                                    "Id": 837,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Key": "PrescribedMedication",
+                                    "Value": "PrescribedMedication_1",
+                                    "Description": null,
+                                    "Id": 838,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                }
+                            ],
+                            "Id": 208,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        }
+                    ],
+                    "AdditionalAttributes": [],
+                    "InvalidTimeComponent": false,
+                    "Id": 52,
+                    "HistoryDate": "0001-01-01T00:00:00",
+                    "IsDeleted": false
+                },
+                {
+                    "IntakeDateTime": "2018-09-26T02:00:00+02:00",
+                    "MedicationDetails": [
+                        {
+                            "MedicineIdentifier": "33333333",
+                            "Quantity": 1.0,
+                            "AdditionalAttributes": [
+                                {
+                                    "Key": "IntakeAdvice",
+                                    "Value": "IntakeAdvice_2",
+                                    "Description": null,
+                                    "Id": 839,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Key": "Physician",
+                                    "Value": "Physician_2",
+                                    "Description": null,
+                                    "Id": 840,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Key": "PhysicianComment",
+                                    "Value": "PhysicianComment_2",
+                                    "Description": null,
+                                    "Id": 841,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Key": "PrescribedMedication",
+                                    "Value": "PrescribedMedication_2",
+                                    "Description": null,
+                                    "Id": 842,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                }
+                            ],
+                            "Id": 209,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        }
+                    ],
+                    "AdditionalAttributes": [],
+                    "InvalidTimeComponent": false,
+                    "Id": 53,
+                    "HistoryDate": "0001-01-01T00:00:00",
+                    "IsDeleted": false
+                },
+                {
+                    "IntakeDateTime": "2018-09-27T03:00:00+02:00",
+                    "MedicationDetails": [
+                        {
+                            "MedicineIdentifier": "33333333",
+                            "Quantity": 1.0,
+                            "AdditionalAttributes": [
+                                {
+                                    "Key": "IntakeAdvice",
+                                    "Value": "IntakeAdvice_3",
+                                    "Description": null,
+                                    "Id": 843,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Key": "Physician",
+                                    "Value": "Physician_3",
+                                    "Description": null,
+                                    "Id": 844,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Key": "PhysicianComment",
+                                    "Value": "PhysicianComment_3",
+                                    "Description": null,
+                                    "Id": 845,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Key": "PrescribedMedication",
+                                    "Value": "PrescribedMedication_3",
+                                    "Description": null,
+                                    "Id": 846,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                }
+                            ],
+                            "Id": 210,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        }
+                    ],
+                    "AdditionalAttributes": [],
+                    "InvalidTimeComponent": false,
+                    "Id": 54,
+                    "HistoryDate": "0001-01-01T00:00:00",
+                    "IsDeleted": false
+                }
+            ],
+            "AdditionalAttributes": [
+                {
+                    "Key": "ExternalDetailPrintInfo1",
+                    "Value": "ExternalDetailPrintInfo1_1",
+                    "Description": null,
+                    "Id": 833,
+                    "HistoryDate": "0001-01-01T00:00:00",
+                    "IsDeleted": false
+                },
+                {
+                    "Key": "ExternalDetailPrintInfo2",
+                    "Value": "ExternalDetailPrintInfo2_1",
+                    "Description": null,
+                    "Id": 834,
+                    "HistoryDate": "0001-01-01T00:00:00",
+                    "IsDeleted": false
+                }
+            ],
+            "Id": 7,
+            "HistoryDate": "0001-01-01T00:00:00",
+            "IsDeleted": false
+        }
+    ],
+    "Id": 5,
+    "HistoryDate": "0001-01-01T00:00:00",
+    "IsDeleted": false
+}

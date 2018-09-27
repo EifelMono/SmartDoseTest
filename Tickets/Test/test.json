@@ -2,46 +2,46 @@
     "ExternalId": "201807234-TEST49",
     "Timestamp": "2018-07-24T10:47:00",
     "Customer": {
-        "CustomerId": "11111 - TEST49",
-        "Name": "Customer Customer - TEST49"
+        "CustomerId": "Customer.CustomerId.1",
+        "Name": "Customer.Name.1"
     },
     "OrderDetails": [
         {
             "Pharmacy": {
-                "CustomerId": "11112 - TEST49",
-                "Name": "Customer Apotheke - TEST49"
+                "CustomerId": "Pharmacy.CustomerId.1",
+                "Name": "Pharmacy.Name.1"
             },
             "Patient": {
-                "ExternalPatientNumber": "081513 - TEST49",
+                "ExternalPatientNumber": "Patient.ExternalPatientNumber.1",
                 "DateOfBirth": "1900-02-03T00:00:00",
                 "ContactPerson": {
-                    "Name": "Domi Tester - TEST49"
+                    "Name": "Patient.ContactPerson.Name.1"
                 },
                 "ContactAddress": {
-                    "Addressline1": "Apotheke Nameline1 - TEST49",
-                    "City":  "Apotheke Nameline2 - TEST49",
-                    "Country": "de-DE - TEST49",
-                    "Postalcode": "0815-0850-20180724",
+                    "Addressline1": "Patient.ContactAddress.Addressline1.1",
+                    "City":  "Patient.ContactAddress.City.1",
+                    "Country": "Patient.ContactAddress.Country.1",
+                    "Postalcode": "4711",
                     "State": "01"
                 },
-                "RoomNumber": "PatRoom - TEST49",
-                "BedNumber": "PatBed - TEST49",
-                "WardName": "PadWard - TEST49"
+                "RoomNumber": "Patient.RoomNumber1",
+                "BedNumber": "Patient.BedNumber.1",
+                "WardName": "Patient.WardName.1"
             },
             "DestinationFacility": {
-                "CustomerId": "11123 - TEST49",
-                "Name": "DestinationName - TEST49",
-				"DepartmentCode": "10100 - TEST49",
-				"DepartmentName": "DepartmentName - TEST49",
+                "CustomerId": "DestinationFacility.CustomerId.1",
+                "Name": "DestinationFacility.Name.1",
+				"DepartmentCode": "DestinationFacility.DepartmentCode.1",
+				"DepartmentName": "DestinationFacility.DepartmentName.1",
                 "ContactAddress": {
-                    "Addressline1": "DestinationFacility AdressLine1 - TEST49",
-                    "Postalcode": "asasdas",
-                    "City": "DestinationFacility City - TEST49",
-                    "Country": "DestinationFacility Country - TEST49"
+                    "Addressline1": "DestinationFacility.ContactAddress.Addressline1.1",
+                    "Postalcode": "4712",
+                    "City": "DestinationFacility.ContactAddress.City",
+                    "Country": "DestinationFacility.ContactAddress.Country"
                 }
 			},
-            "ExternalDetailPrintInfo1": "A 25.07.2018 - TEST49",
-            "ExternalDetailPrintInfo2": "B 25.07.2018 - TEST49",
+            "ExternalDetailPrintInfo1": "ExternalDetailPrintInfo1.1",
+            "ExternalDetailPrintInfo2": "ExternalDetailPrintInfo1.2",
             "IntakeDetails": [
                 {
                     "IntakeDateTime": "2019-07-25T08:00:00",

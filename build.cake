@@ -407,7 +407,7 @@ async Task TestExternalOrderAsync(string jsonFilename, int count)
     StatusMessage(await ordersUrl.EmcPostJsonAsync(externalOrder).ConfigureAwait(false), $"Create External order");
 }
 
-Task("Ticket-Test.test.json")
+Task("Ticket-Test.test.json.TimeDetection")
     .Does(async ()=> {
             var times= new List<(int Count, long Time)>();
             foreach(var count in new int [] {
@@ -433,6 +433,12 @@ Task("Ticket-Test.test.json")
             }
             foreach(var time in times)
                 Information($"Count={time.Count,5}\ttime={time.Time, 10} ms\ttime per element={time.Time/time.Count, 10} ");
+    });
+
+Task("Ticket-Test.test.json")
+    .Does(async ()=> {
+            Information("1");
+            await CreateExternalOrderAsync("./Tickets/Test/test.json", true);
     });
 
 

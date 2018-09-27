@@ -1,0 +1,1513 @@
+{
+    "Customer": {
+        "Contact": {
+            "Id": 2,
+            "Name": "Johanna Blisterfrau",
+            "AddressLine": null,
+            "AdditionalAddressLine": null,
+            "PostalCode": "53539",
+            "City": "Kelberg",
+            "State": null,
+            "Country": "Germany",
+            "LandlineNumber": null,
+            "CellphoneNumber": "0269292060",
+            "Email": "Johanna.Blisterfrau@bd.com",
+            "Website": null,
+            "Fax": null,
+            "HistoryDate": "0001-01-01T00:00:00",
+            "IsDeleted": false
+        },
+        "Patients": [],
+        "Identifier": "91292ca8-82fe-4726-85db-653451cb0285",
+        "Description": null,
+        "Name": "THE-Customer",
+        "OriginalId": 0,
+        "CustomerId": 0,
+        "PouchSchemeId": 0,
+        "Id": 1,
+        "HistoryDate": "0001-01-01T00:00:00",
+        "IsDeleted": false
+    },
+    "OrderDetails": [
+        {
+            "AdditionalAttributes": [
+                {
+                    "Id": 829,
+                    "Key": "ExternalDetailPrintInfo1",
+                    "Value": "edpi1",
+                    "Description": null,
+                    "HistoryDate": "0001-01-01T00:00:00",
+                    "IsDeleted": false
+                },
+                {
+                    "Id": 830,
+                    "Key": "ExternalDetailPrintInfo2",
+                    "Value": "edpi2",
+                    "Description": null,
+                    "HistoryDate": "0001-01-01T00:00:00",
+                    "IsDeleted": false
+                }
+            ],
+            "DestinationFacility": {
+                "Contact": null,
+                "Patients": [],
+                "PouchSchemaDesign": {
+                    "LabelDesigns": [
+                        {
+                            "Id": 33,
+                            "Description": "Import",
+                            "CreateDate": "0001-01-01T00:00:00",
+                            "SerializedContent": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<XtraReportsLayoutSerializer SerializerVersion=\"16.2.3.0\" Ref=\"1\" ControlType=\"DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v16.2, Version=16.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a\" Name=\"Pouch_PatientHeader\" ScriptsSource=\"&#xD;&#xA;\" SnapGridSize=\"25\" ReportUnit=\"TenthsOfAMillimeter\" Margins=\"0, 0, 595, 0\" PaperKind=\"Custom\" PageWidth=\"525\" PageHeight=\"600\" Version=\"17.1\" DataSource=\"#Ref-0\" TextAlignment=\"MiddleCenter\" Dpi=\"254\" Font=\"Microsoft Sans Serif, 8.25pt, charSet=0\">\r\n  <FormattingRuleSheet>\r\n    <Item1 Ref=\"2\" Name=\"formattingRule1\" Condition=\"Len([MedicineName]) == 0\">\r\n      <Formatting Ref=\"3\" Visible=\"False\" BorderStyle=\"Inset\" StringFormat=\"Near;Near;0;None;Character;Default\" />\r\n    </Item1>\r\n  </FormattingRuleSheet>\r\n  <Bands>\r\n    <Item1 Ref=\"4\" ControlType=\"DetailBand\" Name=\"detailBand1\" HeightF=\"0\" Dpi=\"254\" BorderColor=\"Transparent\">\r\n      <StylePriority Ref=\"5\" UseBorderColor=\"false\" />\r\n    </Item1>\r\n    <Item2 Ref=\"6\" ControlType=\"TopMarginBand\" Name=\"topMarginBand1\" HeightF=\"595.34845\" TextAlignment=\"MiddleCenter\" Dpi=\"254\">\r\n      <Controls>\r\n        <Item1 Ref=\"7\" ControlType=\"XRBarCode\" Name=\"barCode2\" Module=\"5.08\" AutoModule=\"true\" Alignment=\"MiddleCenter\" TextAlignment=\"MiddleCenter\" ShowText=\"false\" SizeF=\"179.171509,114.785248\" LocationFloat=\"170.268677, 340.823273\" Dpi=\"254\" Padding=\"25,25,0,0,254\">\r\n          <Symbology Ref=\"8\" Name=\"DataMatrix\" CompactionMode=\"Text\" />\r\n          <DataBindings>\r\n            <Item1 Ref=\"9\" PropertyName=\"Text\" DataMember=\"RollId\" />\r\n          </DataBindings>\r\n          <StylePriority Ref=\"10\" UseTextAlignment=\"false\" />\r\n        </Item1>\r\n        <Item2 Ref=\"11\" ControlType=\"XRLabel\" Name=\"label5\" CanGrow=\"false\" TextAlignment=\"MiddleCenter\" WordWrap=\"false\" SizeF=\"523.3862,42.7837753\" LocationFloat=\"0, 262.4962\" Dpi=\"254\" Font=\"Arial, 10pt, style=Bold\" ForeColor=\"Black\" Borders=\"None\">\r\n          <DataBindings>\r\n            <Item1 Ref=\"12\" PropertyName=\"Text\" DataMember=\"PharmacyData.Name\" />\r\n          </DataBindings>\r\n          <StylePriority Ref=\"13\" UseFont=\"false\" UseForeColor=\"false\" UseBorders=\"false\" UseTextAlignment=\"false\" />\r\n        </Item2>\r\n        <Item3 Ref=\"14\" ControlType=\"XRLabel\" Name=\"label4\" CanGrow=\"false\" TextAlignment=\"MiddleCenter\" WordWrap=\"false\" SizeF=\"523.3862,42.7837753\" LocationFloat=\"1.06787682, 184.996841\" Dpi=\"254\" Font=\"Arial, 8pt, style=Bold\" ForeColor=\"Black\" Borders=\"None\">\r\n          <DataBindings>\r\n            <Item1 Ref=\"15\" FormatString=\"Zimmer:{0}\" PropertyName=\"Text\" DataMember=\"PatientData.RoomNumber\" />\r\n          </DataBindings>\r\n          <StylePriority Ref=\"16\" UseFont=\"false\" UseForeColor=\"false\" UseBorders=\"false\" UseTextAlignment=\"false\" />\r\n        </Item3>\r\n        <Item4 Ref=\"17\" ControlType=\"XRLabel\" Name=\"label2\" CanGrow=\"false\" TextAlignment=\"MiddleCenter\" WordWrap=\"false\" SizeF=\"523.3862,42.7837753\" LocationFloat=\"0.4539961, 142.2131\" Dpi=\"254\" Font=\"Arial, 10pt, style=Bold\" ForeColor=\"Black\" Borders=\"None\">\r\n          <DataBindings>\r\n            <Item1 Ref=\"18\" FormatString=\"Station:{0}\" PropertyName=\"Text\" DataMember=\"CustomerData.Name\" />\r\n          </DataBindings>\r\n          <StylePriority Ref=\"19\" UseFont=\"false\" UseForeColor=\"false\" UseBorders=\"false\" UseTextAlignment=\"false\" />\r\n        </Item4>\r\n        <Item5 Ref=\"20\" ControlType=\"XRLabel\" Name=\"label1\" Text=\"Patienten Vorlaufblister\" TextAlignment=\"MiddleCenter\" SizeF=\"523.3862,42.7837753\" LocationFloat=\"0, 11.7708416\" Dpi=\"254\" Font=\"Arial, 8pt, style=Bold\" ForeColor=\"Black\" Borders=\"None\">\r\n          <StylePriority Ref=\"21\" UseFont=\"false\" UseForeColor=\"false\" UseBorders=\"false\" UseTextAlignment=\"false\" />\r\n        </Item5>\r\n        <Item6 Ref=\"22\" ControlType=\"XRLabel\" Name=\"label3\" CanGrow=\"false\" Text=\"[PatientData.FirstName] [PatientData.LastName]\" TextAlignment=\"MiddleCenter\" WordWrap=\"false\" SizeF=\"523.3862,42.7837753\" LocationFloat=\"0, 99.429306\" Dpi=\"254\" Font=\"Arial, 10pt, style=Bold\" ForeColor=\"Black\" Borders=\"None\">\r\n          <StylePriority Ref=\"23\" UseFont=\"false\" UseForeColor=\"false\" UseBorders=\"false\" UseTextAlignment=\"false\" />\r\n        </Item6>\r\n        <Item7 Ref=\"24\" ControlType=\"XRBarCode\" Name=\"barCode1\" Module=\"5.08\" AutoModule=\"true\" Alignment=\"MiddleCenter\" TextAlignment=\"BottomCenter\" SizeF=\"521.840332,75.60495\" LocationFloat=\"0.9999434, 494.7435\" Dpi=\"254\" Font=\"Arial, 8pt, style=Bold\" Padding=\"11,11,0,0,254\">\r\n          <Symbology Ref=\"25\" Name=\"Code128\" />\r\n          <DataBindings>\r\n            <Item1 Ref=\"26\" PropertyName=\"Text\" DataMember=\"PouchIdentifier\" />\r\n          </DataBindings>\r\n          <StylePriority Ref=\"27\" UseFont=\"false\" UsePadding=\"false\" UseTextAlignment=\"false\" />\r\n        </Item7>\r\n        <Item8 Ref=\"28\" ControlType=\"XRLine\" Name=\"line2\" LineWidth=\"3\" SizeF=\"525.000061,5\" LocationFloat=\"0, 67.78377\" Dpi=\"254\" />\r\n      </Controls>\r\n      <StylePriority Ref=\"29\" UseTextAlignment=\"false\" />\r\n    </Item2>\r\n    <Item3 Ref=\"30\" ControlType=\"BottomMarginBand\" Name=\"bottomMarginBand1\" HeightF=\"0\" Dpi=\"254\" />\r\n  </Bands>\r\n  <Scripts Ref=\"31\" OnBeforePrint=\"Pouch_PatientHeader_BeforePrint\" />\r\n  <ExportOptions Ref=\"32\">\r\n    <Image Ref=\"33\" PageBorderWidth=\"0\" ExportMode=\"SingleFilePageByPage\" PageRange=\"1\" Format=\"Bmp\" Resolution=\"300\" />\r\n  </ExportOptions>\r\n  <Watermark Ref=\"34\" TextTransparency=\"0\" />\r\n  <ComponentStorage>\r\n    <Item1 Ref=\"0\" ObjectType=\"DevExpress.DataAccess.ObjectBinding.ObjectDataSource,DevExpress.DataAccess.v16.2\" Name=\"DataSourcePouch\" Base64=\"PE9iamVjdERhdGFTb3VyY2U+PE5hbWU+RGF0YVNvdXJjZVBvdWNoPC9OYW1lPjxEYXRhU291cmNlIFR5cGU9IlJvd2EuU21hcnREb3NlLlNkbWMuQ29udHJvbGxlci5Qcm9kdWN0aW9uLk9yZGVyRm9yUHJvZHVjdGlvbi5QRFRSLlBvdWNoRGF0YSwgUG91Y2hEYXRhVG9SZW5kZXIsIFZlcnNpb249MS4yLjAuMTA0LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPW51bGwiIC8+PC9PYmplY3REYXRhU291cmNlPg==\" />\r\n  </ComponentStorage>\r\n</XtraReportsLayoutSerializer>",
+                            "Preview": null,
+                            "SizeLimitX": 0.0,
+                            "SizeLimitY": 0.0,
+                            "IsSystemTemplate": false,
+                            "Name": "Patient Header Asklepios",
+                            "OriginalId": 23,
+                            "IsUserCreated": false,
+                            "Type": 3,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        },
+                        {
+                            "Id": 34,
+                            "Description": "Import",
+                            "CreateDate": "0001-01-01T00:00:00",
+                            "SerializedContent": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<XtraReportsLayoutSerializer SerializerVersion=\"17.1.4.0\" Ref=\"1\" ControlType=\"DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v17.1, Version=17.1.4.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a\" Name=\"XtraReport\" ScriptsSource=\"using System.Data;&#xD;&#xA;using System.Drawing.Printing;&#xD;&#xA;using Rowa.SmartDose.ReportRenderer.Interface.Sdmc;&#xD;&#xA;&#xD;&#xA;private System.Globalization.CultureInfo _originalCulture = System.Globalization.CultureInfo.CurrentCulture;&#xD;&#xA;&#xD;&#xA;private void XtraReport_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e) &#xD;&#xA;{&#xD;&#xA;&#x9;//Set Manually the Culture to german&#xD;&#xA;&#x9;var currentCulture = System.Globalization.CultureInfo.CreateSpecificCulture(&quot;de-DE&quot;);&#xD;&#xA;    &#x9;System.Threading.Thread.CurrentThread.CurrentUICulture = currentCulture;&#xD;&#xA;    &#x9;System.Threading.Thread.CurrentThread.CurrentCulture = currentCulture;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;//Set the matching Text for the intake time&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;DateTime intaketime = (System.DateTime)GetCurrentColumnValue(&quot;IntakeDateTime&quot;);&#xD;&#xA;&#xD;&#xA;&#x9;//lblIntakeTime.Text =&quot;Bedtime&quot;;&#xD;&#xA;&#xD;&#xA;&#x9;if (intaketime.Hour==8 &amp;&amp; intaketime.Minute == 0 &amp;&amp; intaketime.Second == 0)&#xD;&#xA;&#x9;{&#xD;&#xA;&#x9;&#x9;lblIntakeTime.Text =&quot;morgens&quot;;&#x9;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;else if (intaketime.Hour==12 &amp;&amp; intaketime.Minute == 0 &amp;&amp; intaketime.Second == 0)&#xD;&#xA;&#x9;{&#xD;&#xA;&#x9;&#x9;lblIntakeTime.Text=&quot;mittags&quot;;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;else if (intaketime.Hour==18 &amp;&amp; intaketime.Minute == 0 &amp;&amp; intaketime.Second == 0)&#xD;&#xA;&#x9;{&#xD;&#xA;&#x9;&#x9;lblIntakeTime.Text =&quot;abends&quot;;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;else if (intaketime.Hour==22 &amp;&amp; intaketime.Minute == 0 &amp;&amp; intaketime.Second == 0)&#xD;&#xA;&#x9;{&#xD;&#xA;&#x9;&#x9;lblIntakeTime.Text =&quot;nachts&quot;;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;else&#xD;&#xA;&#x9;{&#xD;&#xA;&#x9;&#x9;lblIntakeTime.Text = intaketime.ToShortTimeString();&#xD;&#xA;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;&#xD;&#xA;&#xD;&#xA;/*&#x9;&#xD;&#xA;&#xD;&#xA;&#x9;//Set pouchcounter visible / not visible&#xD;&#xA;&#x9;int pouchCountIntakeTimeTotal = (int)GetCurrentColumnValue(&quot;PouchCountIntakeTimeTotal&quot;);&#xD;&#xA;&#x9;int pouchCountIntakeTimeCurrent = (int)GetCurrentColumnValue(&quot;PouchCountIntakeTimeCurrent&quot;);&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;if (pouchCountIntakeTimeTotal &gt; 1)&#xD;&#xA;&#x9;{&#xD;&#xA;&#x9;&#x9;lblPouchCountIntakeTime.Text = pouchCountIntakeTimeCurrent.ToString()+&quot; / &quot;+pouchCountIntakeTimeTotal.ToString();&#xD;&#xA;&#x9;}&#xD;&#xA;*/&#xD;&#xA;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;private void lblMedicineDescription_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e) &#xD;&#xA;{&#xD;&#xA;&#x9;var data = (IMedicineData)DetailReport.GetCurrentRow();&#xD;&#xA; &#x9;var details = (IMedicineDataDetails)data.MedicineDataDetails;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;string tmpDetail =&quot;&quot;;&#xD;&#xA;&#x9;string formType = details.FormType;&#xD;&#xA;&#x9;string color = details.Color;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;lblMedicineDescription.Text=&quot;&quot;;&#xD;&#xA;&#xD;&#xA;&#x9;if (!string.IsNullOrEmpty(formType) &amp;&amp; string.IsNullOrEmpty(color))&#x9;&#xD;&#xA;&#x9;{&#xD;&#xA;&#x9;&#x9;lblMedicineDescription.Text +=string.Format(&quot;({0})&quot;,formType);&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;else if (string.IsNullOrEmpty(formType) &amp;&amp; !string.IsNullOrEmpty(color))&#xD;&#xA;&#x9;{&#xD;&#xA;&#x9;&#x9;lblMedicineDescription.Text +=string.Format(&quot;({0})&quot;,color);&#xD;&#xA;&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;else if (!string.IsNullOrEmpty(formType) &amp;&amp; !string.IsNullOrEmpty(color))&#xD;&#xA;&#x9;{&#xD;&#xA;&#x9;&#x9;lblMedicineDescription.Text +=string.Format(&quot;({0}, {1})&quot;, color, formType);&#xD;&#xA;&#x9;}&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;private void lblLot_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e) &#xD;&#xA;{&#xD;&#xA;&#x9;var lotConc = String.Empty;&#xD;&#xA;&#x9;var data = (IMedicineData)DetailReport.GetCurrentRow();&#xD;&#xA;&#x9;var expiryDateMin = System.DateTime.MaxValue;&#xD;&#xA;&#xD;&#xA;&#x9;var lotData = data.LotInfos;&#xD;&#xA;&#xD;&#xA;&#x9;foreach(var lot in lotData)&#xD;&#xA;&#x9;{&#xD;&#xA;&#x9;&#x9;lotConc +=lot.LotNumber;&#xD;&#xA;&#x9;&#x9;lotConc +=&quot;,&quot;;&#xD;&#xA;&#xD;&#xA;&#x9;&#x9;if (lot.ExpiryDate&lt;expiryDateMin)&#xD;&#xA;&#x9;&#x9;{&#xD;&#xA;&#x9;&#x9;&#x9;expiryDateMin = lot.ExpiryDate;&#xD;&#xA;&#x9;&#x9;}&#x9;&#x9;&#x9;&#xD;&#xA;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;if (lotConc !=String.Empty)&#xD;&#xA;&#x9;{&#xD;&#xA;&#x9;&#x9;if (lotConc.EndsWith(&quot;,&quot;)) lotConc = lotConc.Remove(lotConc.Length - 1, 1);&#xD;&#xA;&#x9;}&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;if (expiryDateMin!=System.DateTime.MaxValue) &#xD;&#xA;&#x9;{ &#xD;&#xA;&#x9;&#x9;lblExpiryDate.Text = expiryDateMin.ToString(&quot;dd.MM.yyyy&quot;);&#xD;&#xA;&#x9;}&#xD;&#xA;&#xD;&#xA;&#x9;lblLot.Text=lotConc ;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;private string ConvertDecimalToFraction(double amount)&#xD;&#xA;{&#xD;&#xA;&#x9;string result;&#xD;&#xA;&#x9;bool hasDecimalPart = !(amount-System.Math.Truncate(amount) == 0);&#x9;&#xD;&#xA;&#x9;&#xD;&#xA;&#x9;if (hasDecimalPart)&#xD;&#xA;      {&#xD;&#xA;      &#x9;string wholePart = string.Empty;&#xD;&#xA;                string fractionPart = string.Empty;&#xD;&#xA;&#xD;&#xA;                if (true)&#xD;&#xA;                {&#xD;&#xA;                    int whole = (int)amount;&#xD;&#xA;                    double decimals = (whole &gt; 0) ? amount% whole : amount;&#xD;&#xA;&#xD;&#xA;                    if (whole &gt; 0)&#xD;&#xA;                    {&#xD;&#xA;                        wholePart = whole.ToString()+&quot; &quot;;&#xD;&#xA;                    }&#xD;&#xA;&#xD;&#xA;                    if (decimals == 0.25)&#xD;&#xA;                    {&#xD;&#xA;                        fractionPart = &quot;1/4&quot;;&#xD;&#xA;                    }&#xD;&#xA;                    else if (decimals &gt;= 0.3 &amp;&amp; decimals &lt; 0.5)&#xD;&#xA;                    {&#xD;&#xA;                        fractionPart = &quot;1/3&quot;;&#xD;&#xA;                    }&#xD;&#xA;                    else if (decimals == 0.5)&#xD;&#xA;                    {&#xD;&#xA;                        fractionPart = &quot;1/2&quot;;&#xD;&#xA;                    }&#xD;&#xA;                    else if (decimals &gt;= 0.60 &amp;&amp; decimals &lt;= 0.7)&#xD;&#xA;                    {&#xD;&#xA;                        fractionPart = &quot;2/3&quot;;&#xD;&#xA;                    }&#xD;&#xA;                    else if (decimals == 0.75)&#xD;&#xA;                    {&#xD;&#xA;                        fractionPart = &quot;3/4&quot;;&#xD;&#xA;                    }&#xD;&#xA;                }&#xD;&#xA;&#xD;&#xA;                if (fractionPart == string.Empty)&#xD;&#xA;                {&#xD;&#xA;                    result = amount.ToString(&quot;0.00&quot;).TrimEnd('0');&#xD;&#xA;                }&#xD;&#xA;                else&#xD;&#xA;                {&#xD;&#xA;                    result = wholePart + fractionPart;&#xD;&#xA;                }&#xD;&#xA;&#x9;&#x9;&#xD;&#xA;            }&#xD;&#xA;            else&#xD;&#xA;            {&#xD;&#xA;                result = amount.ToString(&quot;#&quot;);&#xD;&#xA;            }&#xD;&#xA;&#x9;return result;&#xD;&#xA;&#xD;&#xA;}&#xD;&#xA;private void XtraReport_AfterPrint(object sender, System.EventArgs e) &#xD;&#xA;{&#xD;&#xA;&#x9;System.Threading.Thread.CurrentThread.CurrentUICulture = _originalCulture;&#xD;&#xA;    &#x9;System.Threading.Thread.CurrentThread.CurrentCulture = _originalCulture;&#xD;&#xA;&#x9;&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;private void label2_BeforePrint(object sender, System.Drawing.Printing.PrintEventArgs e) &#xD;&#xA;{&#xD;&#xA;&#x9;//if (label2.Text!=string.Empty)&#xD;&#xA;&#x9;//label2.Text =ConvertDecimalToFraction(Convert.ToDouble(label2.Text));&#xD;&#xA;}&#xD;&#xA;&#xD;&#xA;&#xD;&#xA;\" SnapGridSize=\"25\" ReportUnit=\"TenthsOfAMillimeter\" Margins=\"0, 0, 0, 196\" PaperKind=\"Custom\" PageWidth=\"525\" PageHeight=\"600\" Version=\"17.2\" DataSource=\"#Ref-0\" Dpi=\"254\">\r\n  <FormattingRuleSheet>\r\n    <Item1 Ref=\"2\" Name=\"formattingRule1\">\r\n      <Formatting Ref=\"3\" BorderStyle=\"Inset\" StringFormat=\"Near;Near;0;None;Character;Default\" />\r\n    </Item1>\r\n  </FormattingRuleSheet>\r\n  <Bands>\r\n    <Item1 Ref=\"4\" ControlType=\"TopMarginBand\" Name=\"topMarginBand1\" HeightF=\"0\" Dpi=\"254\" />\r\n    <Item2 Ref=\"5\" ControlType=\"DetailBand\" Name=\"detailBand1\" HeightF=\"205.262\" Dpi=\"254\">\r\n      <Scripts Ref=\"6\" OnBeforePrint=\"detailBand1_BeforePrint\" />\r\n      <Controls>\r\n        <Item1 Ref=\"7\" ControlType=\"XRLabel\" Name=\"lblIntakeTime\" CanGrow=\"false\" TextTrimming=\"None\" TextAlignment=\"MiddleCenter\" WordWrap=\"false\" SizeF=\"123.173218,41.9093323\" LocationFloat=\"399.666321, 152.929672\" Dpi=\"254\" Font=\"Arial, 8pt, style=Bold\" Padding=\"1,1,1,1,254\" Borders=\"None\">\r\n          <StylePriority Ref=\"8\" UseFont=\"false\" UsePadding=\"false\" UseBorders=\"false\" UseTextAlignment=\"false\" />\r\n        </Item1>\r\n        <Item2 Ref=\"9\" ControlType=\"XRLabel\" Name=\"label14\" CanGrow=\"false\" TextAlignment=\"MiddleCenter\" SizeF=\"203.076889,41.9093323\" LocationFloat=\"195.387131, 152.929672\" Dpi=\"254\" Font=\"Arial, 9pt, charSet=0\" Padding=\"1,1,1,1,254\" Borders=\"None\">\r\n          <DataBindings>\r\n            <Item1 Ref=\"10\" FormatString=\"{0:dd.MMM.yyyy}\" PropertyName=\"Text\" DataMember=\"IntakeDateTime\" />\r\n          </DataBindings>\r\n          <StylePriority Ref=\"11\" UseFont=\"false\" UsePadding=\"false\" UseBorders=\"false\" UseTextAlignment=\"false\" />\r\n        </Item2>\r\n        <Item3 Ref=\"12\" ControlType=\"XRLabel\" Name=\"label13\" TextAlignment=\"MiddleLeft\" SizeF=\"197.525787,25.5600586\" LocationFloat=\"325.3138, 79.5858154\" Dpi=\"254\" Font=\"Arial, 6pt, charSet=0\" Padding=\"5,5,0,0,254\">\r\n          <DataBindings>\r\n            <Item1 Ref=\"13\" FormatString=\"*{0:dd.MM.yyyy}\" PropertyName=\"Text\" DataMember=\"PatientData.Birthday\" />\r\n          </DataBindings>\r\n          <StylePriority Ref=\"14\" UseFont=\"false\" UseTextAlignment=\"false\" />\r\n        </Item3>\r\n        <Item4 Ref=\"15\" ControlType=\"XRLabel\" Name=\"label12\" CanGrow=\"false\" TextTrimming=\"None\" TextAlignment=\"MiddleLeft\" WordWrap=\"false\" SizeF=\"197.525787,25.5600586\" LocationFloat=\"325.3138, 54.0257568\" Dpi=\"254\" Font=\"Arial, 7pt, style=Bold\" Padding=\"5,5,0,0,254\">\r\n          <DataBindings>\r\n            <Item1 Ref=\"16\" FormatString=\"Zimmer:{0}\" PropertyName=\"Text\" DataMember=\"PatientData.RoomNumber\" />\r\n          </DataBindings>\r\n          <StylePriority Ref=\"17\" UseFont=\"false\" UseTextAlignment=\"false\" />\r\n        </Item4>\r\n        <Item5 Ref=\"18\" ControlType=\"XRLine\" Name=\"line4\" LineWidth=\"3\" SizeF=\"523.7195,5\" LocationFloat=\"0, 147.929672\" Dpi=\"254\" />\r\n        <Item6 Ref=\"19\" ControlType=\"XRLabel\" Name=\"label11\" CanGrow=\"false\" TextTrimming=\"None\" TextAlignment=\"MiddleLeft\" WordWrap=\"false\" SizeF=\"323.1542,25.5600586\" LocationFloat=\"2.15981627, 79.5858154\" Dpi=\"254\" Font=\"Arial, 7pt, style=Bold\" Padding=\"5,5,0,0,254\">\r\n          <DataBindings>\r\n            <Item1 Ref=\"20\" FormatString=\"Station:{0}\" PropertyName=\"Text\" DataMember=\"CustomerData.Name\" />\r\n          </DataBindings>\r\n          <StylePriority Ref=\"21\" UseFont=\"false\" UseTextAlignment=\"false\" />\r\n        </Item6>\r\n        <Item7 Ref=\"22\" ControlType=\"XRLabel\" Name=\"label10\" CanGrow=\"false\" TextTrimming=\"None\" TextAlignment=\"MiddleLeft\" WordWrap=\"false\" SizeF=\"323.154053,25.5600624\" LocationFloat=\"2.15981627, 54.0257454\" Dpi=\"254\" Font=\"Arial, 7pt, style=Bold\" Padding=\"5,5,0,0,254\">\r\n          <DataBindings>\r\n            <Item1 Ref=\"23\" PropertyName=\"Text\" DataMember=\"PharmacyData.Name\" />\r\n          </DataBindings>\r\n          <StylePriority Ref=\"24\" UseFont=\"false\" UseTextAlignment=\"false\" />\r\n        </Item7>\r\n        <Item8 Ref=\"25\" ControlType=\"XRLine\" Name=\"line2\" LineWidth=\"3\" SizeF=\"523.7195,5\" LocationFloat=\"1.280512, 47.0000153\" Dpi=\"254\" />\r\n        <Item9 Ref=\"26\" ControlType=\"XRLabel\" Name=\"label8\" Text=\"Ü\" TextAlignment=\"MiddleRight\" SizeF=\"41.5551147,35.8525925\" LocationFloat=\"483.4449, 11.1474247\" Dpi=\"254\" Font=\"Wingdings, 11.25pt, style=Bold, charSet=2\" Padding=\"5,5,0,0,254\">\r\n          <StylePriority Ref=\"27\" UseFont=\"false\" UseTextAlignment=\"false\" />\r\n        </Item9>\r\n        <Item10 Ref=\"28\" ControlType=\"XRLabel\" Name=\"label3\" Text=\"[PatientData.FirstName] [PatientData.LastName]\" TextAlignment=\"MiddleLeft\" SizeF=\"521.829834,42.7837677\" LocationFloat=\"2.15981627, 105.145889\" Dpi=\"254\" Font=\"Arial, 10pt, style=Bold\" ForeColor=\"Black\" Borders=\"None\">\r\n          <StylePriority Ref=\"29\" UseFont=\"false\" UseForeColor=\"false\" UseBorders=\"false\" UseTextAlignment=\"false\" />\r\n        </Item10>\r\n        <Item11 Ref=\"30\" ControlType=\"XRLabel\" Name=\"label4\" CanGrow=\"false\" TextAlignment=\"MiddleLeft\" SizeF=\"193.2273,41.9093323\" LocationFloat=\"2.15981627, 152.929672\" Dpi=\"254\" Font=\"Arial, 9pt, style=Bold\" Padding=\"1,1,1,1,254\" Borders=\"None\">\r\n          <DataBindings>\r\n            <Item1 Ref=\"31\" FormatString=\"{0:dddd}\" PropertyName=\"Text\" DataMember=\"IntakeDateTime\" />\r\n          </DataBindings>\r\n          <StylePriority Ref=\"32\" UseFont=\"false\" UsePadding=\"false\" UseBorders=\"false\" UseTextAlignment=\"false\" />\r\n        </Item11>\r\n        <Item12 Ref=\"33\" ControlType=\"XRLabel\" Name=\"label7\" Text=\"Öffnen\" TextAlignment=\"MiddleRight\" SizeF=\"124.042862,35.85259\" LocationFloat=\"359.4021, 11.1474247\" Dpi=\"254\" Font=\"Arial, 9pt, style=Bold, charSet=0\" Padding=\"5,5,0,0,254\">\r\n          <StylePriority Ref=\"34\" UseFont=\"false\" UseTextAlignment=\"false\" />\r\n        </Item12>\r\n      </Controls>\r\n    </Item2>\r\n    <Item3 Ref=\"35\" ControlType=\"BottomMarginBand\" Name=\"bottomMarginBand1\" HeightF=\"195.828415\" Dpi=\"254\">\r\n      <Controls>\r\n        <Item1 Ref=\"36\" ControlType=\"XRPictureBox\" Name=\"pictureBox1\" Image=\"/9j/4AAQSkZJRgABAQEAYABgAAD/4QBoRXhpZgAATU0AKgAAAAgABAEaAAUAAAABAAAAPgEbAAUAAAABAAAARgEoAAMAAAABAAIAAAExAAIAAAARAAAATgAAAAAAAABgAAAAAQAAAGAAAAABcGFpbnQubmV0IDQuMC4xOQAA/9sAQwAKBwcIBwYKCAgICwoKCw4YEA4NDQ4dFRYRGCMfJSQiHyIhJis3LyYpNCkhIjBBMTQ5Oz4+PiUuRElDPEg3PT47/9sAQwEKCwsODQ4cEBAcOygiKDs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7Ozs7/8AAEQgB9AIwAwEiAAIRAQMRAf/EAB8AAAEFAQEBAQEBAAAAAAAAAAABAgMEBQYHCAkKC//EALUQAAIBAwMCBAMFBQQEAAABfQECAwAEEQUSITFBBhNRYQcicRQygZGhCCNCscEVUtHwJDNicoIJChYXGBkaJSYnKCkqNDU2Nzg5OkNERUZHSElKU1RVVldYWVpjZGVmZ2hpanN0dXZ3eHl6g4SFhoeIiYqSk5SVlpeYmZqio6Slpqeoqaqys7S1tre4ubrCw8TFxsfIycrS09TV1tfY2drh4uPk5ebn6Onq8fLz9PX29/j5+v/EAB8BAAMBAQEBAQEBAQEAAAAAAAABAgMEBQYHCAkKC//EALURAAIBAgQEAwQHBQQEAAECdwABAgMRBAUhMQYSQVEHYXETIjKBCBRCkaGxwQkjM1LwFWJy0QoWJDThJfEXGBkaJicoKSo1Njc4OTpDREVGR0hJSlNUVVZXWFlaY2RlZmdoaWpzdHV2d3h5eoKDhIWGh4iJipKTlJWWl5iZmqKjpKWmp6ipqrKztLW2t7i5usLDxMXGx8jJytLT1NXW19jZ2uLj5OXm5+jp6vLz9PX29/j5+v/aAAwDAQACEQMRAD8A9mooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiio4pop0LwypIoZkLIwIDKSrDjuCCCOxBoAkooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooA5L4j+Mk8HeGnniOb+73Q2ihlyrYP7wg5yq8HoeSoOM5rzn4L+PPsF1H4T1D/j3upS1pM0mPKcjPl8nG1iOMc7m6HdxyvxN8YL4w8UNNaSO2m2i+TaBgV3Dqz7SeCx74B2hcjIrk4ZpbaeOeCV4pYmDxyIxVkYHIII6EHvQB9k0VheDPEsXizwvZ6shQSuuy4jXH7uUcMMZOBnkAnO0qe9btABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFea/Gfxg2h6Aui2UiC81RWWXIDFLfBDcZ4LE4BweA+MEA16He3kGn2Nxe3Unl29tE0sr4J2qoyTgcngdq+UPFHiO98Va/c6reu5MrERRs24Qx5O1BwOAD6DJyTyTQBk0UUUAd58KPHDeFtfWxvZn/sq/YJIpcKkEhIAlOegA4bkccnO0CvpCvjOvob4OeMk13w8uiXJxfaVEqAllHmw9FIAwflGFPH905JbgA9GooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKzPEmuQeGvD17rFyu5LWLcEyRvY8KuQDjLEDOOM5oA8v+OXjBo0j8KWUiESqJr/ADEDIMaZz8pyNxGAcbMHBIrxarOpale6xqM+oahcPcXVw26SR+pP8AQAcADgAACq1ABRRRQAVueDPEsvhPxRZ6shcxI2y4jXP7yI8MMZGTjkAnG4Ke1YdFAH2LZXkGoWNve2snmW9zEssT4I3KwyDg8jg96nrxz4G+MGkSTwpeyIBEpmsMgKSMkyJnPzHJ3AYJxvycACvY6ACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACvnn4x+Mn13xC2iWxxY6VKyEhmHmzdGJBwPlOVHH945Ibj1n4neIX8N+Br25t5vJu7jFtbMN2Qz9SCv3WCB2Bz1UfQ/MFABRRRQAUUUUAFFFFAFnTdSvdH1GDUNPuHt7q3bdHInUH+oI4IPBBINfUfgbxN/wAJd4UtNWdYY7h9yXEUT7gjqSD7jIwwB5AYcnqflOvSfgj4li0fxRNpNyUSLVlVEkbAxKmSgySOCGYYwSWKgd6APoOiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKjmmitoJJ55UiiiUvJI7BVRQMkknoAO9SV5f8a/GC6Xoo8OWkjre6goaYqCNlvkg/MCOWK7cc/LuzjIyAeX/Efxk/jHxK88RxYWm6G0UM2GXJ/eEHGGbg9BwFBzjNcnRRQAUUUUAdT8N/DEXivxlbWF1E8llGrT3QSQIdijgZ64LFFOOcE9Oo9W+NnhT+1vDya7aw7rvTP9btXLPAevQEnafm5IABc10Hw08Kz+EfCEVlecXk8rXFwgcMsbMAAoIHZVXPXnOCRiutoA+M6K7n4seDU8KeJRPaDFhqW+aFQqqImz88YA/hGVI4HDAc4JrhqACiiigD6c+G3jeLxnoAMm8alZKkd4GUYdiDiQEADDbScdjkdME9hXyl4I8VT+D/EsGpxfNC37q6QIGLwkgsBkj5uARyOQM8ZB+qYZormCOeCVJYpVDxyIwZXUjIII6gjvQBJRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQBS1jVrXQtHutUvX229rEZHwQC2OijJA3E4AGeSQK+VvFPiCXxT4kvNamgSBrpgREhJCKqhVGT1OFGTxk54HSvSfjr4qguZrbwvbfM9rKLi7YoRtYp8ig55+VyTx3XnqK8goAKKKKACvSfgx4PXXNfbWr2NzZ6WytFglQ9xkFecchQMkZHJTOQSK82r0nwb8YpfCnhuDRZNES8W3ZzHKtyYjtZi2CNrZOSeeOMccZIB9B0V4z/AMNCf9St/wCVD/7XR/w0J/1K3/lQ/wDtdAHbfE3we3jDwu0NpGjalaN51oWIXcejJuI4DDtkDcFycCvmaaGW2nkgnieKWJikkbqVZGBwQQehB7V7H/w0J/1K3/lQ/wDtdeWeJNZ/4SHxDe6v9jhs/tcu/wAmEfKvbn1Y4yTxkknAzQBmUUUUAFe8/BPxk+q6W/hu8ObjTot9u5ZmaSHdgg54GwlQOehAA+UmvBq0/DeuT+GvENlrFsu57WXcUyBvU8MuSDjKkjOOM5oA+uaKpaPq1rruj2uqWT7re6iEiZIJXPVTgkbgcgjPBBFXaACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAoqOaaK2gknnlSKKJS8kjsFVFAySSegA715t4r+NmjaT5lroUf9q3a5Xzc7bdD8w69XwQD8vBB4agD02uM8XfE7w/4btb23h1CG51aKJvKto1MgEmSoDkcLhh8wLBsDpnGfDNd+IvivxDvS81eaO3feDb2x8qPa3VCF5dccfMTx9TnmaAJr28n1C+uL26k8y4uZWllfAG5mOScDgcntUNFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAHrPwe+IVholrNoGu3v2e3aUPZyyBiiFjhkJzhFzhhwAMuSeRXt8M0VzBHPBKksUqh45EYMrqRkEEdQR3r43rW0TxVr3hxwdI1W5tVDF/KV8xMxGCShypOMckdh6CgD62orzLwp8bNG1by7XXY/wCyrtsL5ud1u5+UdeqZJJ+bgActXpMM0VzBHPBKksUqh45EYMrqRkEEdQR3oAkooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKK4jxx8T9I8IPLp677nVTAzJHGgZIXx8nm/MMAn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Whs1cLJL0OX7ouONvDZz93HPtlnZWun2qWtlbQ2tvHnZFDGERcnJwBwOST+NT0UAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFAHJeKfhr4b8T2s26xhsr59zJe28YVw7EEs4GBJkjndzycEE5rxnXPg94u0S1FyttDqSfxiwZpHTkAfKVDHOf4QcYJOK+k6KAPjOivrXW/Cug+I0K6vpVtdMVCeayYlVQcgBxhgM54B7n1Neea78BdNuN82hanNZud7CC5XzYyT91QwwyqOmTvOPpyAeG0V1mufDDxdoV0IW0ma/RvuTWCNOjcAnoNy9cfMBnBxmuToAKKKKACiiigAooooAKKKKACiiigAoorf8AD3gXxJ4nki/s3TJjby8i7lUpCAG2k7zwcHqFyeDwcUAYFFexaD8BGlgtbjXtWeFnUtPZ20YLISDgCUkjI4z8pHUA969K8PeBfDfhiOL+zdMhFxFyLuVQ8xJXaTvPIyOoXA5PAzQB8+eHfht4p8SujWunPbWzKHF1eAxRFSCVIyMsDjqoPUZwDmvZvDvwd8LaG6T3UL6tchQCbwAxBsEMRGBjBz0bdjAwc813tFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFFFFABRRRQAUUUUAFUtR0bStX8v+09Ms77ys+X9pgWTZnGcbgcZwPyq7RQBwt58GvBFzavDDps1o7YxNDdSF15zxvLLz05B61jXnwD0B7V1stW1GG4ONkkxjlQc85UKpPGe4/pXqdFAHh9/wDs/wCoRwKdO1+2uJd2ClxbtCoXB5ypfnOOMfjWf/woXxV/0ENI/wC/0v8A8br6AooA+f8A/hQvir/oIaR/3+l/+N0f8KF8Vf8AQQ0j/v8AS/8AxuvoCigD5/8A+FC+Kv8AoIaR/wB/pf8A43WnZ/s+3T2qNe+IoYbg53xw2plQc8YYspPGOw/rXttFAHkunfADSovM/tPXLy5zjy/s0Sw7euc7t+e3pj37bth8F/BdnA0c9nc37FtwkuLlgwGBx+72jHGemeetd7RQBkab4U8PaO8Emn6JY28tuu2OZLdfNAxj7+NxJHBJOTk5rXoooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKACiiigAooooAKKKKAP/9k=\" Sizing=\"ZoomImage\" SizeF=\"63.3606262,50.71181\" LocationFloat=\"445.0712, 56.8862\" Dpi=\"254\" />\r\n        <Item2 Ref=\"37\" ControlType=\"XRLabel\" Name=\"lblExpiryDate\" TextAlignment=\"MiddleLeft\" SizeF=\"112.275085,24.9999981\" LocationFloat=\"410.111877, 25.0000019\" Dpi=\"254\" Font=\"Lucida Sans, 5pt, style=Bold\" Padding=\"5,5,0,0,254\">\r\n          <StylePriority Ref=\"38\" UseFont=\"false\" UseTextAlignment=\"false\" />\r\n        </Item2>\r\n        <Item3 Ref=\"39\" ControlType=\"XRLabel\" Name=\"label21\" Text=\"verw. bis.:\" TextAlignment=\"MiddleLeft\" SizeF=\"112.275085,24.9999981\" LocationFloat=\"410.111877, 0\" Dpi=\"254\" Font=\"Lucida Sans, 5pt, style=Bold\" Padding=\"5,5,0,0,254\">\r\n          <StylePriority Ref=\"40\" UseFont=\"false\" UseTextAlignment=\"false\" />\r\n        </Item3>\r\n        <Item4 Ref=\"41\" ControlType=\"XRLabel\" Name=\"label20\" TextAlignment=\"MiddleLeft\" SizeF=\"243.788589,24.9999981\" LocationFloat=\"154.6754, 25.0000019\" Dpi=\"254\" Font=\"Lucida Sans, 5pt, style=Bold\" Padding=\"5,5,0,0,254\">\r\n          <DataBindings>\r\n            <Item1 Ref=\"42\" PropertyName=\"Text\" DataMember=\"PouchIdentifier\" />\r\n          </DataBindings>\r\n          <StylePriority Ref=\"43\" UseFont=\"false\" UseTextAlignment=\"false\" />\r\n        </Item4>\r\n        <Item5 Ref=\"44\" ControlType=\"XRLabel\" Name=\"lblLot\" CanGrow=\"false\" TextAlignment=\"MiddleLeft\" SizeF=\"243.788589,24.9999981\" LocationFloat=\"154.6754, 0\" Dpi=\"254\" Font=\"Lucida Sans, 5pt, style=Bold\" Padding=\"5,5,0,0,254\">\r\n          <Scripts Ref=\"45\" OnBeforePrint=\"lblLot_BeforePrint\" />\r\n          <StylePriority Ref=\"46\" UseFont=\"false\" UseTextAlignment=\"false\" />\r\n        </Item5>\r\n        <Item6 Ref=\"47\" ControlType=\"XRLabel\" Name=\"label18\" Text=\"Apotheken Ch.-\" TextAlignment=\"MiddleLeft\" SizeF=\"151.184387,24.9999943\" LocationFloat=\"2.15981627, 25.0000019\" Dpi=\"254\" Font=\"Lucida Sans, 5pt, style=Bold\" Padding=\"5,5,0,0,254\">\r\n          <StylePriority Ref=\"48\" UseFont=\"false\" UseTextAlignment=\"false\" />\r\n        </Item6>\r\n        <Item7 Ref=\"49\" ControlType=\"XRLabel\" Name=\"label6\" Text=\"Hersteller   Ch.-\" TextAlignment=\"MiddleLeft\" SizeF=\"151.184387,24.9999981\" LocationFloat=\"2.15981627, 0\" Dpi=\"254\" Font=\"Lucida Sans, 5pt, style=Bold\" Padding=\"5,5,0,0,254\">\r\n          <StylePriority Ref=\"50\" UseFont=\"false\" UseTextAlignment=\"false\" />\r\n        </Item7>\r\n        <Item8 Ref=\"51\" ControlType=\"XRLabel\" Name=\"label1\" Text=\"Harzkliniken GmbH Goslar\" TextAlignment=\"MiddleLeft\" SizeF=\"442.911438,24.9999924\" LocationFloat=\"2.15981627, 81.88622\" Dpi=\"254\" Font=\"Lucida Sans, 6pt\" Padding=\"5,5,0,0,254\">\r\n          <StylePriority Ref=\"52\" UseFont=\"false\" UseTextAlignment=\"false\" />\r\n        </Item8>\r\n        <Item9 Ref=\"53\" ControlType=\"XRBarCode\" Name=\"barCode1\" Module=\"5.08\" AutoModule=\"true\" Alignment=\"MiddleCenter\" TextAlignment=\"BottomCenter\" SizeF=\"521.840332,75.60495\" LocationFloat=\"0.5466874, 110.008995\" Dpi=\"254\" Font=\"Microsoft Sans Serif, 6pt\" Padding=\"11,11,0,0,254\">\r\n          <Symbology Ref=\"54\" Name=\"Code128\" />\r\n          <DataBindings>\r\n            <Item1 Ref=\"55\" PropertyName=\"Text\" DataMember=\"PouchIdentifier\" />\r\n          </DataBindings>\r\n          <StylePriority Ref=\"56\" UseFont=\"false\" UsePadding=\"false\" UseTextAlignment=\"false\" />\r\n        </Item9>\r\n        <Item10 Ref=\"57\" ControlType=\"XRLabel\" Name=\"label9\" Text=\"Apotheke der Asklepios\" TextAlignment=\"MiddleLeft\" SizeF=\"442.9114,24.9999924\" LocationFloat=\"2.15981627, 56.8861847\" Dpi=\"254\" Font=\"Lucida Sans, 6pt\" Padding=\"5,5,0,0,254\">\r\n          <StylePriority Ref=\"58\" UseFont=\"false\" UseTextAlignment=\"false\" />\r\n        </Item10>\r\n        <Item11 Ref=\"59\" ControlType=\"XRLine\" Name=\"line3\" SizeF=\"525,5\" LocationFloat=\"0, 51.8861923\" Dpi=\"254\" />\r\n      </Controls>\r\n    </Item3>\r\n    <Item4 Ref=\"60\" ControlType=\"DetailReportBand\" Name=\"DetailReport\" Level=\"0\" DataMember=\"MedicineData\" DataSource=\"#Ref-0\" Dpi=\"254\">\r\n      <Bands>\r\n        <Item1 Ref=\"61\" ControlType=\"DetailBand\" Name=\"Detail\" HeightF=\"112.222153\" Dpi=\"254\">\r\n          <Scripts Ref=\"62\" OnBeforePrint=\"Detail_BeforePrint\" />\r\n          <Controls>\r\n            <Item1 Ref=\"63\" ControlType=\"XRLabel\" Name=\"label15\" CanGrow=\"false\" TextAlignment=\"TopLeft\" WordWrap=\"false\" SizeF=\"520.227234,38.8310471\" LocationFloat=\"2.15979767, 73.3910751\" Dpi=\"254\" Font=\"Arial, 9pt, style=Bold, Italic\">\r\n              <DataBindings>\r\n                <Item1 Ref=\"64\" PropertyName=\"Text\" DataMember=\"MedicineData.Comment\" />\r\n              </DataBindings>\r\n              <StylePriority Ref=\"65\" UseFont=\"false\" UseTextAlignment=\"false\" />\r\n            </Item1>\r\n            <Item2 Ref=\"66\" ControlType=\"XRLabel\" Name=\"label17\" CanGrow=\"false\" Text=\"Stk.\" SizeF=\"65.40036,38.8310471\" LocationFloat=\"456.9866, 34.56005\" Dpi=\"254\" Font=\"Arial, 9pt, style=Bold\">\r\n              <Scripts Ref=\"67\" OnBeforePrint=\"lblMedicineDescription_BeforePrint\" />\r\n              <StylePriority Ref=\"68\" UseFont=\"false\" />\r\n            </Item2>\r\n            <Item3 Ref=\"69\" ControlType=\"XRLabel\" Name=\"label5\" CanGrow=\"false\" SizeF=\"497.840363,34.56005\" LocationFloat=\"2.15981627, 0\" Dpi=\"254\" Font=\"Arial, 9pt, style=Bold\">\r\n              <Scripts Ref=\"70\" OnBeforePrint=\"lblMedicineDescription_BeforePrint\" />\r\n              <DataBindings>\r\n                <Item1 Ref=\"71\" PropertyName=\"Text\" DataMember=\"MedicineData.MedicineName\" />\r\n              </DataBindings>\r\n              <StylePriority Ref=\"72\" UseFont=\"false\" />\r\n            </Item3>\r\n            <Item4 Ref=\"73\" ControlType=\"XRLabel\" Name=\"lblMedicineDescription\" CanGrow=\"false\" TextTrimming=\"None\" SizeF=\"359.338837,23.00001\" LocationFloat=\"2.15958166, 34.56005\" Dpi=\"254\" Font=\"Lucida Sans, 6pt\">\r\n              <Scripts Ref=\"74\" OnBeforePrint=\"lblMedicineDescription_BeforePrint\" />\r\n              <StylePriority Ref=\"75\" UseFont=\"false\" />\r\n            </Item4>\r\n            <Item5 Ref=\"76\" ControlType=\"XRLabel\" Name=\"label2\" CanGrow=\"false\" TextAlignment=\"TopRight\" WordWrap=\"false\" SizeF=\"83.5727844,38.8310471\" LocationFloat=\"361.4984, 34.56005\" Dpi=\"254\" Font=\"Arial, 9pt, style=Bold\">\r\n              <Scripts Ref=\"77\" OnBeforePrint=\"label2_BeforePrint\" />\r\n              <DataBindings>\r\n                <Item1 Ref=\"78\" PropertyName=\"Text\" DataMember=\"MedicineData.OriginalAmount\" />\r\n              </DataBindings>\r\n              <StylePriority Ref=\"79\" UseFont=\"false\" UseTextAlignment=\"false\" />\r\n            </Item5>\r\n          </Controls>\r\n        </Item1>\r\n      </Bands>\r\n      <Scripts Ref=\"80\" OnDataSourceRowChanged=\"DetailReport_DataSourceRowChanged_1\" OnBeforePrint=\"DetailReport_BeforePrint\" />\r\n    </Item4>\r\n  </Bands>\r\n  <Scripts Ref=\"81\" OnAfterPrint=\"XtraReport_AfterPrint\" OnBeforePrint=\"XtraReport_BeforePrint\" />\r\n  <ExportOptions Ref=\"82\">\r\n    <Image Ref=\"83\" PageBorderWidth=\"0\" ExportMode=\"SingleFilePageByPage\" PageRange=\"1\" Format=\"Bmp\" Resolution=\"300\" />\r\n  </ExportOptions>\r\n  <Watermark Ref=\"84\" ShowBehind=\"false\" TextDirection=\"BackwardDiagonal\" ForeColor=\"Black\" TextTransparency=\"0\" />\r\n  <ComponentStorage>\r\n    <Item1 Ref=\"0\" ObjectType=\"DevExpress.DataAccess.ObjectBinding.ObjectDataSource,DevExpress.DataAccess.v17.1\" Name=\"PouchDataSource\" Base64=\"PE9iamVjdERhdGFTb3VyY2U+PE5hbWU+UG91Y2hEYXRhU291cmNlPC9OYW1lPjxEYXRhU291cmNlIFR5cGU9IlJvd2EuU21hcnREb3NlLlNkbWMuQ29udHJvbGxlci5Qcm9kdWN0aW9uLk9yZGVyRm9yUHJvZHVjdGlvbi5QRFRSLlBvdWNoRGF0YSwgUG91Y2hEYXRhVG9SZW5kZXIsIFZlcnNpb249MS4wLjAuMjAwLCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPW51bGwiIC8+PC9PYmplY3REYXRhU291cmNlPg==\" />\r\n  </ComponentStorage>\r\n</XtraReportsLayoutSerializer>",
+                            "Preview": null,
+                            "SizeLimitX": 0.0,
+                            "SizeLimitY": 0.0,
+                            "IsSystemTemplate": false,
+                            "Name": "Patient Detail Asklepios",
+                            "OriginalId": 11,
+                            "IsUserCreated": false,
+                            "Type": 5,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        },
+                        {
+                            "Id": 35,
+                            "Description": "Import",
+                            "CreateDate": "0001-01-01T00:00:00",
+                            "SerializedContent": "<?xml version=\"1.0\" encoding=\"utf-8\"?>\r\n<XtraReportsLayoutSerializer SerializerVersion=\"16.2.3.0\" Ref=\"1\" ControlType=\"DevExpress.XtraReports.UI.XtraReport, DevExpress.XtraReports.v16.2, Version=16.2.3.0, Culture=neutral, PublicKeyToken=b88d1754d700e49a\" Name=\"Pouch_PatientFooter\" SnapGridSize=\"25\" ReportUnit=\"TenthsOfAMillimeter\" Margins=\"0, 0, 610, 0\" PaperKind=\"Custom\" PageWidth=\"525\" PageHeight=\"600\" Version=\"17.1\" DataSource=\"#Ref-0\" Dpi=\"254\" Font=\"Arial, 8pt\">\r\n  <FormattingRuleSheet>\r\n    <Item1 Ref=\"2\" Name=\"formattingRule1\" Condition=\"Len([MedicineName]) == 0\">\r\n      <Formatting Ref=\"3\" Visible=\"False\" BorderStyle=\"Inset\" StringFormat=\"Near;Near;0;None;Character;Default\" />\r\n    </Item1>\r\n  </FormattingRuleSheet>\r\n  <Bands>\r\n    <Item1 Ref=\"4\" ControlType=\"DetailBand\" Name=\"detailBand1\" HeightF=\"0\" Dpi=\"254\" />\r\n    <Item2 Ref=\"5\" ControlType=\"TopMarginBand\" Name=\"topMarginBand1\" HeightF=\"610.3395\" Dpi=\"254\">\r\n      <Controls>\r\n        <Item1 Ref=\"6\" ControlType=\"XRLabel\" Name=\"label2\" Text=\"Patienten Endblister\" TextAlignment=\"MiddleCenter\" SizeF=\"523.3862,42.7837753\" LocationFloat=\"0, 11.2570629\" Dpi=\"254\" Font=\"Arial, 8pt, style=Bold\" ForeColor=\"Black\" Borders=\"None\">\r\n          <StylePriority Ref=\"7\" UseFont=\"false\" UseForeColor=\"false\" UseBorders=\"false\" UseTextAlignment=\"false\" />\r\n        </Item1>\r\n        <Item2 Ref=\"8\" ControlType=\"XRBarCode\" Name=\"barCode1\" Module=\"5.08\" AutoModule=\"true\" Alignment=\"MiddleCenter\" TextAlignment=\"BottomCenter\" SizeF=\"521.840332,75.60495\" LocationFloat=\"3.15966129, 523.8981\" Dpi=\"254\" Font=\"Microsoft Sans Serif, 6pt\" Padding=\"11,11,0,0,254\">\r\n          <Symbology Ref=\"9\" Name=\"Code128\" />\r\n          <DataBindings>\r\n            <Item1 Ref=\"10\" PropertyName=\"Text\" DataMember=\"PouchIdentifier\" />\r\n          </DataBindings>\r\n          <StylePriority Ref=\"11\" UseFont=\"false\" UsePadding=\"false\" UseTextAlignment=\"false\" />\r\n        </Item2>\r\n        <Item3 Ref=\"12\" ControlType=\"XRLabel\" Name=\"label1\" TextAlignment=\"MiddleCenter\" SizeF=\"519.8404,58.42\" LocationFloat=\"3.15966, 177.759186\" Dpi=\"254\" Font=\"Arial, 9pt, style=Bold\" Padding=\"5,5,0,0,254\">\r\n          <DataBindings>\r\n            <Item1 Ref=\"13\" PropertyName=\"Text\" DataMember=\"RollId\" />\r\n          </DataBindings>\r\n          <StylePriority Ref=\"14\" UseFont=\"false\" UseTextAlignment=\"false\" />\r\n        </Item3>\r\n        <Item4 Ref=\"15\" ControlType=\"XRBarCode\" Name=\"barCode2\" Module=\"5.08\" AutoModule=\"true\" Alignment=\"MiddleCenter\" TextAlignment=\"MiddleCenter\" ShowText=\"false\" SizeF=\"179.171509,114.785248\" LocationFloat=\"172.69957, 318.1902\" Dpi=\"254\" Padding=\"25,25,0,0,254\">\r\n          <Symbology Ref=\"16\" Name=\"DataMatrix\" CompactionMode=\"Text\" />\r\n          <DataBindings>\r\n            <Item1 Ref=\"17\" PropertyName=\"Text\" DataMember=\"RollId\" />\r\n          </DataBindings>\r\n          <StylePriority Ref=\"18\" UseTextAlignment=\"false\" />\r\n        </Item4>\r\n        <Item5 Ref=\"19\" ControlType=\"XRLine\" Name=\"line2\" LineWidth=\"3\" SizeF=\"523.000061,5\" LocationFloat=\"0, 64.28006\" Dpi=\"254\" />\r\n      </Controls>\r\n    </Item2>\r\n    <Item3 Ref=\"20\" ControlType=\"BottomMarginBand\" Name=\"bottomMarginBand1\" HeightF=\"0\" Dpi=\"254\" />\r\n  </Bands>\r\n  <ExportOptions Ref=\"21\">\r\n    <Image Ref=\"22\" PageBorderWidth=\"0\" ExportMode=\"SingleFilePageByPage\" Format=\"Bmp\" Resolution=\"300\" />\r\n  </ExportOptions>\r\n  <Watermark Ref=\"23\" TextTransparency=\"0\" />\r\n  <ComponentStorage>\r\n    <Item1 Ref=\"0\" ObjectType=\"DevExpress.DataAccess.ObjectBinding.ObjectDataSource,DevExpress.DataAccess.v16.2\" Name=\"DataSourcePouch\" Base64=\"PE9iamVjdERhdGFTb3VyY2U+PE5hbWU+RGF0YVNvdXJjZVBvdWNoPC9OYW1lPjxEYXRhU291cmNlIFR5cGU9IlJvd2EuU21hcnREb3NlLlNkbWMuQ29udHJvbGxlci5Qcm9kdWN0aW9uLk9yZGVyRm9yUHJvZHVjdGlvbi5QRFRSLlBvdWNoRGF0YSwgUG91Y2hEYXRhVG9SZW5kZXIsIFZlcnNpb249MS4yLjAuMTA0LCBDdWx0dXJlPW5ldXRyYWwsIFB1YmxpY0tleVRva2VuPW51bGwiIC8+PC9PYmplY3REYXRhU291cmNlPg==\" />\r\n  </ComponentStorage>\r\n</XtraReportsLayoutSerializer>",
+                            "Preview": null,
+                            "SizeLimitX": 0.0,
+                            "SizeLimitY": 0.0,
+                            "IsSystemTemplate": false,
+                            "Name": "Patient Footer Asklepios",
+                            "OriginalId": 17,
+                            "IsUserCreated": false,
+                            "Type": 4,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        }
+                    ],
+                    "Name": null,
+                    "Description": null,
+                    "IsFromDestinationFacility": false,
+                    "IsFromFullFillmentCenter": false,
+                    "Id": 1,
+                    "HistoryDate": "0001-01-01T00:00:00",
+                    "IsDeleted": false
+                },
+                "Identifier": "BD Rowa Germany GmbH DestinationFacility_1",
+                "Description": "",
+                "DepartmentName": "Pharmacy ",
+                "DepartmentCode": "13600",
+                "Status": true,
+                "Logo": null,
+                "CustomerId": 1,
+                "OriginalId": 0,
+                "Id": 1,
+                "HistoryDate": "0001-01-01T00:00:00",
+                "IsDeleted": false
+            },
+            "IntakeDetails": [
+                {
+                    "AdditionalAttributes": [],
+                    "MedicationDetails": [
+                        {
+                            "AdditionalAttributes": [
+                                {
+                                    "Id": 1,
+                                    "Key": "IntakeAdvice",
+                                    "Value": "IntakeAdvice",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 208,
+                                    "Key": "PhysicianComment",
+                                    "Value": "PhysicianComment",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 415,
+                                    "Key": "Physician",
+                                    "Value": "Physician",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 622,
+                                    "Key": "PrescribedMedication",
+                                    "Value": "med1",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                }
+                            ],
+                            "MedicineIdentifier": "med1i",
+                            "Quantity": 1.0,
+                            "Id": 1,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        },
+                        {
+                            "AdditionalAttributes": [
+                                {
+                                    "Id": 2,
+                                    "Key": "IntakeAdvice",
+                                    "Value": "IntakeAdvice",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 209,
+                                    "Key": "PhysicianComment",
+                                    "Value": "PhysicianComment",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 416,
+                                    "Key": "Physician",
+                                    "Value": "Physician",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 623,
+                                    "Key": "PrescribedMedication",
+                                    "Value": "med2",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                }
+                            ],
+                            "MedicineIdentifier": "med2i",
+                            "Quantity": 2.0,
+                            "Id": 2,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        },
+                        {
+                            "AdditionalAttributes": [
+                                {
+                                    "Id": 3,
+                                    "Key": "IntakeAdvice",
+                                    "Value": "IntakeAdvice",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 210,
+                                    "Key": "PhysicianComment",
+                                    "Value": "PhysicianComment",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 417,
+                                    "Key": "Physician",
+                                    "Value": "Physician",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 624,
+                                    "Key": "PrescribedMedication",
+                                    "Value": "med3",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                }
+                            ],
+                            "MedicineIdentifier": "med3i",
+                            "Quantity": 3.0,
+                            "Id": 3,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        }
+                    ],
+                    "IntakeDateTime": "2020-05-06T08:00:00",
+                    "InvalidTimeComponent": false,
+                    "Id": 1,
+                    "HistoryDate": "0001-01-01T00:00:00",
+                    "IsDeleted": false
+                },
+                {
+                    "AdditionalAttributes": [],
+                    "MedicationDetails": [
+                        {
+                            "AdditionalAttributes": [
+                                {
+                                    "Id": 4,
+                                    "Key": "IntakeAdvice",
+                                    "Value": "IntakeAdvice",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 211,
+                                    "Key": "PhysicianComment",
+                                    "Value": "PhysicianComment",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 418,
+                                    "Key": "Physician",
+                                    "Value": "Physician",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 625,
+                                    "Key": "PrescribedMedication",
+                                    "Value": "med1",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                }
+                            ],
+                            "MedicineIdentifier": "med1i",
+                            "Quantity": 1.0,
+                            "Id": 4,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        },
+                        {
+                            "AdditionalAttributes": [
+                                {
+                                    "Id": 5,
+                                    "Key": "IntakeAdvice",
+                                    "Value": "IntakeAdvice",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 212,
+                                    "Key": "PhysicianComment",
+                                    "Value": "PhysicianComment",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 419,
+                                    "Key": "Physician",
+                                    "Value": "Physician",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 626,
+                                    "Key": "PrescribedMedication",
+                                    "Value": "med2",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                }
+                            ],
+                            "MedicineIdentifier": "med2i",
+                            "Quantity": 2.0,
+                            "Id": 5,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        },
+                        {
+                            "AdditionalAttributes": [
+                                {
+                                    "Id": 6,
+                                    "Key": "IntakeAdvice",
+                                    "Value": "IntakeAdvice",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 213,
+                                    "Key": "PhysicianComment",
+                                    "Value": "PhysicianComment",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 420,
+                                    "Key": "Physician",
+                                    "Value": "Physician",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 627,
+                                    "Key": "PrescribedMedication",
+                                    "Value": "med3",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                }
+                            ],
+                            "MedicineIdentifier": "med3i",
+                            "Quantity": 3.0,
+                            "Id": 6,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        }
+                    ],
+                    "IntakeDateTime": "2020-05-07T08:00:00",
+                    "InvalidTimeComponent": false,
+                    "Id": 2,
+                    "HistoryDate": "0001-01-01T00:00:00",
+                    "IsDeleted": false
+                },
+                {
+                    "AdditionalAttributes": [],
+                    "MedicationDetails": [
+                        {
+                            "AdditionalAttributes": [
+                                {
+                                    "Id": 7,
+                                    "Key": "IntakeAdvice",
+                                    "Value": "IntakeAdvice",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 214,
+                                    "Key": "PhysicianComment",
+                                    "Value": "PhysicianComment",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 421,
+                                    "Key": "Physician",
+                                    "Value": "Physician",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 628,
+                                    "Key": "PrescribedMedication",
+                                    "Value": "med1",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                }
+                            ],
+                            "MedicineIdentifier": "med1i",
+                            "Quantity": 1.0,
+                            "Id": 7,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        },
+                        {
+                            "AdditionalAttributes": [
+                                {
+                                    "Id": 8,
+                                    "Key": "IntakeAdvice",
+                                    "Value": "IntakeAdvice",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 215,
+                                    "Key": "PhysicianComment",
+                                    "Value": "PhysicianComment",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 422,
+                                    "Key": "Physician",
+                                    "Value": "Physician",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 629,
+                                    "Key": "PrescribedMedication",
+                                    "Value": "med2",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                }
+                            ],
+                            "MedicineIdentifier": "med2i",
+                            "Quantity": 2.0,
+                            "Id": 8,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        },
+                        {
+                            "AdditionalAttributes": [
+                                {
+                                    "Id": 9,
+                                    "Key": "IntakeAdvice",
+                                    "Value": "IntakeAdvice",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 216,
+                                    "Key": "PhysicianComment",
+                                    "Value": "PhysicianComment",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 423,
+                                    "Key": "Physician",
+                                    "Value": "Physician",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 630,
+                                    "Key": "PrescribedMedication",
+                                    "Value": "med3",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                }
+                            ],
+                            "MedicineIdentifier": "med3i",
+                            "Quantity": 3.0,
+                            "Id": 9,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        }
+                    ],
+                    "IntakeDateTime": "2020-05-08T08:00:00",
+                    "InvalidTimeComponent": false,
+                    "Id": 3,
+                    "HistoryDate": "0001-01-01T00:00:00",
+                    "IsDeleted": false
+                },
+                {
+                    "AdditionalAttributes": [],
+                    "MedicationDetails": [
+                        {
+                            "AdditionalAttributes": [
+                                {
+                                    "Id": 10,
+                                    "Key": "IntakeAdvice",
+                                    "Value": "IntakeAdvice",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 217,
+                                    "Key": "PhysicianComment",
+                                    "Value": "PhysicianComment",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 424,
+                                    "Key": "Physician",
+                                    "Value": "Physician",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 631,
+                                    "Key": "PrescribedMedication",
+                                    "Value": "med1",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                }
+                            ],
+                            "MedicineIdentifier": "med1i",
+                            "Quantity": 1.0,
+                            "Id": 10,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        },
+                        {
+                            "AdditionalAttributes": [
+                                {
+                                    "Id": 11,
+                                    "Key": "IntakeAdvice",
+                                    "Value": "IntakeAdvice",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 218,
+                                    "Key": "PhysicianComment",
+                                    "Value": "PhysicianComment",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 425,
+                                    "Key": "Physician",
+                                    "Value": "Physician",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 632,
+                                    "Key": "PrescribedMedication",
+                                    "Value": "med2",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                }
+                            ],
+                            "MedicineIdentifier": "med2i",
+                            "Quantity": 2.0,
+                            "Id": 11,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        },
+                        {
+                            "AdditionalAttributes": [
+                                {
+                                    "Id": 12,
+                                    "Key": "IntakeAdvice",
+                                    "Value": "IntakeAdvice",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 219,
+                                    "Key": "PhysicianComment",
+                                    "Value": "PhysicianComment",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 426,
+                                    "Key": "Physician",
+                                    "Value": "Physician",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 633,
+                                    "Key": "PrescribedMedication",
+                                    "Value": "med3",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                }
+                            ],
+                            "MedicineIdentifier": "med3i",
+                            "Quantity": 3.0,
+                            "Id": 12,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        }
+                    ],
+                    "IntakeDateTime": "2020-05-09T08:00:00",
+                    "InvalidTimeComponent": false,
+                    "Id": 4,
+                    "HistoryDate": "0001-01-01T00:00:00",
+                    "IsDeleted": false
+                },
+                {
+                    "AdditionalAttributes": [],
+                    "MedicationDetails": [
+                        {
+                            "AdditionalAttributes": [
+                                {
+                                    "Id": 13,
+                                    "Key": "IntakeAdvice",
+                                    "Value": "IntakeAdvice",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 220,
+                                    "Key": "PhysicianComment",
+                                    "Value": "PhysicianComment",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 427,
+                                    "Key": "Physician",
+                                    "Value": "Physician",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 634,
+                                    "Key": "PrescribedMedication",
+                                    "Value": "med1",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                }
+                            ],
+                            "MedicineIdentifier": "med1i",
+                            "Quantity": 1.0,
+                            "Id": 13,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        },
+                        {
+                            "AdditionalAttributes": [
+                                {
+                                    "Id": 14,
+                                    "Key": "IntakeAdvice",
+                                    "Value": "IntakeAdvice",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 221,
+                                    "Key": "PhysicianComment",
+                                    "Value": "PhysicianComment",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 428,
+                                    "Key": "Physician",
+                                    "Value": "Physician",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 635,
+                                    "Key": "PrescribedMedication",
+                                    "Value": "med2",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                }
+                            ],
+                            "MedicineIdentifier": "med2i",
+                            "Quantity": 2.0,
+                            "Id": 14,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        },
+                        {
+                            "AdditionalAttributes": [
+                                {
+                                    "Id": 15,
+                                    "Key": "IntakeAdvice",
+                                    "Value": "IntakeAdvice",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 222,
+                                    "Key": "PhysicianComment",
+                                    "Value": "PhysicianComment",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 429,
+                                    "Key": "Physician",
+                                    "Value": "Physician",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 636,
+                                    "Key": "PrescribedMedication",
+                                    "Value": "med3",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                }
+                            ],
+                            "MedicineIdentifier": "med3i",
+                            "Quantity": 3.0,
+                            "Id": 15,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        }
+                    ],
+                    "IntakeDateTime": "2020-05-10T08:00:00",
+                    "InvalidTimeComponent": false,
+                    "Id": 5,
+                    "HistoryDate": "0001-01-01T00:00:00",
+                    "IsDeleted": false
+                },
+                {
+                    "AdditionalAttributes": [],
+                    "MedicationDetails": [
+                        {
+                            "AdditionalAttributes": [
+                                {
+                                    "Id": 16,
+                                    "Key": "IntakeAdvice",
+                                    "Value": "IntakeAdvice",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 223,
+                                    "Key": "PhysicianComment",
+                                    "Value": "PhysicianComment",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 430,
+                                    "Key": "Physician",
+                                    "Value": "Physician",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 637,
+                                    "Key": "PrescribedMedication",
+                                    "Value": "med1",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                }
+                            ],
+                            "MedicineIdentifier": "med1i",
+                            "Quantity": 1.0,
+                            "Id": 16,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        },
+                        {
+                            "AdditionalAttributes": [
+                                {
+                                    "Id": 17,
+                                    "Key": "IntakeAdvice",
+                                    "Value": "IntakeAdvice",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 224,
+                                    "Key": "PhysicianComment",
+                                    "Value": "PhysicianComment",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 431,
+                                    "Key": "Physician",
+                                    "Value": "Physician",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 638,
+                                    "Key": "PrescribedMedication",
+                                    "Value": "med2",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                }
+                            ],
+                            "MedicineIdentifier": "med2i",
+                            "Quantity": 2.0,
+                            "Id": 17,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        },
+                        {
+                            "AdditionalAttributes": [
+                                {
+                                    "Id": 18,
+                                    "Key": "IntakeAdvice",
+                                    "Value": "IntakeAdvice",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 225,
+                                    "Key": "PhysicianComment",
+                                    "Value": "PhysicianComment",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 432,
+                                    "Key": "Physician",
+                                    "Value": "Physician",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 639,
+                                    "Key": "PrescribedMedication",
+                                    "Value": "med3",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                }
+                            ],
+                            "MedicineIdentifier": "med3i",
+                            "Quantity": 3.0,
+                            "Id": 18,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        }
+                    ],
+                    "IntakeDateTime": "2020-05-11T08:00:00",
+                    "InvalidTimeComponent": false,
+                    "Id": 6,
+                    "HistoryDate": "0001-01-01T00:00:00",
+                    "IsDeleted": false
+                },
+                {
+                    "AdditionalAttributes": [],
+                    "MedicationDetails": [
+                        {
+                            "AdditionalAttributes": [
+                                {
+                                    "Id": 19,
+                                    "Key": "IntakeAdvice",
+                                    "Value": "IntakeAdvice",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 226,
+                                    "Key": "PhysicianComment",
+                                    "Value": "PhysicianComment",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 433,
+                                    "Key": "Physician",
+                                    "Value": "Physician",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 640,
+                                    "Key": "PrescribedMedication",
+                                    "Value": "med1",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                }
+                            ],
+                            "MedicineIdentifier": "med1i",
+                            "Quantity": 1.0,
+                            "Id": 19,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        },
+                        {
+                            "AdditionalAttributes": [
+                                {
+                                    "Id": 20,
+                                    "Key": "IntakeAdvice",
+                                    "Value": "IntakeAdvice",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 227,
+                                    "Key": "PhysicianComment",
+                                    "Value": "PhysicianComment",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 434,
+                                    "Key": "Physician",
+                                    "Value": "Physician",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 641,
+                                    "Key": "PrescribedMedication",
+                                    "Value": "med2",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                }
+                            ],
+                            "MedicineIdentifier": "med2i",
+                            "Quantity": 2.0,
+                            "Id": 20,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        },
+                        {
+                            "AdditionalAttributes": [
+                                {
+                                    "Id": 21,
+                                    "Key": "IntakeAdvice",
+                                    "Value": "IntakeAdvice",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 228,
+                                    "Key": "PhysicianComment",
+                                    "Value": "PhysicianComment",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 435,
+                                    "Key": "Physician",
+                                    "Value": "Physician",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 642,
+                                    "Key": "PrescribedMedication",
+                                    "Value": "med3",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                }
+                            ],
+                            "MedicineIdentifier": "med3i",
+                            "Quantity": 3.0,
+                            "Id": 21,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        }
+                    ],
+                    "IntakeDateTime": "2020-05-12T08:00:00",
+                    "InvalidTimeComponent": false,
+                    "Id": 7,
+                    "HistoryDate": "0001-01-01T00:00:00",
+                    "IsDeleted": false
+                },
+                {
+                    "AdditionalAttributes": [],
+                    "MedicationDetails": [
+                        {
+                            "AdditionalAttributes": [
+                                {
+                                    "Id": 22,
+                                    "Key": "IntakeAdvice",
+                                    "Value": "IntakeAdvice",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 229,
+                                    "Key": "PhysicianComment",
+                                    "Value": "PhysicianComment",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 436,
+                                    "Key": "Physician",
+                                    "Value": "Physician",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 643,
+                                    "Key": "PrescribedMedication",
+                                    "Value": "med1",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                }
+                            ],
+                            "MedicineIdentifier": "med1i",
+                            "Quantity": 1.0,
+                            "Id": 22,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        },
+                        {
+                            "AdditionalAttributes": [
+                                {
+                                    "Id": 23,
+                                    "Key": "IntakeAdvice",
+                                    "Value": "IntakeAdvice",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 230,
+                                    "Key": "PhysicianComment",
+                                    "Value": "PhysicianComment",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 437,
+                                    "Key": "Physician",
+                                    "Value": "Physician",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 644,
+                                    "Key": "PrescribedMedication",
+                                    "Value": "med2",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                }
+                            ],
+                            "MedicineIdentifier": "med2i",
+                            "Quantity": 2.0,
+                            "Id": 23,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        },
+                        {
+                            "AdditionalAttributes": [
+                                {
+                                    "Id": 24,
+                                    "Key": "IntakeAdvice",
+                                    "Value": "IntakeAdvice",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 231,
+                                    "Key": "PhysicianComment",
+                                    "Value": "PhysicianComment",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 438,
+                                    "Key": "Physician",
+                                    "Value": "Physician",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 645,
+                                    "Key": "PrescribedMedication",
+                                    "Value": "med3",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                }
+                            ],
+                            "MedicineIdentifier": "med3i",
+                            "Quantity": 3.0,
+                            "Id": 24,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        }
+                    ],
+                    "IntakeDateTime": "2020-05-13T08:00:00",
+                    "InvalidTimeComponent": false,
+                    "Id": 8,
+                    "HistoryDate": "0001-01-01T00:00:00",
+                    "IsDeleted": false
+                },
+                {
+                    "AdditionalAttributes": [],
+                    "MedicationDetails": [
+                        {
+                            "AdditionalAttributes": [
+                                {
+                                    "Id": 25,
+                                    "Key": "IntakeAdvice",
+                                    "Value": "IntakeAdvice",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 232,
+                                    "Key": "PhysicianComment",
+                                    "Value": "PhysicianComment",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 439,
+                                    "Key": "Physician",
+                                    "Value": "Physician",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 646,
+                                    "Key": "PrescribedMedication",
+                                    "Value": "med1",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                }
+                            ],
+                            "MedicineIdentifier": "med1i",
+                            "Quantity": 1.0,
+                            "Id": 25,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        },
+                        {
+                            "AdditionalAttributes": [
+                                {
+                                    "Id": 26,
+                                    "Key": "IntakeAdvice",
+                                    "Value": "IntakeAdvice",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 233,
+                                    "Key": "PhysicianComment",
+                                    "Value": "PhysicianComment",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 440,
+                                    "Key": "Physician",
+                                    "Value": "Physician",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 647,
+                                    "Key": "PrescribedMedication",
+                                    "Value": "med2",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                }
+                            ],
+                            "MedicineIdentifier": "med2i",
+                            "Quantity": 2.0,
+                            "Id": 26,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        },
+                        {
+                            "AdditionalAttributes": [
+                                {
+                                    "Id": 27,
+                                    "Key": "IntakeAdvice",
+                                    "Value": "IntakeAdvice",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 234,
+                                    "Key": "PhysicianComment",
+                                    "Value": "PhysicianComment",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 441,
+                                    "Key": "Physician",
+                                    "Value": "Physician",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 648,
+                                    "Key": "PrescribedMedication",
+                                    "Value": "med3",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                }
+                            ],
+                            "MedicineIdentifier": "med3i",
+                            "Quantity": 3.0,
+                            "Id": 27,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        }
+                    ],
+                    "IntakeDateTime": "2020-05-14T08:00:00",
+                    "InvalidTimeComponent": false,
+                    "Id": 9,
+                    "HistoryDate": "0001-01-01T00:00:00",
+                    "IsDeleted": false
+                },
+                {
+                    "AdditionalAttributes": [],
+                    "MedicationDetails": [
+                        {
+                            "AdditionalAttributes": [
+                                {
+                                    "Id": 28,
+                                    "Key": "IntakeAdvice",
+                                    "Value": "IntakeAdvice",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 235,
+                                    "Key": "PhysicianComment",
+                                    "Value": "PhysicianComment",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 442,
+                                    "Key": "Physician",
+                                    "Value": "Physician",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 649,
+                                    "Key": "PrescribedMedication",
+                                    "Value": "med1",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                }
+                            ],
+                            "MedicineIdentifier": "med1i",
+                            "Quantity": 1.0,
+                            "Id": 28,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        },
+                        {
+                            "AdditionalAttributes": [
+                                {
+                                    "Id": 29,
+                                    "Key": "IntakeAdvice",
+                                    "Value": "IntakeAdvice",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 236,
+                                    "Key": "PhysicianComment",
+                                    "Value": "PhysicianComment",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 443,
+                                    "Key": "Physician",
+                                    "Value": "Physician",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 650,
+                                    "Key": "PrescribedMedication",
+                                    "Value": "med2",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                }
+                            ],
+                            "MedicineIdentifier": "med2i",
+                            "Quantity": 2.0,
+                            "Id": 29,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        },
+                        {
+                            "AdditionalAttributes": [
+                                {
+                                    "Id": 30,
+                                    "Key": "IntakeAdvice",
+                                    "Value": "IntakeAdvice",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 237,
+                                    "Key": "PhysicianComment",
+                                    "Value": "PhysicianComment",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 444,
+                                    "Key": "Physician",
+                                    "Value": "Physician",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                },
+                                {
+                                    "Id": 651,
+                                    "Key": "PrescribedMedication",
+                                    "Value": "med3",
+                                    "Description": null,
+                                    "HistoryDate": "0001-01-01T00:00:00",
+                                    "IsDeleted": false
+                                }
+                            ],
+                            "MedicineIdentifier": "med3i",
+                            "Quantity": 3.0,
+                            "Id": 30,
+                            "HistoryDate": "0001-01-01T00:00:00",
+                            "IsDeleted": false
+                        }
+                    ],
+                    "IntakeDateTime": "2020-05-15T08:00:00",
+                    "InvalidTimeComponent": false,
+                    "Id": 10,
+                    "HistoryDate": "0001-01-01T00:00:00",
+                    "IsDeleted": false
+                }
+            ],
+            "Patient": {
+                "AdditionalAttributes": [],
+                "CareLocation": {
+                    "Id": 5,
+                    "Name": "",
+                    "AddressLine": null,
+                    "AdditionalAddressLine": null,
+                    "PostalCode": null,
+                    "City": null,
+                    "State": null,
+                    "Country": null,
+                    "LandlineNumber": null,
+                    "CellphoneNumber": "",
+                    "Email": "",
+                    "Website": null,
+                    "Fax": null,
+                    "HistoryDate": "0001-01-01T00:00:00",
+                    "IsDeleted": false
+                },
+                "Identifier": "VK_64079",
+                "FirstName": "",
+                "LastName": "Victoria Krause",
+                "PrintName": "Victoria Krause",
+                "Birthday": "1957-05-07T00:00:00",
+                "Gender": 0,
+                "CultureName": null,
+                "CareLocationName": null,
+                "WardName": "Admissions",
+                "RoomNumber": "Room 3508",
+                "BedNumber": "Bed 1",
+                "OriginalId": 0,
+                "ReplacementPharmacy": 0,
+                "Id": 1,
+                "HistoryDate": "0001-01-01T00:00:00",
+                "IsDeleted": false
+            },
+            "Pharmacy": null,
+            "Id": 1,
+            "HistoryDate": "0001-01-01T00:00:00",
+            "IsDeleted": false
+        }
+    ],
+    "Identifier": "1_MO_91292ca8-82fe-4726-85db-653451cb0285_19042018_091227",
+    "MachineNumber": 0,
+    "MachineOrderIdentifier": null,
+    "Status": 1,
+    "Timestamp": "2018-04-19T09:12:30.3861047",
+    "ProductionFinishedTimeStamp": "0001-01-01T00:00:00",
+    "ExternalId": "MO_91292ca8-82fe-4726-85db-653451cb0285_19042018_091227",
+    "InternalId": null,
+    "HasSkippedMedication": false,
+    "Source": 0,
+    "ValidationErrors": 0,
+    "Id": 1,
+    "HistoryDate": "0001-01-01T00:00:00",
+    "IsDeleted": false
+}
